@@ -8,7 +8,7 @@ public String longestCommonPrefix(String[] strs) {
 
 #### Horizontal scanning
 
-To employ this idea, the algorithm iterates through the strings [S1…Sn], finding at each iteration i the longest common prefix of strings LCP(S1…Si). When LCP(S1…Si) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S\1…S\n).
+To employ this idea, the algorithm iterates through the strings [S1…Sn], finding at each iteration i the longest common prefix of strings LCP(S1…Si). When LCP(S1…Si) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S<sub>1</sub>…S<sub>n</sub>).
 
 ##### Complexity Analysis
 
