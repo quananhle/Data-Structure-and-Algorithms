@@ -2,8 +2,12 @@
 
 **Note: Cannot make the assumption that the input is always valid**
 
-```{java}
-public int romanToInt(String str) {
+```{python}
+def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
 ```
 
 | Symbol        | Value         |
