@@ -1,4 +1,4 @@
-class Solution {
+class HorizontalSolution {
     public String longestCommonPrefix(String[] strs) {
         //special case, if the array is empty
         if (strs.length == 0) {
