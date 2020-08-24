@@ -1,6 +1,7 @@
-##### Pseudocode
+#### Left-to-Right Pass
 
-'''
+##### Pseudocode
+```
 total = 0
 i = 0
 while i < s.length:
@@ -11,4 +12,4 @@ while i < s.length:
         total = total + (value of s[i])
         i = i + 1
 return total
-'''
+```
