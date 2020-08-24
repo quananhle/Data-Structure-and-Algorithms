@@ -33,10 +33,12 @@ Imagine a very short string is at the end of the array. The above approach will 
 To employ this idea, the algorithm iterates through the strings [S<sub>1</sub>…S<sub>n</sub>], finding at each iteration i the longest common prefix of strings LCP(S<sub>1</sub>…S<sub>i</sub>). When LCP(S<sub>1</sub>…S<sub>i</sub>) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S<sub>1</sub>…S<sub>n</sub>).
 
 ##### Complexity Analysis
+In the worst case we have n equal strings with length m
 
-* Time complexity : **O(S)**, where S is the sum of all characters in all strings.
+* Time complexity : O(S), where S is the number of all characters in the array, S=m⋅n Time complexity is 2⋅T(n/2)+O(m). Therefore time complexity is O(S). In the best case this algorithm performs O(minLen⋅n) comparisons, where minLen is the shortest string of the array
 
-    In the worst case all n strings are the same. The algorithm compares the string S1 with the other strings [S<sub>2</sub>…S<sub>n</sub>]. There are S character comparisons, where S is the sum of all characters in the input array.
+* (Space complexity : O(m⋅log⁡n)
 
-* Space complexity : **O(1)**. We only used constant extra space. 
+    There is a memory overhead since we store recursive calls in the execution stack. There are log⁡n recursive calls, each store need m space to store the result, so space complexity is O(m⋅log⁡n)
+
 
