@@ -14,7 +14,7 @@ To employ this idea, the algorithm iterates through the strings [S<sub>1</sub>�
 
 * Time complexity : **O(S)**, where S is the sum of all characters in all strings.
 
-    In the worst case all n strings are the same. The algorithm compares the string S1 with the other strings [S<sub>2</sub>…Sn]. There are S character comparisons, where S is the sum of all characters in the input array.
+    In the worst case all n strings are the same. The algorithm compares the string S1 with the other strings [S<sub>2</sub>…S<sub>n</sub>]. There are S character comparisons, where S is the sum of all characters in the input array.
 
 * Space complexity : **O(1)**. We only used constant extra space. 
 
