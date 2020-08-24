@@ -21,7 +21,7 @@ public int romanToInt(String str) {
 ```
        
 ##### Pseudocode
-```{java}
+```
 total = 0
 i = 0
 while i < s.length:
