@@ -8,7 +8,7 @@ public String longestCommonPrefix(String[] strs) {
 
 #### Horizontal scanning
 
-To employ this idea, the algorithm iterates through the strings [S1…Sn], finding at each iteration i the longest common prefix of strings LCP(S1…Si). When LCP(S1…Si) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S1…Sn).
+To employ this idea, the algorithm iterates through the strings [S1…Sn], finding at each iteration i the longest common prefix of strings LCP(S1…Si). When LCP(S1…Si) is an empty string, the algorithm ends. Otherwise after n iterations, the algorithm returns LCP(S\1…S\n).
 
 ##### Complexity Analysis
 
@@ -27,7 +27,7 @@ Imagine a very short string is at the end of the array. The above approach will 
 * Time complexity : O(S), where S is the sum of all characters in all strings. In the worst case there will be n equal strings with length m and the algorithm performs S=m⋅nS = m character comparisons. Even though the worst case is still the same as Approach 1, in the best case there are at most n⋅minLen comparisons where minLen is the length of the shortest string in the array.
 Space complexity : O(1). We only used constant extra space. 
 
-Because we're starting at the second-to-last-index, we know that index i + 1 always exists. We no longer need to handle its potential non-existence as a special case, and additionally we're able to (cleanly) use a for loop, as we're always moving along by 1 index at at time, unlike before where it could have been 1 or 2.
+    Because we're starting at the second-to-last-index, we know that index i + 1 always exists. We no longer need to handle its potential non-existence as a special case, and additionally we're able to (cleanly) use a for loop, as we're always moving along by 1 index at at time, unlike before where it could have been 1 or 2.
 
 
 
