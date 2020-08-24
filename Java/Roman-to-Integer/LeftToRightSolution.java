@@ -1,4 +1,4 @@
-class Solution {
+class LeftToRightSolution {
     static Map<String, Integer> values = new HashMap<>();
     static {
         values.put("I", 1);
