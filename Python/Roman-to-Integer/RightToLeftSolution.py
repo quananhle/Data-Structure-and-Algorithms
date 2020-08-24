@@ -9,11 +9,11 @@ values = {
 }
 
 class RightToLeftSolution:
-    def romanToInt(self, s):
-        total = values.get(s[-1])
-        for i in (range(len(s) - 1)):
-            if values[s[i]] < values[s[i + 1]]:
-                total -= values[s[i]]
+    def romanToInt(self, str):
+        total = values.get(str[-1])
+        for i in (range(len(str) - 1)):
+            if values[str[i]] < values[str[i + 1]]:
+                total -= values[str[i]]
             else:
-                total += values[s[i]]
+                total += values[str[i]]
         return total
