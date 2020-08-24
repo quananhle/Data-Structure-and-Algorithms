@@ -36,7 +36,7 @@ return total
 
 ##### Complexity Analysis
 
-Let nnn be the length of the input string (the total number of symbols in it).
+Let n be the length of the input string (the total number of symbols in it).
 
 * Time complexity : **O(1)**.
 
