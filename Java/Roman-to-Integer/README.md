@@ -14,7 +14,7 @@ Each symbol adds its own value, except for when a smaller valued symbol is befor
 
 Therefore, the simplest algorithm is to use a pointer to scan through the string, at each step deciding whether to add the current symbol and go forward 1 place, or add the difference of the next 2 symbols and go forward 2 places. Here is this algorithm in pseudocode.
 
-***Note: Cannot make the assumption that the input is always valid
+*** Note: Cannot make the assumption that the input is always valid
        
 ##### Pseudocode
 ```
