@@ -75,10 +75,10 @@ define function integer_in_array(arr, target):
 
 Let N be the length of the input array, arr.
 
-* Time complexity : O(N<superscript>2</superscript>).<sup>2</sup>
+* Time complexity : O(N<sup>2</sup>).
 
-    We loop through each of the NNN integers x, checking whether or not x + 1 is also in arr. Checking whether or not x + 1 is in arr is done using linear search, which requires checking through all NNN integers in arr. Because we're doing NNN operations NNN times, we get a time complexity of O(N2)O(N^2)O(N2).
+    We loop through each of the N integers x, checking whether or not x + 1 is also in arr. Checking whether or not x + 1 is in arr is done using linear search, which requires checking through all N integers in arr. Because we're doing N operations N times, we get a time complexity of O(N<sup>2</sup>).
 
-    Space complexity : O(1)O(1)O(1).
+* Space complexity : O(1)O(1)O(1).
 
-    We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1)O(1)O(1).
+    We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1).
