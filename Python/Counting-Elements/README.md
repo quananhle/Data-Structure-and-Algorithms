@@ -83,7 +83,7 @@ Let N be the length of the input array, arr.
 
     We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1).
     
-### Approach 2: 
+### Approach 2: Hash Table Solution
 
 The reason why the algorithm above was so inefficient is because we're performing N linear searches, each with a cost of O(N). When we have an algorithm that is performing many linear searches to check for item existence, we should instead be looking to change the way the data is stored so that the time complexity of doing each search is less.
 
@@ -128,7 +128,7 @@ Let N be the length of the input array, arr.
 
 It's interesting to note that O(N) is an upper bound on the space complexity. If U is the number of unique integers in arr, then the space complexity could more accurately be represented as O(U).
 
-### Approach 3:
+### Approach 3: Sorted List Solution
 
 Sorting has a time complexity of O(NlogN), and searching for integers in a sorted array, using binary search, has a cost of O(logN). This will give us a total time complexity of O(NlogN).
 ```
