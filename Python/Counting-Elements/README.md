@@ -82,3 +82,34 @@ Let N be the length of the input array, arr.
 * Space complexity : O(1).
 
     We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1).
+    
+### Approach 2:
+
+The reason why the algorithm above was so inefficient is because we're performing N linear searches, each with a cost of O(N). When we have an algorithm that is performing many linear searches to check for item existence, we should instead be looking to change the way the data is stored so that the time complexity of doing each search is less.
+
+Recall that looking up items in a HashSet has a cost of O(1). Creating a HashSet from an array of N items has a cost of O(N). We only need to create the HashSet once. After that, we can then replace all O(N) linear searches with O(1) HashSet lookups.
+
+The algorithm below is incorrect since if there were duplicates in arr, then the count returned will be too low!
+```
+define function count_elements(arr):
+    hash_set = a new HashSet
+    add all integers of arr to hash_set
+    count = 0
+    for each x in hash_set:
+        if hash_set contains x + 1:
+            count = count + 1
+    return count
+```
+Recall that a HashSet removes duplicates. Consider a case like arr = [1, 1, 2]. The HashSet will be {1, 2}. Therefore, the above code will loop over each integer in the HashSet, which is only one copy of 1. Yet arr had two copies of 1.
+
+To fix it, we need to loop over arr, but do the existence checks using the HashSet.
+```
+define function count_elements(arr):
+    hash_set = a new HashSet
+    add all integers of arr to hash_set
+    count = 0
+    for each x in arr:
+        if hash_set contains x + 1:
+            count = count + 1
+    return count
+```
