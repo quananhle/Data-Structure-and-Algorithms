@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     //initialize a hash table for mappings
     private HashMap<Character, Character> mappings;
     //constructor
