@@ -113,3 +113,17 @@ define function count_elements(arr):
             count = count + 1
     return count
 ```
+
+#### Complexity Analysis
+
+Let N be the length of the input array, arr.
+
+* Time complexity : O(N).
+
+    Creating a HashSet from N integers takes O(N) time. We then need to loop over each of the N integers like before, except this time we check for x + 1 by seeing if it is in the HashSet; an O(1) operation. This gives us a total time complexity of O(N)+N⋅O(1)=O(N)+O(N)=O(N).
+
+* Space complexity : O(N).
+
+    The HashSet needs to store each unique integer from arr. In the worst case, all the integers in arr will be unique, meaning that the HashSet has a space complexity of O(N).
+
+It's interesting to note that O(N)O(N)O(N) is an upper bound on the space complexity. If UUU is the number of unique integers in arr, then the space complexity could more accurately be represented as O(U)O(U)O(U).
