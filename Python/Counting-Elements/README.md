@@ -126,4 +126,4 @@ Let N be the length of the input array, arr.
 
     The HashSet needs to store each unique integer from arr. In the worst case, all the integers in arr will be unique, meaning that the HashSet has a space complexity of O(N).
 
-It's interesting to note that O(N)O(N)O(N) is an upper bound on the space complexity. If UUU is the number of unique integers in arr, then the space complexity could more accurately be represented as O(U)O(U)O(U).
+It's interesting to note that O(N) is an upper bound on the space complexity. If U is the number of unique integers in arr, then the space complexity could more accurately be represented as O(U).
