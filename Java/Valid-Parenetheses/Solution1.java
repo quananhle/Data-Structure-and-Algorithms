@@ -10,7 +10,6 @@ class Solution {
         this.mappings.put(']', '[');
     }
     public boolean isValid(String s) {
-        /**
         //initialize a stack
         Stack<Character> stack = new Stack<Character>();
         for (int i = 0; i < s.length(); i++) {
@@ -18,12 +17,14 @@ class Solution {
             char c = s.charAt(i);
             // if the character is a closing bracket
             if (this.mappings.containsKey(c)) {
-                // if stack.isEmpty() {
-                //     char topElement = '#';
-                // }
-                // else {
-                //     stack.pop();
-                // }
+                /**
+                if stack.isEmpty() {
+                    char topElement = '#';
+                }
+                else {
+                    stack.pop();
+                }
+                **/
                 // get the top element of the stack. If the stack is empty, set a dummy value of '#'
                 char topElement = stack.empty() ? '#' : stack.pop();
                 // if the mapping for this bracket doesn't match the stack's top element, return false.
