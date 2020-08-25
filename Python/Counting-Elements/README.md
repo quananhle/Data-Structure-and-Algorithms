@@ -48,7 +48,7 @@ Explanation: Both 1s are counted because 2 is in the array.
         :rtype: int
         """
 ```
-### Approach 1:
+### Approach 1: Naive Solution
 
 The simplest way of solving this problem is to loop through each integer, x, checking whether or not it should be counted. This requires checking whether or not x + 1 is in arr.
 
@@ -83,7 +83,7 @@ Let N be the length of the input array, arr.
 
     We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1).
     
-### Approach 2:
+### Approach 2: 
 
 The reason why the algorithm above was so inefficient is because we're performing N linear searches, each with a cost of O(N). When we have an algorithm that is performing many linear searches to check for item existence, we should instead be looking to change the way the data is stored so that the time complexity of doing each search is less.
 
