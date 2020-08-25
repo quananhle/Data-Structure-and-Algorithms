@@ -48,3 +48,37 @@ Explanation: Both 1s are counted because 2 is in the array.
         :rtype: int
         """
 ```
+### Approach 1:
+
+The simplest way of solving this problem is to loop through each integer, x, checking whether or not it should be counted. This requires checking whether or not x + 1 is in arr.
+
+```
+define function count_elements(arr):
+    count = 0
+    for each x in arr:
+        if integer_in_array(arr, x + 1):
+            count = count + 1
+    return count
+```
+
+To implement the integer_in_array function in the above algorithm, we can use linear search. To do a linear search, we need to loop through each integer of arr. If we find the integer that we're looking for, then return true. If we get to the end of arr, then we know the integer is not there, and so should return false.
+
+```{python}
+define function integer_in_array(arr, target):
+    for each x in arr:
+        if target is equal to x:
+            return true
+    return false
+```
+
+#### Complexity Analysis
+
+Let N be the length of the input array, arr.
+
+* Time complexity : O(N{superscript}2{/superscript}).
+
+    We loop through each of the NNN integers x, checking whether or not x + 1 is also in arr. Checking whether or not x + 1 is in arr is done using linear search, which requires checking through all NNN integers in arr. Because we're doing NNN operations NNN times, we get a time complexity of O(N2)O(N^2)O(N2).
+
+    Space complexity : O(1)O(1)O(1).
+
+    We are only using a constant number of single-value variables (e.g. count), giving us a space complexity of O(1)O(1)O(1).
