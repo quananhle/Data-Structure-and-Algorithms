@@ -1,4 +1,4 @@
-class Solution(object):
+class ShortSolution(object):
     def moveZeroes(self, nums):
         """
         :type nums: List[int]
