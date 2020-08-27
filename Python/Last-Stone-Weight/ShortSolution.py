@@ -1,4 +1,4 @@
-class OptimizingSolution:
+class ShortSolution:
     def lastStoneWeight(self, stones):
         while len(stones) != 1:
             stones = sorted(stones)
