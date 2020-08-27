@@ -50,3 +50,26 @@ Let N be the length of stones.
 
 An alternative to this approach is to simply sort inside the loop every time. This will be even worse, with a time complexity of O(N<sup>2</sup>logN).
 
+### Approach 2: Swap Solution
+
+Conceptually, the simplest way we could solve this problem is to repeatedly search for the 2 largest stones in the array, delete them, and then if they are not the same size, add the new stone size back in. We can repeat this process until there is only one stone left.
+
+Because the array is not sorted, there is no need to preserve the original order. Removals should be done by swapping with the last value, not by shuffling all values along.
+
+#### Complexity Analysis
+
+Let N be the **length of stones**. 
+
+* Time complexity : O(N<sup>2</sup>).
+
+    The only non-O(1) method of StoneArray is findAndRemoveMax(). This method does a single pass over the array, to find the index of the maximum value. This pass has a cost of O(N). Once we find the maximum value, we delete it, although this only has a cost of O(1) because instead of shuffling along, we're simply swapping with the end.
+
+    Each time around the main loop, there is a net loss of either 1 or 2 stones. Starting with N stones and needing to get to 111 stone, this is up to N−1 iterations. On each of these iterations, it finds the maximum twice. In total, we get O(N<sup>2</sup>).
+
+    Note that even if we'd shuffled instead of swapped with the end, the findAndRemoveMax() method still would have been O(N), as the pass and then deletion are done one-after-the-other. However, it's often best to avoid needlessly large constants.
+
+* Space complexity : O(N) or O(1).
+
+    For the Python: We are not allocating any new space for data structures, and instead are modifying the input list. Note that this modifies the input. This has its pros and cons; it saves space, but it means that other functions can't use the same array.
+
+    For the Java: We need to convert the input to an ArrayList, and therefore the ints to Integers. It is possible to write a O(1) space solution for Java, however it is long-winded and a lot of work for what is a poor overall approach anyway.
