@@ -10,9 +10,9 @@ class HeapSolution:
         # while there is more than one stone left, remove the two largest, smash them together, 
         # and insert the result back into the heap if it is non-zero.
         while len(stones) > 1:
-            #pop the parent node 
+            #remove and return the smallest element from heap
             heaviest_1 = heapq.heappop(stones)
-            #pop the parent node 
+            #remove and return the smallest element from heap
             heaviest_2 = heapq.heappop(stones)
             if heaviest_1 != heaviest_2:
                 #push the new element into stones
