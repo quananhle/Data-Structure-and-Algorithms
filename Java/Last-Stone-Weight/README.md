@@ -1,7 +1,7 @@
 ## Last Stone Weight
 
 ```{java}
-public int lastStoneWeight(int[] stones) {:
+public int lastStoneWeight(int[] stones) {
 ```
 
 We have a collection of stones, each stone has a positive integer weight.
