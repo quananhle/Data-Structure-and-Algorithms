@@ -73,3 +73,32 @@ Let N be the **length of stones**.
     For the Python: We are not allocating any new space for data structures, and instead are modifying the input list. Note that this modifies the input. This has its pros and cons; it saves space, but it means that other functions can't use the same array.
 
     For the Java: We need to convert the input to an ArrayList, and therefore the ints to Integers. It is possible to write a O(1) space solution for Java, however it is long-winded and a lot of work for what is a poor overall approach anyway.
+    
+### Approach 3: Heap Solution
+
+While most programming languages have a Heap/ Priority Queue data structure, some, such as Python and Java, only have **Min-Heap**. Just as the name suggests, this is a Heap that instead of always returning the maximum item, it returns the minimum. There are two solutions to this problem:
+
+    1. Multiply all numbers going into the heap by -1, and then multiply them by -1 to restore them when they come out.
+    2. Pass a comparator in (language-dependent).
+
+Approach 2 found and removed the maximum stones in O(N) time, and added the new stone in O(1) time. Approach 1 inverted this, as finding and removing the maximum stones took O(1) time, but adding the new stone took O(N) time. In both cases, we're left with an overall time complexity of O(N) per stone-smash turn.
+
+We want to find a solution that makes both removing the maximums, and adding a new stone, less than O(N).
+
+For this kind of maximum-maintenance, we use a Max-Heap, also known as a Max-Priority Queue. A Max-Heap is a data structure that can take items, and can remove and return the maximum, with both operations taking O(logN) time. It does this by maintaining the items in a special order (within the array), or as a balanced binary tree. We don't need to know these details though, almost all programming languages have a Heap data structure!
+
+Here is the pseudocode using a Heap.
+```
+define function last_stone_weight(stones):
+    heap = a new Max-Heap
+    add all stones to heap
+    while heap contains more than 1 stone:
+        heavy_stone_1 = remove max from heap
+        heavy_stone_2 = remove max from heap
+        if heavy_stone_1 is heavier than heavy_stone_2:
+            new_stone = heavy_stone_1 - heavy_stone_2
+            add new_stone to heap
+    if heap is empty:
+        return 0
+    return last stone on heap
+```
