@@ -1,4 +1,4 @@
-### Move Zeroes
+## Move Zeroes
 
 **Difficulty**: <span style="color:green">Green</span>
 
