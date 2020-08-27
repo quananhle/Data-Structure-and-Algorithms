@@ -1,6 +1,6 @@
 ### Move Zeroes
 
-Code: <color=green>Green</color>
+Code: <span style="color:green">Green</span>
 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
