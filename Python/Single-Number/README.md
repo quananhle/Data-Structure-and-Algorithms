@@ -20,11 +20,19 @@ Input: [4,1,2,1,2]
 Output: 4
 ```
 
-### Approach 1: List operation
+### Approach 1: List
 
 **Algorithm**
 
     Iterate over all the elements in nums
     If some number in nums is new to array, append it
     If some number is already in the array, remove it
+
+Complexity Analysis
+
+* Time complexity : O(n<sup>2</sup>). We iterate through nums, taking O(n) time. We search the whole list to find whether there is duplicate number, taking O(n) time. Because search is in the for loop, so we have to multiply both time complexities which is O(n<sup>2</sup>).
+
+* Space complexity : O(n). We need a list of size nnn to contain elements in nums. 
+
+### Approach 2:
 
