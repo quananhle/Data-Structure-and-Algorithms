@@ -2,5 +2,8 @@
 
 ## Python
 
+#### Code: Green
+
+**1. Missing Number**
 
 ## Java
