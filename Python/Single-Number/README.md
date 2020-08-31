@@ -32,7 +32,16 @@ Complexity Analysis
 
 * Time complexity : O(n<sup>2</sup>). We iterate through nums, taking O(n) time. We search the whole list to find whether there is duplicate number, taking O(n) time. Because search is in the for loop, so we have to multiply both time complexities which is O(n<sup>2</sup>).
 
-* Space complexity : O(n). We need a list of size nnn to contain elements in nums. 
+* Space complexity : O(n). We need a list of size n to contain elements in nums. 
 
-### Approach 2:
+### Approach 2: Hash Table
+
+**Algorithm**
+
+We use hash table to avoid the O(n) time required for searching the elements.
+
+    Iterate through all elements in nums and set up key/value pair.
+    Return the element which appeared only once.
+
+
 
