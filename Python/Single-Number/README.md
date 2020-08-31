@@ -43,5 +43,10 @@ We use hash table to avoid the O(n) time required for searching the elements.
     Iterate through all elements in nums and set up key/value pair.
     Return the element which appeared only once.
 
+Complexity Analysis
+
+* Time complexity : O(n⋅1) = O(n). Time complexity of for loop is O(n). Time complexity of hash table(dictionary in python) operation pop is O(1).
+
+* Space complexity : O(n). The space required by hash_table is equal to the number of elements in nums.
 
 
