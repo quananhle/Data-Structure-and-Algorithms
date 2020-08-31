@@ -1,4 +1,4 @@
-class Solution(object):
+class BitWise(object):
     def singleNumber(self, nums):
         """
         :type nums: List[int]
