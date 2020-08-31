@@ -1,5 +1,5 @@
 from collections import defaultdict
-class Solution(object):
+class HashTable(object):
     def singleNumber(self, nums):
         """
         :type nums: List[int]
