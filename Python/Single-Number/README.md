@@ -20,7 +20,7 @@ Input: [4,1,2,1,2]
 Output: 4
 ```
 
-### Approach 1: List
+### Approach 1: List Operations
 
 **Algorithm**
 
@@ -80,4 +80,6 @@ So we can XOR all bits together to find the unique number.
 * Time complexity : O(n). We only iterate through nums, so the time complexity is the number of elements in nums.
 
 * Space complexity : O(1).
+
+### Approach 5: Set Operations
 
