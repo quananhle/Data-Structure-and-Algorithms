@@ -49,4 +49,12 @@ Complexity Analysis
 
 * Space complexity : O(n). The space required by hash_table is equal to the number of elements in nums.
 
+### Approach 3: Math
+
+Approach 3: Math
+
+**Concept:**
+
+    2 * (a + b + c) - (a + a + b + b + c) = c
+
 
