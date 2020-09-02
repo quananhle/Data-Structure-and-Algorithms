@@ -1,5 +1,7 @@
 # Algorithm and Data Structures Interview Questions
 
+## Description: Algorithm and Data Structures Interview Questions Used by Google, Amazon, Facebook, Netflix, Apple
+
 ## Python
 
 #### Code: Green
