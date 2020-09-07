@@ -79,7 +79,7 @@ missing = 4 ∧ (0 ∧ 0) ∧ (1 ∧ 1) ∧ (2 ∧ 3) ∧ (3 ∧ 4)
 
     This algorithm allocates only constant additional space.
         
-### Approach #4 Gauss' Formula
+### Approach #4 Math.py
 
 **Algorithm**: We can compute the sum of nums in linear time, and by Gauss' formula, we can compute the sum of the first nnn natural numbers in constant time. Therefore, the number that is missing is simply the result of Gauss' formula minus the sum of nums, as nums consists of the first nnn natural numbers minus some number.
 
