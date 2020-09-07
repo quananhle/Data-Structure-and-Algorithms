@@ -60,7 +60,6 @@ If nums were in order, it would be easy to see which number is missing. First, w
 
 **Algorithm**: Because we know that nums contains n numbers and that it is missing exactly one number on the range [0..n−1][, we know that n definitely replaces the missing number in nums. Therefore, if we initialize an integer to n and XOR it with every index and value, we will be left with the missing number. 
 
-|   |   |   |   |   |
 |---|---|---|---|---|
 |Index|   0|   1|   2|   3|
 |Value|   0|   1|   3|   4|
