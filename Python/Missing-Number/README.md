@@ -58,10 +58,24 @@ If nums were in order, it would be easy to see which number is missing. First, w
 
 **Intuition**: We can harness the fact that XOR is its own inverse to find the missing element in linear time.
 
-**Algorithm**: Because we know that nums contains n numbers and that it is missing exactly one number on the range [0..n−1][, we know that n definitely replaces the missing number in nums. Therefore, if we initialize an integer to n and XOR it with every index and value, we will be left with the missing number. 
+**Algorithm**: Because we know that nums contains n numbers and that it is missing exactly one number on the range [0..n−1], we know that n definitely replaces the missing number in nums. Therefore, if we initialize an integer to n and XOR it with every index and value, we will be left with the missing number. 
 
 |Index|   0|   1|   2|   3|
 |---|---|---|---|---|
 |Value|   0|   1|   3|   4|
 
-missing=4∧(0∧0)∧(1∧1)∧(2∧3)∧(3∧4)=(4∧4)∧(0∧0)∧(1∧1)∧(3∧3)∧2=0∧0∧0∧0∧2=2 \begin{aligned} missing &= 4 \wedge (0 \wedge 0) \wedge (1 \wedge 1) \wedge (2 \wedge 3) \wedge (3 \wedge 4) \\ &= (4 \wedge 4) \wedge (0 \wedge 0) \wedge (1 \wedge 1) \wedge (3 \wedge 3) \wedge 2 \\ &= 0 \wedge 0 \wedge 0 \wedge 0 \wedge 2 \\ &= 2 \end{aligned} missing​=4∧(0∧0)∧(1∧1)∧(2∧3)∧(3∧4)=(4∧4)∧(0∧0)∧(1∧1)∧(3∧3)∧2=0∧0∧0∧0∧2=2​
+missing = 4 ∧ (0 ∧ 0) ∧ (1 ∧ 1) ∧ (2 ∧ 3) ∧ (3 ∧ 4)
+        = (4 ∧ 4) ∧ (0 ∧ 0) ∧ (1 ∧ 1) ∧ (3 ∧ 3) ∧ 2
+        = 0 ∧ 0 ∧ 0 ∧ 0 ∧ 2
+        = 2 
+        
+#### Complexity Analysis
+
+* **Time complexity** : O(n)
+
+    Assuming that XOR is a constant-time operation, this algorithm does constant work on nnn iterations, so the runtime is overall linear.
+
+* **Space complexity** : O(1)
+
+    This algorithm allocates only constant additional space.
+        
