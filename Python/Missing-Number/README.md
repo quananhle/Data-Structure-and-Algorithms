@@ -22,7 +22,7 @@ Output: 8
 ```
 **Note:** The algorithm should run in linear runtime complexity.
 
-### Approach #1 Sorting
+### Approach #1 Sorting.py
 
 **Algorithm**
 
@@ -37,3 +37,19 @@ If nums were in order, it would be easy to see which number is missing. First, w
 * **Space complexity** : O(1) (or O(n))
 
     In the sample code, we sorted nums in place, allowing us to avoid allocating additional space. If modifying ```nums``` is forbidden, we can allocate an O(n) size copy and sort that instead.
+     
+### Approach #2 HashSet.py
+
+**Intuition**: A brute force method for solving this problem would be to simply check for the presence of each number that we expect to be present. The naive implementation might use a linear scan of the array to check for containment, but we can use a HashSet to get constant time containment queries and overall linear runtime.
+
+**Algorithm**: This algorithm is almost identical to the brute force approach, except we first insert each element of nums into a set, allowing us to later query for containment in O(1) time.    
+
+#### Complexity Analysis
+
+* **Time complexity** : O(n)
+
+    Because the set allows for O(1) containment queries, the main loop runs in O(n) time. Creating num_set costs O(n) time, as each set insertion runs in amortized O(1) time, so the overall runtime is O(n+n)=O(n).
+    
+* **Space complexity** : O(n)
+
+    nums contains n−1 distinct elements, so it costs O(n) space to store a set containing all of them.
