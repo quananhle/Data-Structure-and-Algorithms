@@ -87,7 +87,7 @@ missing = 4 ∧ (0 ∧ 0) ∧ (1 ∧ 1) ∧ (2 ∧ 3) ∧ (3 ∧ 4)
 
 * **Time complexity** : O(n)
 
-    Summing nums costs us O(n)\mathcal{O}(n)O(n) time, so the algorithm is overall linear
+    Summing nums costs us O(n) time, so the algorithm is overall linear
 
 * **Space complexity** : O(1)
 
