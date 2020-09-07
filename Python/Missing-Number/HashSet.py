@@ -1,4 +1,4 @@
-class Solution(object):
+class HashSet(object):
     def missingNumber(self, nums):
         """
         :type nums: List[int]
