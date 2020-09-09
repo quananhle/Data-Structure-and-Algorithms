@@ -13,3 +13,19 @@ e
 Explanation:
 'e' is the letter that was added.
 ```
+
+### Approach 1: Sorting
+
+**Intuition**: The first thing we might think of is, what if string t was not shuffled. If string t was not shuffled this problem would have been so easy. And then next we might end up bringing the order between the two strings. What better than sorting both the strings.
+```
+    i.e. sort(String t) = sort(shuffled(String s + Any character)).
+```
+That said, this could be one of the most brute ways of solving this problem. (There are other brute ways too. The intent is not to challenge your brute instincts :P)
+
+**Algorithm**:
+
+    1. Sort the string s and string t.
+
+    2. Iterate through the length of strings and do a character by character comparison. This just checks if the current character in string t is present in string s.
+
+    3. Once we encounter a character which is in string t but not in string s, we have found the extra character string t was hiding all this while.
