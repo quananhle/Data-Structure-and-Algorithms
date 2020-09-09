@@ -29,3 +29,9 @@ That said, this could be one of the most brute ways of solving this problem. (Th
     2. Iterate through the length of strings and do a character by character comparison. This just checks if the current character in string t is present in string s.
 
     3. Once we encounter a character which is in string t but not in string s, we have found the extra character string t was hiding all this while.
+
+#### Complexity Analysis
+
+* **Time Complexity**: O(Nlog(N)), where N is length of the strings. Sorting is the most expensive operation of this algorithm. Sorting would take O(Nlog(N)) time. Iterating both the strings for character by character comparison would take another O(N) time.
+
+* **Space Complexity**: O(N). The sorted character arrays would take O(N) each. An important thing to note here is that we are converting the String in java to an array first and then sorting it. That's what takes the additional space. In Python, we can just sort the given input inplace by using the sort method. If you can get around the conversion to a temporary array in Java as well, then we will have an O(1) solution here. 
