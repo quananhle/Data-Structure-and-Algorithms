@@ -35,3 +35,31 @@ That said, this could be one of the most brute ways of solving this problem. (Th
 * **Time Complexity**: O(Nlog(N)), where N is length of the strings. Sorting is the most expensive operation of this algorithm. Sorting would take O(Nlog(N)) time. Iterating both the strings for character by character comparison would take another O(N) time.
 
 * **Space Complexity**: O(N). The sorted character arrays would take O(N) each. An important thing to note here is that we are converting the String in java to an array first and then sorting it. That's what takes the additional space. In Python, we can just sort the given input inplace by using the sort method. If you can get around the conversion to a temporary array in Java as well, then we will have an O(1) solution here. 
+
+### Approach 2: Using HashMap
+
+We might just think in worst case the string is of length N and each character has a frequency of 1. This would result in a hash map of O(N)O(N)O(N) space. This is when your attention to detail comes to test.
+```
+    The problem states, string s and t consists of only lowercase letters.
+```
+The above statement implies we only have 26 characters i.e. [a, z]. Thus, we have a space complexity for just 26 characters.
+
+It's always good to clarify this with the interviewer as now the space complexity would just be constant. Thus, this approach can also be implemented using array of length 26 as a hash table, where each index corresponds to a letter from [a, z].
+
+**Algorithm**: 
+```
+    1. Store all the characters of string s in a hash map called counterS. The key would be the character and value would be number of times the character appeared in the string.
+
+    2. Now, iterate through string t and for each character, check if it is present in the hash map counterS.
+
+    3. If the character is present in counterS then we just decrement the corresponding value by 1.
+
+    4. If the character is not present in counterS or has a frequency of zero in counterS it means we have found the extra character of string t.
+```
+**Note** - We are dropping the frequency of a character by 1 every time there is a match. This helps us find out the extra character which is present in both s and t but the number of occurrences vary. Thus keeping frequency is equally important.
+
+#### Complexity Analysis
+
+* **Time Complexity**: O(N), where N is length of the strings. Since, we iterate through both the strings once.
+
+* **Space Complexity**: O(1). The problem states string s and string t have lowercase letters. Thus, the total number of unique characters and eventually buckets in the hash map possible are just 26. 
