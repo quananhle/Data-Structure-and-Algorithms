@@ -38,7 +38,7 @@ That said, this could be one of the most brute ways of solving this problem. (Th
 
 ### Approach 2: Using HashMap
 
-We might just think in worst case the string is of length N and each character has a frequency of 1. This would result in a hash map of O(N)O(N)O(N) space. This is when your attention to detail comes to test.
+We might just think in worst case the string is of length N and each character has a frequency of 1. This would result in a hash map of O(N) space. This is when your attention to detail comes to test.
 ```
     The problem states, string s and t consists of only lowercase letters.
 ```
