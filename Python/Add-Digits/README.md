@@ -24,7 +24,7 @@ dr<sub>10</sub>(n) = 9, if n = 9k
 
 dr<sub>10</sub>(n)= n mod 9, if n ≠ 9k 
 
-Complexity Analysis
+### Complexity Analysis
 
     Time Complexity: O(1)
 
