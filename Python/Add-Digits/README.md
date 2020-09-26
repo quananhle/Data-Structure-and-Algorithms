@@ -23,3 +23,9 @@ dr<sub>10</sub>(n) = 0, if n = 0
 dr<sub>10</sub>(n) = 9, if n = 9k 
 
 dr<sub>10</sub>(n)= n mod 9, if n ≠ 9k 
+
+Complexity Analysis
+
+    Time Complexity: O(1)
+
+    Space Complexity: O(1)
