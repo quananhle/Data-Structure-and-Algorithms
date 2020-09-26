@@ -2,7 +2,7 @@ class Solution:
     def split(self, message):  
         lastSpace = 0
         curStart = 0
-        ans = []
+        ouput = []
         totalSplit = 0
         count = 0
         i = 0
@@ -16,7 +16,7 @@ class Solution:
                         lastSpace = i
                 totalSplit += 1
                 count = 0
-                ans.append(message[curStart:lastSpace+1])
+                ouput.append(message[curStart:lastSpace+1])
                 if i > lastSpace:
                     i = lastSpace
                 curStart = i + 1
@@ -24,9 +24,9 @@ class Solution:
         if curStart < len(message):
             if totalSplit == 0:
                 return [message]
-            ans.append(message[curStart:])
+            ouput.append(message[curStart:])
             totalSplit += 1
         
-        for i, s in enumerate(ans):
-            ans[i] = s + '(' + str(i+1) + '/' + str(totalSplit) + ')'
-        return ans
+        for i, s in enumerate(ouput):
+            ouput[i] = s + '(' + str(i+1) + '/' + str(totalSplit) + ')'
+        return ouput
