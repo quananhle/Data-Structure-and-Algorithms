@@ -6,12 +6,12 @@ class Solution:
         totalSplit = 0
         count = 0
         i = 0
-        while i < len(input1):
+        while i < len(message):
             count += 1
-            if input1[i] == ' ':
+            if message[i] == ' ':
                 lastSpace = i
             if count == 155:
-                if input1[i] != ' ':
+                if message[i] != ' ':
                     if (i < len(message) - 1 and message[i+1] == ' ') or i == len(message) - 1:
                         lastSpace = i
                 totalSplit += 1
@@ -23,8 +23,8 @@ class Solution:
             i += 1
         if curStart < len(message):
             if totalSplit == 0:
-                return [input1]
-            ans.append(input1[curStart:])
+                return [message]
+            ans.append(message[curStart:])
             totalSplit += 1
         
         for i, s in enumerate(ans):
