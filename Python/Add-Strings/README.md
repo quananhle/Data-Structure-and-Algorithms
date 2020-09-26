@@ -24,13 +24,13 @@ __Output__: "888"
 
 * Loop over the strings from the end to the beginning using p1 and p2. Stop when both strings are used entirely.
 
-    Set x1 to be equal to a digit from string nums1 at index p1. If p1 has reached the beginning of nums1, set x1 to 0.
+        Set x1 to be equal to a digit from string nums1 at index p1. If p1 has reached the beginning of nums1, set x1 to 0.
 
-    Do the same for x2. Set x2 to be equal to digit from string nums2 at index p2. If p2 has reached the beginning of nums2, set x2 to 0.
+        Do the same for x2. Set x2 to be equal to digit from string nums2 at index p2. If p2 has reached the beginning of nums2, set x2 to 0.
 
-    Compute the current value: value = (x1 + x2 + carry) % 10, and update the carry: carry = (x1 + x2 + carry) / 10.
+        Compute the current value: value = (x1 + x2 + carry) % 10, and update the carry: carry = (x1 + x2 + carry) / 10.
 
-    Append the current value to the result: res.append(value).
+        Append the current value to the result: res.append(value).
 
 * Now both strings are done. If the carry is still non-zero, update the result: res.append(carry).
 
