@@ -1,5 +1,6 @@
 class Solution:
     def split(self, message):  
+        #length of message is limited to 160 characters including white space
         lastSpace = 0
         curStart = 0
         ouput = []
@@ -26,7 +27,9 @@ class Solution:
                 return [message]
             ouput.append(message[curStart:])
             totalSplit += 1
-        
-        for i, s in enumerate(ouput):
-            ouput[i] = s + '(' + str(i+1) + '/' + str(totalSplit) + ')'
+        if len(message) < 160:
+            return None
+        else:
+            for i, s in enumerate(ouput):
+                ouput[i] = s + '(' + str(i+1) + '/' + str(totalSplit) + ')'
         return ouput
