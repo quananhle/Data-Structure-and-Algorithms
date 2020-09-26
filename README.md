@@ -17,4 +17,4 @@
 1. [Missing Number](): Given an array containing n distinct numbers taken from ```0, 1, 2, ..., n``` find the one that is missing from the array.
 2. [Single Number](https://github.com/Quananhle/Algorithm-DS/tree/master/Java/Single-Number): Given a non-empty array of integers, every element appears ***twice*** except for one. Find that single one.
 3. [Longest Common Prefix](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/LongestCommonPrefix): Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
-5. [Add Digits](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/Add-Digits): Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+4. [Add Digits](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/Add-Digits): Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
