@@ -12,16 +12,16 @@ class Solution:
                 lastSpace = i
             if count == 155:
                 if input1[i] != ' ':
-                    if (i < len(message) - 1 and input1[i+1] == ' ') or i == len(input1) - 1:
+                    if (i < len(message) - 1 and message[i+1] == ' ') or i == len(message) - 1:
                         lastSpace = i
                 totalSplit += 1
                 count = 0
-                ans.append(input1[curStart:lastSpace+1])
+                ans.append(message[curStart:lastSpace+1])
                 if i > lastSpace:
                     i = lastSpace
                 curStart = i + 1
             i += 1
-        if curStart < len(input1):
+        if curStart < len(message):
             if totalSplit == 0:
                 return [input1]
             ans.append(input1[curStart:])
