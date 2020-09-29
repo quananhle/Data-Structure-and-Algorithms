@@ -18,5 +18,4 @@ def reverse_integer(num):
 print(reverse_integer(123))
 print(reverse_integer(-1000))
 print(reverse_integer(4539))
-print(reverse_integer(43.56))
 print(reverse_integer(123134342312))
