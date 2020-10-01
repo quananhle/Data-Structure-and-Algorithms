@@ -15,6 +15,7 @@ class Solution {
             map.put(item[0], gradeList);
         }
         System.out.print(map);
+        //{1=[91, 92, 60, 65, 87, 100], 2=[93, 97, 77, 100, 76]}
         int totalStudents = map.keySet().size();
         int[][] result = new int[totalStudents][2];
         for(Map.Entry<Integer,List<Integer>> entry : map.entrySet()){
