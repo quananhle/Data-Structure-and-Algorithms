@@ -23,7 +23,9 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
-### Approach 1: ```OnePassSolution.py``` and ```OnePassPointerSolution.py```
+### Approach 1: 
+
+```OnePassSolution.py``` and ```OnePassPointerSolution.py```
 
 #### Complexity Analysis
 
@@ -31,7 +33,13 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
     Space complexity : O(1). Only two variables are used.
 
-### Approach 2: ```BruteForce.py``` 
+### Approach 2: 
+
+```BruteForce.py``` 
+
+We need to find out the maximum difference (which will be the maximum profit) between two numbers in the given array. Also, the second number (selling price) must be larger than the first one (buying price).
+
+In formal terms, we need to find ```max⁡(prices[j]−prices[i])```, for every ```i``` and ```j``` such that ```j>i```
 
 #### Complexity Analysis
 
