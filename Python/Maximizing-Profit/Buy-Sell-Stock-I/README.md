@@ -23,7 +23,7 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
-1. ```OnePassSolution.py```
+1. ```OnePassSolution.py``` and ```OnePassPointerSolution.py```
 
 #### Complexity Analysis
 
