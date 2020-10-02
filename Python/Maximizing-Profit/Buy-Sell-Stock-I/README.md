@@ -22,3 +22,11 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
+
+1. ```OnePassSolution.py```
+
+#### Complexity Analysis
+
+    Time complexity : O(n). Only a single pass is needed.
+
+    Space complexity : O(1). Only two variables are used.
