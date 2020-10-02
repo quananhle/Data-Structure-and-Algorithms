@@ -1,4 +1,4 @@
-class FastSolution(object):
+class FastRuntimeSolution(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
