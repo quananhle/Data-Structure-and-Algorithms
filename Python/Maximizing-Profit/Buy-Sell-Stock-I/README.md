@@ -8,8 +8,12 @@ If you were only permitted to complete **at most one transaction** (i.e., buy on
 
 Note that you cannot sell a stock before you buy one.
 
-```{Java}
-    public int maxProfit(int[] prices) {
+```{Python}
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
 ```
 
 __Example 1__:
@@ -29,7 +33,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ### Approach 1: 
 
-```OnePassSolution.java``` and ```OnePassPointerSolution.java```
+```OnePassSolution.py``` and ```OnePassPointerSolution.py```
 
 #### Complexity Analysis
 
@@ -39,7 +43,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ### Approach 2: 
 
-```BruteForce.java``` 
+```BruteForce.py``` 
 
 We need to find out the maximum difference (which will be the maximum profit) between two numbers in the given array. Also, the second number (selling price) must be larger than the first one (buying price).
 
