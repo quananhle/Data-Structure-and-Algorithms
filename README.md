@@ -22,7 +22,7 @@
 3. [Longest Common Prefix](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/LongestCommonPrefix): Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
 4. [Add Digits](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/Add-Digits): Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
 5. [High Five](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/HashMap/High-Five): Given a list of scores of different students, return the average score of each student's top five scores in the order of each student's id. Each entry ```items[i]``` has ```items[i][0]``` the student's id, and ```items[i][1]``` the student's score.  The average score is calculated using integer division.
-
+4. [Add Digits](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Java/Maximizing-Profit/Buy-and-Sell-Stock-I): Say you have an array for which the i<sup>th</sup> element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one.
 
 
 ⭐️ From [Quan](https://github.com/Quananhle) with :sparkling_heart: 
