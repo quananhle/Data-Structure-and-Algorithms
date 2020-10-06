@@ -9,12 +9,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 
 ```{JAVA}
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
+public int maxProfit(int[] prices) {
 ```
 
 __Example 1__:
