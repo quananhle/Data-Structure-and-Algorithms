@@ -31,7 +31,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ```OnePassSolution.java``` and ```OnePassPointerSolution.java```
 
-121_profit_graph.png
+![Alt text](pic/121_profit_graph.png?raw=true "Maximum Profit")
 
 #### Complexity Analysis
 
