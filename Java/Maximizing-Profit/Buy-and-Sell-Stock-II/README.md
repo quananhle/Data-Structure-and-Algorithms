@@ -40,4 +40,4 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
 
-![Alt text](images/122_maxprofit_1.png?raw=true "Maximum Profit")
+![Alt text](../images/122_maxprofit_1.PNG?raw=true "Maximum Profit")
