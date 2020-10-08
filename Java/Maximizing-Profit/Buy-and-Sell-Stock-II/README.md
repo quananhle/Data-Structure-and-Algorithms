@@ -38,3 +38,6 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
+
+
+![Alt text](images/122_profit_graph.png?raw=true "Maximum Profit")
