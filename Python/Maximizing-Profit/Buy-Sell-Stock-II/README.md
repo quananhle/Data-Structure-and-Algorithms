@@ -56,7 +56,9 @@ Say the given array is: ```[7, 1, 5, 3, 6, 4]```. If we plot the numbers of the 
 
 If we analyze the graph, we notice that the points of interest are the consecutive valleys and peaks.
 
-Mathematically speaking: TotalProfit=∑i(height(peak<sub>i</sub>)−height(valley<sub>i</sub>)) Total Profit= \sum_{i}(height(peak_i)-height(valley_i)) TotalProfit=∑i​(height(peaki​)−height(valleyi​))
+Mathematically speaking: __TotalProfit__ = ∑<sub>i</sub>(height(peak<sub>i</sub>) − height(valley<sub>i</sub>)) 
+
+TotalProfit=∑i​(height(peaki​)−height(valleyi​))
 
 The key point is we need to consider every peak immediately following a valley to maximize the profit. In case we skip one of the peaks (trying to obtain more profit), we will end up losing the profit over one of the transactions leading to an overall lesser profit.
 
