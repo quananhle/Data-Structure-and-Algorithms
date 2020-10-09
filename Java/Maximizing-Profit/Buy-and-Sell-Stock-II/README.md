@@ -86,4 +86,14 @@ This solution follows the logic used in Peak Valley solution itself, but with on
 
 The graph corresponding to this array is:
 
-![Alt text](images/122_maxprofit_1.PNG?raw=true "Maximum Profit")
+![Alt text](images/122_maxprofit_2.PNG?raw=true "Maximum Profit")
+
+From the above graph, we can observe that the sum A+B+C is equal to the difference D corresponding to the difference between the heights of the consecutive peak and valley.
+
+#### Complexity Analysis
+
+___Time complexity___ : O(n). Single pass.
+
+___Space complexity___ : O(1). Constant space needed.
+
+
