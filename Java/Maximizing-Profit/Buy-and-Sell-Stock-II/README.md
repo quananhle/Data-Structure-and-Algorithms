@@ -67,6 +67,6 @@ In this case, we simply calculate the profit corresponding to all the possible s
 
 #### Complexity Analysis
 
-    Time complexity : O(n<sup>n</sup>). Recursive function is called n<sup>n</sup> times.
+___Time complexity___ : O(n<sup>n</sup>). Recursive function is called n<sup>n</sup> times.
 
-    Space complexity : O(n). Depth of recursion is nnn. 
+___Space complexity___ : O(n). Depth of recursion is nnn. 
