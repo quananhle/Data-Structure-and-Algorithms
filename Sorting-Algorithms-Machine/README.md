@@ -24,11 +24,17 @@ Run a single or multiple sorting algorithms on any randomly-generated list of in
 
 <img src="https://media.giphy.com/media/cZxTGymVeHOKCQYXM7/giphy.gif" title="Heap Sorting Visualization" alt="Gif of the Heap Sorting Visualization">
 
-When option ```Visualization``` is selected, the list is fixed with the size of 375 integer numbers, and only 1 sorting algorithm can be chose.
+When option ```Visualization``` is selected, the list is fixed with the size of 375 integer numbers, and only 1 sorting algorithm can be chose. Press ```RUN``` to run the algorithm.
 
 ### Analyzation of all sorting algorithms
 
+![Alt text](pic/Analyzation.png?raw=true "Main page")
 
+When option ```Analyzation``` is selected, all sorting algorithms are automatically selected and the list is fixed with the size of 5500 integer numbers. Press ```RUN``` to display the result.
+
+<img src="https://media.giphy.com/media/HUI5PQZYehSiut9Pxd/giphy.gif" title="Unchecked Analyzation" alt="Gif of Unchecked Analyzation">
+
+If option ```Analyzation``` is deselected, text field will be editable again and all algorithms buttons will be unchecked.
 
 # Usage
 When you run the application you will be greeted with a menu system. You have the following customisations:
