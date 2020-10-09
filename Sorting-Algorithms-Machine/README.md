@@ -53,3 +53,7 @@ When you run the application you will be greeted with a menu system.
 - **SELECT ALL/DESELECT ALL** - Used to quickly select/deselect all algorithms after 1 click.
 - **RESET** - Used to clear all selections and field.
 
+### Exceptions
+
+<img src="https://media.giphy.com/media/Fqp68iHSvm8vzmq9h7/giphy.gif" title="Exceptions Catching" alt="Exceptions">
+
