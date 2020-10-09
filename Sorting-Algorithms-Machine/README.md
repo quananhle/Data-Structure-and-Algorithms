@@ -3,7 +3,7 @@
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
 > Displays a visual representation of various sorting algorithms.
-<img src="http://leonwilberforce.com/sorting.gif" title="Sorting Gif" alt="Gif of the application sorting">
+<img src="https://media.giphy.com/media/mm5YZDK21zGFzpRhWo/giphy.gif" title="Sorting Gif" alt="Gif of the application sorting">
 
 ## FEATURE
 
