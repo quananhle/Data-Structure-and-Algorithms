@@ -2,7 +2,9 @@
 
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
-```application.jar```
+## INSTRUCTIONS
+
+Program is launched by the ```application.jar``` file 
 
 > Displays a visual representation of various sorting algorithms.
 >> - Insertion Sort
@@ -12,7 +14,7 @@
 >> - Radix Sort
 >> - Counting Sort
 
-## FEATURE
+## FEATURES
 
 ### Display the numbers
 
