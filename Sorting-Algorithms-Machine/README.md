@@ -3,20 +3,22 @@
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
 > Displays a visual representation of various sorting algorithms.
-<img src="https://media.giphy.com/media/mm5YZDK21zGFzpRhWo/giphy.gif" title="Sorting Gif" alt="Gif of the application sorting">
+
+>> - Insertion Sort
+>> - Merge Sort
+>> - Quick Sort
+>> - Heap Sort
+>> - Radix Sort
+>> - Counting Sort
 
 ## FEATURE
 
 ### Display the numbers
 
-Run a sorting algorithm on any randomly-generated list of integer numbers.
-- Run
-- Run
-- Run 
-- Run a Bubble Sort
-- Run a Shuttle Sort
-- Run a Shaker Sort
-- Change the speed of the sorting to easily analyse and understand what is happening.
+<img src="https://media.giphy.com/media/mm5YZDK21zGFzpRhWo/giphy.gif" title="Sorting Gif" alt="Gif of the application sorting">
+
+Run a single or multiple sorting algorithms on any randomly-generated list of integer numbers.
+
 
 # Usage
 When you run the application you will be greeted with a menu system. You have the following customisations:
