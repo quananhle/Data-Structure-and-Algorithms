@@ -61,3 +61,23 @@ Mathematically speaking: __TotalProfit__ = ∑<sub>i</sub>(height(peak<sub>i</su
 The key point is we need to consider every peak immediately following a valley to maximize the profit. In case we skip one of the peaks (trying to obtain more profit), we will end up losing the profit over one of the transactions leading to an overall lesser profit.
 
 For example, in the above case, if we skip peak<sub>i</sub> and valley<sub>j</sub> trying to obtain more profit by considering points with more difference in heights, the net profit obtained will always be lesser than the one obtained by including them, since C will always be lesser than A+B.
+
+### Approach: Simple One Pass
+
+__Algorithm__:
+
+This solution follows the logic used in Peak Valley solution itself, but with only a slight variation. In this case, instead of looking for every peak following a valley, we can simply go on crawling over the slope and keep on adding the profit obtained from every consecutive transaction. In the end, we will be using the peaks and valleys effectively, but we need not track the costs corresponding to the peaks and valleys along with the maximum profit, but we can directly keep on adding the difference between the consecutive numbers of the array if the second number is larger than the first one, and at the total sum we obtain will be the maximum profit. This approach will simplify the solution. This can be made clearer by taking this example:
+
+```[1, 7, 2, 3, 6, 7, 6, 7]```
+
+The graph corresponding to this array is:
+
+![Alt text](images/122_maxprofit_2.PNG?raw=true "Maximum Profit")
+
+From the above graph, we can observe that the sum A+B+C is equal to the difference D corresponding to the difference between the heights of the consecutive peak and valley.
+
+#### Complexity Analysis
+
+___Time complexity___ : O(n). Single pass.
+
+___Space complexity___ : O(1). Constant space needed.
