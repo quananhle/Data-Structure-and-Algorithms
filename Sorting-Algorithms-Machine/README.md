@@ -2,6 +2,8 @@
 
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
+```application.jar```
+
 > Displays a visual representation of various sorting algorithms.
 >> - Insertion Sort
 >> - Merge Sort
