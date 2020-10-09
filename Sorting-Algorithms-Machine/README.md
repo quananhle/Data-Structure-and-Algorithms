@@ -22,9 +22,13 @@ Run a single or multiple sorting algorithms on any randomly-generated list of in
 
 <img src="https://media.giphy.com/media/CcaHlGjsRGgX3ax4B3/giphy.gif" title="Quick Sorting Visualization" alt="Gif of the Quick Sorting Visualization">
 
-
+<img src="https://media.giphy.com/media/cZxTGymVeHOKCQYXM7/giphy.gif" title="Heap Sorting Visualization" alt="Gif of the Heap Sorting Visualization">
 
 When option ```Visualization``` is selected, the list is fixed with the size of 375 integer numbers, and only 1 sorting algorithm can be chose.
+
+### Analyzation of all sorting algorithms
+
+
 
 # Usage
 When you run the application you will be greeted with a menu system. You have the following customisations:
