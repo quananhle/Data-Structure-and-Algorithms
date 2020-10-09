@@ -36,11 +36,16 @@ When option ```Analyzation``` is selected, all sorting algorithms are automatica
 
 If option ```Analyzation``` is deselected, text field will be editable again and all algorithms buttons will be unchecked.
 
-# Usage
-When you run the application you will be greeted with a menu system. You have the following customisations:
-### Array Options
-- **Array field**  - You can enter a comma separated list of integers.
-- **Array Size** - This is the size of the array. You can also fill this in and click the Random button to generate a random array of that size
-### Sorting Options
-- **Speed** - This is the speed of the sorting, you can use this to slow it down to get a good look at what is happening.
-Here you can select the type of sort you want to perform or select **all** for them all to run at once.
+## USAGE
+When you run the application you will be greeted with a menu system.
+### List Generating Options
+- **Text Field**  - User determine the size of the list.
+- **Visualization** - Fixed size of 375 integer numbers
+- **Analyzation** - Fixed size of 5500 integer numbers
+
+### Buttons
+- **GENERATE** - Used to generate a list of random numbers from 1 to 999. Button is frozen when ```Visualization``` or ```Analyzation``` is selected.
+- **RUN** - Main button, used to handle all commands.
+- **SELECT ALL/DESELECT ALL** - Used to quickly select/deselect all algorithms after 1 click.
+- **RESET** - Used to clear all selections and field.
+
