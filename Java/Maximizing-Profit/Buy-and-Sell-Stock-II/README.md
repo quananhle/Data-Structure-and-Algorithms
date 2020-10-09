@@ -64,3 +64,9 @@ For example, in the above case, if we skip peak<sub>i</sub> and valley<sub>j</su
 ```BruteForce.java```
 
 In this case, we simply calculate the profit corresponding to all the possible sets of transactions and find out the maximum profit out of them.
+
+#### Complexity Analysis
+
+    Time complexity : O(n<sup>n</sup>). Recursive function is called n<sup>n</sup> times.
+
+    Space complexity : O(n). Depth of recursion is nnn. 
