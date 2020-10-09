@@ -74,3 +74,16 @@ In this case, we simply calculate the profit corresponding to all the possible s
 ___Time complexity___ : O(n<sup>n</sup>). Recursive function is called n<sup>n</sup> times.
 
 ___Space complexity___ : O(n). Depth of recursion is n. 
+
+
+### Approach: Simple One Pass
+
+__Algorithm__:
+
+This solution follows the logic used in Peak Valley solution itself, but with only a slight variation. In this case, instead of looking for every peak following a valley, we can simply go on crawling over the slope and keep on adding the profit obtained from every consecutive transaction. In the end, we will be using the peaks and valleys effectively, but we need not track the costs corresponding to the peaks and valleys along with the maximum profit, but we can directly keep on adding the difference between the consecutive numbers of the array if the second number is larger than the first one, and at the total sum we obtain will be the maximum profit. This approach will simplify the solution. This can be made clearer by taking this example:
+
+```[1, 7, 2, 3, 6, 7, 6, 7]```
+
+The graph corresponding to this array is:
+
+![Alt text](images/122_maxprofit_1.PNG?raw=true "Maximum Profit")
