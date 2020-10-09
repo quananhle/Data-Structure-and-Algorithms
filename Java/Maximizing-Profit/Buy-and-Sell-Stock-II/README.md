@@ -57,7 +57,11 @@ The key point is we need to consider every peak immediately following a valley t
 
 For example, in the above case, if we skip peak<sub>i</sub> and valley<sub>j</sub> trying to obtain more profit by considering points with more difference in heights, the net profit obtained will always be lesser than the one obtained by including them, since C will always be lesser than A+B.
 
+#### Complexity Analysis
 
+___Time complexity___: O(n). Single pass.
+
+___Space complexity___: O(1). Constant space required. 
 
 ### Approach: Brute Force
 
