@@ -3,7 +3,6 @@
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
 > Displays a visual representation of various sorting algorithms.
-
 >> - Insertion Sort
 >> - Merge Sort
 >> - Quick Sort
@@ -19,6 +18,9 @@
 
 Run a single or multiple sorting algorithms on any randomly-generated list of integer numbers.
 
+### Visualization of the sorting procedure
+
+<img src="https://media.giphy.com/media/CcaHlGjsRGgX3ax4B3/giphy.gif" title="Sorting Gif" alt="Gif of the application sorting">
 
 # Usage
 When you run the application you will be greeted with a menu system. You have the following customisations:
