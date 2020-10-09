@@ -1,6 +1,7 @@
+# GUI-Sorting-Algorithms
+
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
-# GUI-Sorting-Algorithms
 > Displays a visual representation of various sorting algorithms.
 <img src="http://leonwilberforce.com/sorting.gif" title="Sorting Gif" alt="Gif of the application sorting">
 
