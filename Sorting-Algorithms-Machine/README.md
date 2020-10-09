@@ -1,12 +1,18 @@
-# GUI-Sorting-Algorithms
+# GUI-SORTING-ALGORITHMS
 
 ![Alt text](pic/main-interface.png?raw=true "Main page")
 
 > Displays a visual representation of various sorting algorithms.
 <img src="http://leonwilberforce.com/sorting.gif" title="Sorting Gif" alt="Gif of the application sorting">
 
-# Features
-- Run a sorting algorithm on any int array you want.
+## FEATURE
+
+### Display the numbers
+
+Run a sorting algorithm on any randomly-generated list of integer numbers.
+- Run
+- Run
+- Run 
 - Run a Bubble Sort
 - Run a Shuttle Sort
 - Run a Shaker Sort
