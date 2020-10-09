@@ -62,7 +62,9 @@ The key point is we need to consider every peak immediately following a valley t
 
 For example, in the above case, if we skip peak<sub>i</sub> and valley<sub>j</sub> trying to obtain more profit by considering points with more difference in heights, the net profit obtained will always be lesser than the one obtained by including them, since C will always be lesser than A+B.
 
-### Approach: Simple One Pass
+### Approach: One Pass
+
+```OnePass.py```
 
 __Algorithm__:
 
