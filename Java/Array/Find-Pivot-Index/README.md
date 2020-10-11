@@ -28,8 +28,12 @@ Explanation:
 There is no index that satisfies the conditions in the problem statement.
 ```
 
-### Complexity Analysis
+### Approach: Prefix Sum
+
+```PrefixSum.java```
+
+#### Complexity Analysis
 
     Time Complexity: O(N), where N is the length of nums.
 
-    Space Complexity: O(1), the space used by left_sum and right_sum.
+    Space Complexity: O(1), the space used by leftSum and rightSum.
