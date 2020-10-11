@@ -21,3 +21,9 @@ Output: -1
 Explanation:
 There is no index that satisfies the conditions in the problem statement.
 ```
+
+### Complexity Analysis
+
+    Time Complexity: O(N), where N is the length of nums.
+
+    Space Complexity: O(1), the space used by left_sum and right_sum.
