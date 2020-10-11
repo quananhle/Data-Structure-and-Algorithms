@@ -22,7 +22,11 @@ Explanation:
 There is no index that satisfies the conditions in the problem statement.
 ```
 
-### Complexity Analysis
+### Approach: Prefix Sum
+
+```PrefixSum.py```
+
+#### Complexity Analysis
 
     Time Complexity: O(N), where N is the length of nums.
 
