@@ -1,4 +1,4 @@
-class Solution(object):
+class PrefixSum(object):
     def pivotIndex(self, nums):
         """
         :type nums: List[int]
