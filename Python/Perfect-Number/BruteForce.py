@@ -10,5 +10,7 @@ class Solution(object):
         for n in range (1, num):
             if 0 == (num % n):
                 sum += n
+            if sum > num:
+                return False
         return sum == num
         
