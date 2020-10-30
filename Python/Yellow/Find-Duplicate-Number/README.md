@@ -50,3 +50,7 @@ __Answer:__ we can compare the size of the list with the size of the set that co
     if len(nums) != len(set(num)):
         return 0
 ```
+
+#### 2. Can you solve the problem without modifying the array nums?
+
+__Answer:__ Yes, refer to Math approach
