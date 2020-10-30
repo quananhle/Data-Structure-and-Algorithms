@@ -54,6 +54,6 @@ __Answer:__ we can compare the size of the list with the size of the set that co
 
 #### 2. Can you solve the problem without modifying the list ```nums```?
 
-__Answer:__ Yes, refer to Math approach
+__Answer:__ Yes, refer to the Math approach
 
 #### 3. Can you solve the problem using only constant, ```O(1)``` extra space?
