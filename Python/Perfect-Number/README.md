@@ -67,9 +67,3 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 __Algorirthm__:
 
 
-$$\frac{n}{(2)}$$
-
-In this method, instead of iterating over all the integers to find the factors of ```num```, we only iterate upto the 
-
-$$\sqrt{k}$$
-
