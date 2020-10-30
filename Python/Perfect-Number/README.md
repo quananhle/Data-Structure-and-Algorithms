@@ -69,5 +69,5 @@ __Algorirthm__:
 
 $\frac{n}{(2)}$
 
-In this method, instead of iterating over all the integers to find the factors of ```num```, we only iterate upto the \sqrt{k}
+In this method, instead of iterating over all the integers to find the factors of ```num```, we only iterate upto the $$\sqrt{k}$$
 
