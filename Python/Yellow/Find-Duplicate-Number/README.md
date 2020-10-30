@@ -12,7 +12,7 @@ There is only one duplicate number in nums, return this duplicate number.
         """
 ```
 
-### Simple approach 
+### Simple Approach 
 
 ```{PYTHON}
         nums.sort()
@@ -23,7 +23,19 @@ There is only one duplicate number in nums, return this duplicate number.
 
 __Note:__ This approach, however, modified the list as we sort ```nums``` in place, so the memory footprint is constant or O(1). But if we cannot modify the input array, then we must allocate linear space for a copy of ```nums``` and sort that instead, but the space complexity is now O(n).
 
-### Defaultdict approach
+### Set Approach
+
+```{PYTHON}
+        num_set = set()
+        for num in nums:
+            if num in num_set:
+                return num
+            num_set.add(num)
+```
+
+__Note:__ This approach has ```O(n)``` time complexity, as set in both Python and Java rely on underlying hash tables, so insertion and lookup have amortized constant time complexities. The algorithm is therefore linear, as it consists of a for loop that performs constant work n times. The space complexity is also ```O(n)``` as in the worst case, the duplicate element appears twice, with one of its appearances at array index n−1. In this case, ```num_set``` will contain n−1 distinct values, and will therefore occupy ```O(n)``` space.
+
+### Defaultdict Approach
 
 ```{PYTHON}
         res = collections.defaultdict(int)
@@ -36,7 +48,7 @@ __Note:__ This approach, however, modified the list as we sort ```nums``` in pla
                 return num
 ```
 
-### Math approach
+### Math Approach
 
 ```{PYTHON}
     """
