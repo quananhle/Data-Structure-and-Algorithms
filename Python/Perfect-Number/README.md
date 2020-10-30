@@ -58,7 +58,7 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 
 #### Complexity Analysis
 
-    Time complexity : O(n). Even though it is n/2, the time complexity is O(n/2) = O(n).
+    Time complexity : O(n). Even though it is \frac{n}{(2)}, the time complexity is O(n/2) = O(n).
 
     Space complexity : O(1). Constant extra space is used.
     
