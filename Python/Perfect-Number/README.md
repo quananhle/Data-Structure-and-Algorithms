@@ -66,7 +66,7 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 
 __Algorirthm__:
 
- 	\sqrt{k}
+$\sqrt{k}$
 
 In this method, instead of iterating over all the integers to find the factors of numnumnum, we only iterate upto the n\sqrt{n}n
 
