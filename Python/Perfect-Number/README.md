@@ -66,21 +66,5 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 
 __Algorirthm__:
 
-\sqrt{k}
+In this method, instead of iterating over all the integers to find the factors of ```num```, we only iterate upto the \sqrt{k}
 
-In this method, instead of iterating over all the integers to find the factors of numnumnum, we only iterate upto the n\sqrt{n}n
-
-​. The reasoning behind this can be understood as follows.
-
-Consider the given number numnumnum which can have mmm distinct factors, namely n1,n2,...,nmn_1, n_2,..., n_mn1​,n2​,...,nm​. Now, since the number numnumnum is divisible by nin_ini​, it is also divisible by nj=num/n1n_j=num/n_1nj​=num/n1​ i.e. ni∗nj=numn_i*n_j=numni​∗nj​=num. Also, the largest number in such a pair can only be up to num\sqrt{num}num
-​ (because num×num=num\sqrt{num} \times \sqrt{num}=numnum
-​×num
-​=num). Thus, we can get a significant reduction in the run-time by iterating only upto num\sqrt{num}num
-
-​ and considering such nin_ini​'s and njn_jnj​'s in a single pass directly.
-
-Further, if num\sqrt{num}num
-
-​ is also a factor, we have to consider the factor only once while checking for the perfect number property.
-
-We sum up all such factors and check if the given number is a Perfect Number or not. Another point to be observed is that while considering 1 as such a factor, numnumnum will also be considered as the other factor. Thus, we need to subtract numnumnum from the sumsumsum.
