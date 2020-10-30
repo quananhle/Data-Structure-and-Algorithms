@@ -74,7 +74,7 @@ Complexity Analysis
 
     Space complexity : O(1). Constant extra space is used.
 
-### Approach #4 Euclid-Euler Theorem:
+### Approach #4 Euclid-EulerTheorem:
 
 __Algorirthm__:
 
