@@ -58,13 +58,16 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 
 #### Complexity Analysis
 
-    Time complexity : O(n). Even though it is \frac{n}{(2)}, the time complexity is O(n/2) = O(n).
+    Time complexity : O(n). Even though it is n/2, the time complexity is O(n/2) = O(n).
 
     Space complexity : O(1). Constant extra space is used.
     
 ### Approach #3 PowerMethod:
 
 __Algorirthm__:
+
+
+\begin{equation*} \frac{n}{(2)}
 
 In this method, instead of iterating over all the integers to find the factors of ```num```, we only iterate upto the \sqrt{k}
 
