@@ -12,7 +12,18 @@ There is only one duplicate number in nums, return this duplicate number.
         """
 ```
 
-### Simple approach
+### Simple approach 
+
+```{PYTHON}
+        nums.sort()
+        for i in range(1, len(nums)):
+            if (nums[i] == nums[i-1]):
+                return nums[i]
+```
+
+__Note:__ This approach, however, modified the list as we sort ```nums``` in place, so the memory footprint is constant or O(1). But if we cannot modify the input array, then we must allocate linear space for a copy of ```nums``` and sort that instead, but the space complexity is now O(n).
+
+### Defaultdict approach
 
 ```{PYTHON}
         res = collections.defaultdict(int)
@@ -61,8 +72,8 @@ __Answer:__ we can compare the size of the list with the size of the set that co
 
 #### 2. Can you solve the problem without modifying the list ```nums```?
 
-__Answer:__ Yes, refer to the ```Math approach``` and the ```basic approach```
+__Answer:__ Yes, refer to the ```Math approach``` and the ```defaultdict approach```
 
 #### 3. Can you solve the problem using only constant, ```O(1)``` extra space?
 
-__Answer:__ Yes, refer to the ```Math approach``` and the ```basic approach```
+__Answer:__ Yes, refer to the ```Math approach``` and the ```defaultdict approach```
