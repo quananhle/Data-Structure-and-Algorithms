@@ -26,6 +26,20 @@ There is only one duplicate number in nums, return this duplicate number.
                 return num
 ```
 
+### Math approach
+
+```{PYTHON}
+        nums.sort()
+        res = collections.defaultdict(int)
+        for num in nums:
+            #defaultdict[key,val] = res[num,cnt]
+            res[num] += 1
+            #check if any key is counted more than 1
+            if res[num] > 1:
+                #return key
+                return num
+```
+
 ### Follow-ups:
 
 #### 1. How can we prove that at least one duplicate number must exist in nums? 
