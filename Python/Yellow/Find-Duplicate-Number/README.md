@@ -15,7 +15,6 @@ There is only one duplicate number in nums, return this duplicate number.
 ### Simple approach
 
 ```{PYTHON}
-        nums.sort()
         res = collections.defaultdict(int)
         for num in nums:
             #defaultdict[key,val] = res[num,cnt]
@@ -62,6 +61,6 @@ __Answer:__ we can compare the size of the list with the size of the set that co
 
 #### 2. Can you solve the problem without modifying the list ```nums```?
 
-__Answer:__ Yes, refer to the Math approach
+__Answer:__ Yes, refer to the ```Math approach``` and the ```basic approach```
 
 #### 3. Can you solve the problem using only constant, ```O(1)``` extra space?
