@@ -6,12 +6,10 @@ A __perfect number__ is a positive integer that is equal to the sum of its __pos
 
 Given an integer ```n```, return ```true``` if ```n``` is a perfect number, otherwise return false.
 
-```{python}
-    def checkPerfectNumber(self, num):
-        """
-        :type num: int
-        :rtype: bool
-        """
+```{java}
+    public boolean checkPerfectNumber(int num) {
+        
+    }
 ```
 
 __Example 1__:
