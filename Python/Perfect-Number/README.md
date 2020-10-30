@@ -67,3 +67,9 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 __Algorirthm__:
 
 ![Alt text](power.png?raw=true "main")
+
+Complexity Analysis
+
+    Time complexity : O(sqrt(n)). We iterate only over the range 1 < i ≤ sqrt(num).
+
+    Space complexity : O(1). Constant extra space is used.
