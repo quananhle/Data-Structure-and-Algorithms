@@ -1,4 +1,4 @@
-class ShorterBruteForce {
+class NinjaBruteForce {
     public boolean checkPerfectNumber(int num) {
         if(num <= 0) {
           return false;  
