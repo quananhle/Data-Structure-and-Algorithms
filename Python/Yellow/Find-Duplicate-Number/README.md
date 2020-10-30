@@ -51,6 +51,14 @@ __Answer:__ we can compare the size of the list with the size of the set that co
     if len(nums) != len(set(num)):
         return 0
 ```
+```{PYTHON}
+    """Check if given list contains any duplicates using list.count()"""   
+    for num in nums:
+        if nums.count(num) > 1:
+            #implement the function to find duplicate element
+	else:
+	    return 0
+```
 
 #### 2. Can you solve the problem without modifying the list ```nums```?
 
