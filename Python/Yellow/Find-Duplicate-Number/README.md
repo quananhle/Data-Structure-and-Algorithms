@@ -46,7 +46,7 @@ There is only one duplicate number in nums, return this duplicate number.
 
 __Answer:__ we can compare the size of the list with the size of the set that contains the same elements as in list to make sure the size are the same as set contains no duplicate element
 ```{PYTHON}
-    ''' Check if given list contains any duplicates '''
+    """Check if given list contains any duplicates"""
     if len(nums) != len(set(num)):
         return 0
 ```
