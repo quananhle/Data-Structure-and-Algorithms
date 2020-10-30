@@ -29,15 +29,15 @@ There is only one duplicate number in nums, return this duplicate number.
 ### Math approach
 
 ```{PYTHON}
-        nums.sort()
-        res = collections.defaultdict(int)
-        for num in nums:
-            #defaultdict[key,val] = res[num,cnt]
-            res[num] += 1
-            #check if any key is counted more than 1
-            if res[num] > 1:
-                #return key
-                return num
+    """
+    sum(nums): find the sum of all values in nums
+    sum(set(nums)): find the sum of all distinct values in nums as set contains no duplicate elements
+    len(nums): number of elements in the list
+    len(set(nums)): number of elements in the set
+    """
+    #sum(nums) - sum(set(nums)) yields the total value of the duplicate element
+    #len(nums) - len(set(nums)) yields the times the element appears more than once in the list
+		return (sum(nums) - sum(set(nums))) / (len(nums) - len(set(nums)))
 ```
 
 ### Follow-ups:
