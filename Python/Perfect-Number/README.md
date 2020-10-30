@@ -66,4 +66,4 @@ Similar to approach 1, but we only consider half of ```num``` as all perfect num
 
 __Algorirthm__:
 
-
+![Alt text](power.png?raw=true "main")
