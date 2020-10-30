@@ -42,15 +42,18 @@ There is only one duplicate number in nums, return this duplicate number.
 
 ### Follow-ups:
 
-#### 1. How can we prove that at least one duplicate number must exist in nums? 
+#### 1. How can we prove that at least one duplicate number must exist in ```nums```? 
 
 __Answer:__ we can compare the size of the list with the size of the set that contains the same elements as in list to make sure the size are the same as set contains no duplicate element
+
 ```{PYTHON}
     """Check if given list contains any duplicates"""
     if len(nums) != len(set(num)):
         return 0
 ```
 
-#### 2. Can you solve the problem without modifying the array nums?
+#### 2. Can you solve the problem without modifying the list ```nums```?
 
 __Answer:__ Yes, refer to Math approach
+
+#### 3. Can you solve the problem using only constant, ```O(1)``` extra space?
