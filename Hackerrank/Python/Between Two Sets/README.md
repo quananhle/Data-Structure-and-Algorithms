@@ -1,5 +1,9 @@
+## Between Two Sets
 
-https://www.hackerrank.com/challenges/between-two-sets/problem
+#### Code: Green
+
+[Between Two Sets](https://www.hackerrank.com/challenges/between-two-sets/problem)
+
 
 ```{Python}
 def getTotalX(a, b):
