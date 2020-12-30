@@ -1,8 +1,8 @@
-## Between Two Sets
+## [Between Two Sets](https://www.hackerrank.com/challenges/between-two-sets/problem)
 
 #### Code: Green
 
-[Between Two Sets](https://www.hackerrank.com/challenges/between-two-sets/problem)
+
 
 
 ```{Python}
