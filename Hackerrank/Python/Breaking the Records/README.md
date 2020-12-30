@@ -1,7 +1,8 @@
+## [Breaking the Records](https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem)
 
+#### Code: Green
 
-
-https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+![Alt text](Breaking_the_Records.png?raw=true "Breaking-the-Records")
 
 ```{Python}
 def breakingRecords(scores):
@@ -17,7 +18,7 @@ def breakingRecords(scores):
     return(highest_count, lowest_count)
 ```
 
-One line
+### One-liner solution
 
 ```{Python}
 import itertools
