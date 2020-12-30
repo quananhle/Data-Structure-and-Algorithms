@@ -2,7 +2,7 @@
 
 #### Code: Green
 
-![Alt text](Breaking the Records.png?raw=true "Breaking-the-Records")
+![Alt text](Breaking%20the%20Records.png?raw=true "Breaking-the-Records")
 
 ```{Python}
 def breakingRecords(scores):
