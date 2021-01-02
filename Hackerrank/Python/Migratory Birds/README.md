@@ -1,5 +1,9 @@
 ## [Migatory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem)
 
+#### Code: Green
+
+![Alt text](Migatory_Birds.png?raw=true "Migatory-Birds")
+
 ```{Python}
 def migratoryBirds(arr):
     freq = {}
