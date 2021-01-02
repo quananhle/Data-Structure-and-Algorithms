@@ -1,7 +1,7 @@
-## Sub-array Division
+## [Sub-array Division](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
 
 
-https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
 
 ```{Python}
 def birthday(s, d, m):
