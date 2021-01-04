@@ -4,7 +4,7 @@ https://www.hackerrank.com/challenges/extra-long-factorials/problem
 Orange
 
 
-
+```{Python}
 def extraLongFactorials(n):
     res = [None]*500
     res[0] = 1
@@ -19,3 +19,4 @@ def extraLongFactorials(n):
         ans.append(res[i]) 
         i = i - 1
     print (int(''.join(str(an) for an in ans)))
+```
