@@ -3,7 +3,7 @@
 
 __Code__: Green
 
-Time complexity 0(N) using HashMap
+Time complexity ```0(N)``` using ```HashMap```
 
 ```{Java}
     static boolean isAnagram(String a, String b) {
@@ -37,7 +37,7 @@ Time complexity 0(N) using HashMap
     }
 ```
 
-Time complexity 0(N)LOG(N) using Arrays.sort()
+Time complexity ```0(N)LOG(N)``` using ```Arrays.sort()```
 
 ```{Java}
     static boolean isAnagram(String a, String b) {
