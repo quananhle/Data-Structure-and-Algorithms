@@ -6,7 +6,7 @@ __Code:__ Orange
 
 ```{Python}
 def superDigit(n, k):
-    return (calNum(calNum(n) * int(k)))
+    return (calNum(calNum(n) * k))
 
 def calNum(num):
     return num if len(num) == 1 else calNum(str(sum([int(x) for x in num])))
