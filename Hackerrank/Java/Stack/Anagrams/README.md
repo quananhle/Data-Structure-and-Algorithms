@@ -39,3 +39,14 @@ Time complexity 0(N) using HashMap
 
 Time complexity 0(N)LOG(N) using Arrays.sort()
 
+```{Java}
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+        assert(a.length() == b.length());
+        char[] arrayA = a.toLowerCase().toCharArray();
+        char[] arrayB = b.toLowerCase().toCharArray();
+        java.util.Arrays.sort(arrayA);
+        java.util.Arrays.sort(arrayB);
+        return java.util.Arrays.equals(arrayA, arrayB);
+    }
+```
