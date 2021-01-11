@@ -1,7 +1,6 @@
 ## [Non-Divisible Subset](https://www.hackerrank.com/challenges/non-divisible-subset/problem)
 
-
-
+![Non-Divisible%20Subset.png](Non-Divisible%20Subset.png?raw=true "Non-Divisible-Subset")
 
 __Code__: Orange
 
