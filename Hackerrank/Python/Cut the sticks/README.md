@@ -1,7 +1,7 @@
 ## [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem)
 
 
-
+![Alt text](Cut_the_sticks.png?raw=true "Cut-the-sticks")
 
 __Code__: Orange
 
