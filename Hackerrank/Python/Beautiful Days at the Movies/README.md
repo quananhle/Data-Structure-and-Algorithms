@@ -1,6 +1,6 @@
 ## <a href="https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem" target="_blank">Beautiful Days at the Movies</a>
 
-![Alt text](Beautiful_Days_at_the_Movies.png?raw=true "Beautiful-Days-at-the-Movies")
+![Beautiful_Days_at_the_Movies](Beautiful_Days_at_the_Movies.png?raw=true "Beautiful-Days-at-the-Movies")
 
 __Code__: Green
 
