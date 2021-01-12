@@ -17,7 +17,7 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 ![30 Days of Code](/Badges/30_days_of_code_5_star.png)
 
 ## HackerRank Certificates
-
+[<img src="Badges/python_basic_skill.png">](Certificates/Python.png)
 ![Certificates/Python.png](Badges/python_basic_skill.png?raw=true "Python(Basics) Certificate")
 <a href="Certificates/Python.png">
     <img src="Badges/python_basic_skill.png" alt="Python(Basics) Certificate"/>
