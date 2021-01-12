@@ -1,11 +1,8 @@
-Utopian Tree
+## [Utopian Tree](https://www.hackerrank.com/challenges/utopian-tree/problem)
 
-https://www.hackerrank.com/challenges/utopian-tree/problem
+![Alt text](Utopian_Tree.png?raw=true "Utopian-Tree")
 
-
-Green 
-
-
+__Code__: Green
 
 ```{Python}
 def utopianTree(n):
