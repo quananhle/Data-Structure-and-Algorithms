@@ -1,8 +1,8 @@
 ## [Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
 
+![Alt text](Prime_Checker.png?raw=true "Prime-Checker")
 
 __Code:__ Orange
-
 
 
 ```{Java}
