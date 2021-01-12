@@ -18,25 +18,11 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ## HackerRank Certificates
 
-[<img src="Badges/Java.png" alt="Java(Basics) Certificate"/>](Certificates/Java.png)
-[<img src="Badges/Python.png" alt="Python(Basics) Certificate"/>](Certificates/Python.png)
-[<img src="Badges/Problem_Solving(Basic).png" alt="Python(Basics) Certificate"/>](Certificates/Python.png)
-[<img src="Badges/Problem_Solving(Intermediate).png" alt="Python(Basics) Certificate"/>](Certificates/Python.png)
-[<img src="Badges/REST-API(Intermediate).png" alt="Python(Basics) Certificate"/>](Certificates/Python.png)
-
-<!--<a href="Certificates/Python.png">
-    <img src="Badges/python_basic_skill.png" alt="Python(Basics) Certificate"/>
-</a>
-<a href="Skills%20Certification/Java%20(Basic)%20Certificate.png">
-    <img src="Badges/java_basic_skill.png" alt="Java (Basic) Certificate"/>
-</a>
-<a href="Skills%20Certification/Problem%20Solving%20(Basic)%20Certificate.png">
-    <img src="Badges/problem_solving_basic_skill.png" alt="Problem Solving (Basic) Certificate"/>
-</a>
--->
-
-
-
+[<img src="Badges/Java.png" height="190" width="150"/>](Certificates/Java.png)
+[<img src="Badges/Python.png" height="190" width="150"/>](Certificates/Python.png)
+[<img src="Badges/Problem_Solving(Basic).png" height="190" width="150"/>](Certificates/Problem_Solving(Basic).png)
+[<img src="Badges/Problem_Solving(Intermediate).png" height="190" width="150"/>](Certificates/Problem_Solving(Intermediate).png)
+[<img src="Badges/REST-API(Intermediate).png" height="190" width="150"/>](Certificates/REST-API.png)
 
 ## Table Of Contents
 
