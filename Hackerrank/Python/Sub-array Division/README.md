@@ -1,7 +1,8 @@
 ## [Sub-array Division](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
 
+![Alt text](Sub-array_Divisions.png.png?raw=true "Sub-array_Divisions")
 
-
+__Code__: Green
 
 ```{Python}
 def birthday(s, d, m):
