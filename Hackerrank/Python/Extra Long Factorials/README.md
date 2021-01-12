@@ -2,7 +2,7 @@
 
 #### Code: Orange
 
-![Alt text](Extra_Long_Factorials?raw=true "Extra-Long-Factorials")
+![Alt text](Extra_Long_Factorials.png?raw=true "Extra-Long-Factorials")
 
 ```{Python}
 def extraLongFactorials(n):
