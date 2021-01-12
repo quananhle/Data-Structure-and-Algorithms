@@ -1,9 +1,9 @@
+## [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem)
 
 
 
 
-
-
+__Code__: Orange
 
 **O(N)** time complexity using __Min Heap__ and __Counter__
 
