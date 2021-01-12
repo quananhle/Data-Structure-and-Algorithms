@@ -1,6 +1,6 @@
 ## [Java Stack](https://www.hackerrank.com/challenges/java-stack/problem)
 
-
+![Alt text](Java_Stack.png?raw=true "Java-Stack")
 
 __Code:__ Orange
 
