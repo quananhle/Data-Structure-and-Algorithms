@@ -1,8 +1,8 @@
-Beautiful Days at the Movies    https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+## [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 
+[!]
 
-Green
-
+__Code__: Green
 
 ```{Python}
 def beautifulDays(i, j, k):
