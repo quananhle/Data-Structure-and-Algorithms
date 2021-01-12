@@ -1,9 +1,8 @@
-Forming a Magic Square
-
-https://www.hackerrank.com/challenges/magic-square-forming/forum
+## [Forming a Magic Square](https://www.hackerrank.com/challenges/magic-square-forming)
 
 
-Orange
+
+__Code:__ Orange
 
 
 ```{Python}
