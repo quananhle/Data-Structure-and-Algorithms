@@ -1,12 +1,12 @@
 <p align="center">
     <a href="https://www.hackerrank.com/qle21?hr_r=1">
-        <img alt="HackerRank Logo | Nathan Abela Profile" src="https://hrcdn.net/fcore/assets/brand/typemark_60x200-7435b42d20.svg" >
+        <img alt="HackerRank Logo | Quan Le Profile" src="https://hrcdn.net/fcore/assets/brand/typemark_60x200-7435b42d20.svg" >
     </a>
 </p>
 
 # HackerRank | Practice, Tutorials & Interview Preparation Solutions
 
-This repository consists of solutions to HackerRank **practice**, **tutorials**, and **interview preparation** problems with **Python**, **mySQL**, **C#**, and **JavaScript**.
+This repository consists of solutions to HackerRank **Problem Solving**, **Data Structures and Algorithms**, and **Interview Preparation Kit** problems with **Python**, **Java**, and **mySQL**.
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle)](https://github.com/Quananhle)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle)](https://github.com/Quananhle)
@@ -19,8 +19,8 @@ This repository consists of solutions to HackerRank **practice**, **tutorials**,
 
 ![Python](/Badges/python_5_star.png)
 ![SQL](/Badges/sql_5_star.png)
-![10 Days of JavaScript](/Badges/10_days_of_javascript_5_star.png)
-![10 Days of Statistics](/Badges/10_days_of_statistics_5_star.png)
+![Java](/Badges/10_days_of_javascript_5_star.png)
+![Problem Solving](/Badges/10_days_of_statistics_5_star.png)
 ![30 Days of Code](/Badges/30_days_of_code_5_star.png)
 
 ## HackerRank Certificates
