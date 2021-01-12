@@ -1,6 +1,6 @@
 ## [Forming a Magic Square](https://www.hackerrank.com/challenges/magic-square-forming)
 
-
+![Alt text](Forming_a_Magic_Square.png?raw=true "Forming-a-Magic-Square")
 
 __Code:__ Orange
 
