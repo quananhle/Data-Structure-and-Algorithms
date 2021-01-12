@@ -2,6 +2,9 @@
 
 ## Python
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/commits/master)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/archive/master.zip)
+
 #### Code: Green
 
 1. [Missing Number](https://github.com/Quananhle/Algorithm-DS/tree/master/Python/Missing-Number): Given an array containing n distinct numbers taken from ```0, 1, 2, ..., n``` find the one that is missing from the array.
