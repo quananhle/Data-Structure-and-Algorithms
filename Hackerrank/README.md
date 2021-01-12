@@ -11,10 +11,6 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/commits/master)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/archive/master.zip)
 
-
-/archive/master.zip)
-
-
 ## Personal HackerRank Profile
 
 [View Profile](https://www.hackerrank.com/qle21?hr_r=1)
