@@ -19,7 +19,7 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 ## HackerRank Certificates
 
 <a href="Skills%20Certification/Python%20(Basic)%20Certificate.png">
-    <img src="Badges/python_basic_skill.png" alt="Python (Basic) Certificate"/>
+    <img src="Badges/python_basic_skill.png" alt="https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Hackerrank/Certificates/Python.png"/>
 </a>
 <a href="Skills%20Certification/Java%20(Basic)%20Certificate.png">
     <img src="Badges/java_basic_skill.png" alt="Java (Basic) Certificate"/>
