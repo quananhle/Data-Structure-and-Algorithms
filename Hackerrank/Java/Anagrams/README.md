@@ -1,5 +1,6 @@
-
 ## [Anagrams](https://www.hackerrank.com/challenges/java-anagrams/problem?h_r=profile)
+
+![Alt text](Anagrams.png?raw=true "Anagrams")
 
 __Code__: Green
 
