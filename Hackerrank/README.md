@@ -8,8 +8,13 @@
 
 This repository consists of solutions to HackerRank **Problem Solving**, **Data Structures and Algorithms**, and **Interview Preparation Kit** problems with **Python**, **Java**, and **mySQL**.
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle)](https://github.com/Quananhle)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle/Data-Structure-and-Algorithms/tree/master/Hackerrank)](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Hackerrank/commits/master)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle)](https://github.com/Quananhle)
+
+
+
+
+
 
 ## Personal HackerRank Profile
 
