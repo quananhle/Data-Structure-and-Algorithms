@@ -1,8 +1,8 @@
 ## [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=recursion-backtracking)
 
+![Alt text](Recursive_Digit_Sum.png?raw=true "Recursive-Digit-Sum")
 
-__Code:__ Orange
-
+__Code__: Orange
 
 ```{Python}
 def superDigit(n, k):
