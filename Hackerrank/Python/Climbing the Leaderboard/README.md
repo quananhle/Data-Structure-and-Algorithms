@@ -1,8 +1,8 @@
-Climbing the Leaderboard
+## [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
 
-https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
+![Alt text](Climbing_the_Leaderboard.png?raw=true "Climbing-the-Leaderboard")
 
-Orange
+__Code__: Orange
 
 ```{Python}
 def climbingLeaderboard(ranked, player):
