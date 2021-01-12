@@ -1,9 +1,9 @@
-Minimum Swaps 2
+## [Minimum Swaps 2](
+https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&h_r%5B%5D%5B%5D=next-challenge&h_r%5B%5D%5B%5D=next-challenge&h_v%5B%5D%5B%5D=zen&h_v%5B%5D%5B%5D=zen&playlist_slugs%5B%5D%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D%5B%5D=arrays)
 
-https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&h_r%5B%5D%5B%5D=next-challenge&h_r%5B%5D%5B%5D=next-challenge&h_v%5B%5D%5B%5D=zen&h_v%5B%5D%5B%5D=zen&playlist_slugs%5B%5D%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D%5B%5D=arrays
 
-Orange
 
+__Code__: Orange
 
 ```{Python}
 def minimumSwaps(arr):
