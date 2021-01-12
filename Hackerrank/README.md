@@ -18,6 +18,7 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ## HackerRank Certificates
 
+![Certificates/Python.png](Badges/python_basic_skill.png?raw=true "Python(Basics) Certificate")
 <a href="Certificates/Python.png">
     <img src="Badges/python_basic_skill.png" alt="Python(Basics) Certificate"/>
 </a>
