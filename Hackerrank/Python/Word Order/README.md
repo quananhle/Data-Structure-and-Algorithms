@@ -1,5 +1,6 @@
 ## [Word Order](https://www.hackerrank.com/challenges/word-order/problem)
 
+![Alt text](Word_Order.png?raw=true "Word-Order")
 
 __Code__: Orange
 
