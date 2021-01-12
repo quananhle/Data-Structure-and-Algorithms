@@ -8,10 +8,6 @@
 
 This repository consists of solutions to HackerRank **Problem Solving**, **Data Structures and Algorithms**, and **Interview Preparation Kit** problems with **Python**, **Java**, and **mySQL**.
 
-## Personal HackerRank Profile
-
-[View Profile](https://www.hackerrank.com/qle21?hr_r=1)
-
 ## HackerRank Badges
 
 ![Python](/Badges/python_5_star.png)
