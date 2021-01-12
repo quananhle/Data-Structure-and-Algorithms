@@ -44,3 +44,15 @@ def cutTheSticks(arr):
     return ans
     # Total: 0(N+N+N+N) = 0(N) time complexity
 ```
+
+**O(N<sup>2</sup>)** time complexity
+
+```{Python}
+def cutTheSticks(arr):
+    ans = []
+    while len(arr) >= 1:
+        ans.append(len(arr))
+        minimum = min(arr)
+        arr = [i-minimum for i in arr if i != minimum]
+    return ans
+```
