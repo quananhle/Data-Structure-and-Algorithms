@@ -1,8 +1,8 @@
-https://www.hackerrank.com/challenges/extra-long-factorials/problem
+## [Extra Long Factorials](https://www.hackerrank.com/challenges/extra-long-factorials/problem)
 
+#### Code: Orange
 
-Orange
-
+![Alt text](Breaking%20the%20Records.png?raw=true "Breaking-the-Records")
 
 ```{Python}
 def extraLongFactorials(n):
