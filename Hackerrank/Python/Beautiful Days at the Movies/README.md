@@ -1,4 +1,4 @@
-## [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
+## <a href="https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem" target="_blank">Beautiful Days at the Movies</a>
 
 [!]
 
