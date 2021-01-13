@@ -8,7 +8,7 @@
 
 # HackerRank | Practice, Tutorials & Interview Preparation Solutions
 
-This repository consists of solutions to HackerRank **Problem Solving**, **Data Structures and Algorithms**, and **Interview Preparation Kit** problems with **Python**, **Java**, and **mySQL**.
+This repository consists of solutions to HackerRank and LeetCode in **Problem Solving**, **Data Structures and Algorithms**, and **Interview Preparation Kit** problems with **Python**, **Java**, and **SQL**.
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/commits/master)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/archive/master.zip)
