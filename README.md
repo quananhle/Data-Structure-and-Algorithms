@@ -15,11 +15,11 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ## HackerRank Badges
 
-[<img src="Hackerrank/Badges/Java_Badge.png" height="200" width="180"/>](https://www.hackerrank.com/qle21)
-[<img src="Hackerrank/Badges/python_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
-[<img src="Hackerrank/Badges/Problem_Solving.png" height="220" width="190"/>](https://www.hackerrank.com/qle21)
-[<img src="Hackerrank/Badges/sql_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
-[<img src="Hackerrank/Badges/30_days_of_code_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
+[<img src="Hackerrank/Badges/Java_Badge.png" height="200" width="160"/>](https://www.hackerrank.com/qle21)
+[<img src="Hackerrank/Badges/python_5_star.png" height="170" width="130"/>](https://www.hackerrank.com/qle21)
+[<img src="Hackerrank/Badges/Problem_Solving.png" height="200" width="180"/>](https://www.hackerrank.com/qle21)
+[<img src="Hackerrank/Badges/sql_5_star.png" height="170" width="130"/>](https://www.hackerrank.com/qle21)
+[<img src="Hackerrank/Badges/30_days_of_code_5_star.png" height="170" width="130"/>](https://www.hackerrank.com/qle21)
 
 ## HackerRank Certificates
 
