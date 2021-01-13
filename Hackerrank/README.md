@@ -18,6 +18,7 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ## HackerRank Certificates
 
+[<img src="Badges/Java.png" height="190" width="150"/>](Certificates/Java.png)
 [<img src="Badges/Python.png" height="190" width="150"/>](Certificates/Python.png)
 [<img src="Badges/Problem_Solving(Basic).png" height="190" width="150"/>](Certificates/Problem_Solving(Basic).png)
 [<img src="Badges/Problem_Solving(Intermediate).png" height="190" width="150"/>](Certificates/Problem_Solving(Intermediate).png)
