@@ -10,11 +10,11 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ## HackerRank Badges
 
-[<img src="Badges/Java_Badge.png" height="200" width="180"/>](Certificates/Java.png)
-[<img src="Badges/python_5_star.png" height="190" width="150"/>](Certificates/Python.png)
-[<img src="Badges/Problem_Solving.png" height="220" width="190"/>](Certificates/Problem_Solving(Basic).png)
-[<img src="Badges/sql_5_star.png" height="190" width="150"/>](Certificates/Problem_Solving(Intermediate).png)
-[<img src="Badges/30_days_of_code_5_star.png" height="190" width="150"/>](Certificates/REST-API.png)
+[<img src="Badges/Java_Badge.png" height="200" width="180"/>](https://www.hackerrank.com/qle21)
+[<img src="Badges/python_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
+[<img src="Badges/Problem_Solving.png" height="220" width="190"/>](https://www.hackerrank.com/qle21)
+[<img src="Badges/sql_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
+[<img src="Badges/30_days_of_code_5_star.png" height="190" width="150"/>](https://www.hackerrank.com/qle21)
 
 ## HackerRank Certificates
 
