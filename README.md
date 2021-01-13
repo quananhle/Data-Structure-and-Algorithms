@@ -12,6 +12,7 @@ This repository consists of solutions to HackerRank and LeetCode in **Problem So
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/commits/master)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quananhle/Data-Structure-and-Algorithms)](https://github.com/Quananhle/Data-Structure-and-Algorithms/archive/master.zip)
+<img align="right" width="75" height="20" src="https://visitor-badge.glitch.me/badge?page_id=quananhle.Data-Structure-and-Algorithms">
 
 ## HackerRank Badges
 
@@ -58,4 +59,3 @@ This repository consists of solutions to HackerRank and LeetCode in **Problem So
 
 
 ⭐️ From [Quan](https://github.com/Quananhle) with :sparkling_heart: 
-<img align="right" width="75" height="20" src="https://visitor-badge.glitch.me/badge?page_id=quananhle.Data-Structure-and-Algorithms">
