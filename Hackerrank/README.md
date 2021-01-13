@@ -12,8 +12,8 @@ This repository consists of solutions to HackerRank **Problem Solving**, **Data 
 
 ![Python](Badges/python_5_star.png)
 ![SQL](Badges/sql_5_star.png)
-![Java](Badges/10_days_of_javascript_5_star.png)
-![Problem Solving](Badges/10_days_of_statistics_5_star.png)
+![Java](Badges/Java_Badge.png)
+![Problem Solving](Badges/Problem_Solving.png)
 ![30 Days of Code](Badges/30_days_of_code_5_star.png)
 
 ## HackerRank Certificates
