@@ -33,6 +33,10 @@ def checkMagazine(magazine, note):
 ```{Python}
 from collections import Counter
 
-def ransom_note(magazine, rasom):
-    return (Counter(rasom) - Counter(magazine)) == {}
+def ransom_note(magazine, note):
+    # if (Counter(note) - Counter(magazine)) == {}:
+    #     print ('Yes')
+    # else:
+    #     print ('No')
+    print ('Yes' if (Counter(note) - Counter(magazine)) == {} else 'No')    
 ```
