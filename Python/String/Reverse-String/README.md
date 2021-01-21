@@ -67,6 +67,39 @@ __Note:__ In the string, each word is separated by single space and there will n
 0(N) space complexity, 0(N) time complexity
 
 ```{Python}
+class Solution(object):
+    def __init__(self):
+        self.result = []
+        
+    def reverseWords(self, s):
+        s = self.split(s)
+        for i in range(len(s)):
+            if i > 0:
+                self.result.append(" ")
+            self.reverse(s[i])
+        return "".join(self.result)
+
+    def split(self, s):
+        split_list = list()
+        string = ""
+        for char in s:
+            if char != " ":
+                string += char
+            else:
+                split_list.append(string)
+                string = ""
+        if string != "":
+            split_list.append(string)
+        return split_list
+    
+    def reverse(self, s):
+        for i in range(-1, -len(s)-1, -1):
+            self.result.append(s[i])
+```
+
+One-liner Python
+
+```{Python}
     def reverseWords(self, s):
         return " ".join([i[::-1] for i in s.split(" ")])
 ```
