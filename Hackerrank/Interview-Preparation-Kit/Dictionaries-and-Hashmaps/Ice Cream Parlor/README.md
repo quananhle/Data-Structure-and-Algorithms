@@ -6,9 +6,9 @@ __Code__: Orange
 ```{Python}
 def whatFlavors(cost, money):
     remains = dict()
-    for index, c in enumerate(cost):
+    for i, c in enumerate(cost):
         if c not in remains:
-            remains[money - c] = index + 1
+            remains[money - c] = i + 1
         else:
-            print(remains[c], index + 1)
+            print(remains[c], i + 1)
 ```
