@@ -22,9 +22,17 @@ class LinkedListNode:
     * Multi-pass
 
     #### Two-Pointer
-    
+    - Use two/multiple pointers to manipulate references to nodes (e.g. reversing a linked list)
+    - Also used to get/infer certaint information about list (e.g. detect cycle)
     
     #### Dummy-head
-    
+    - Create a 'dummy head' node and construct a list using its next pointer
+    - Return ```dummyHead.next``` to return the newly constructed list
+    - Very useful when you need to manipulate pointers and create a list with the same nodes but different ordering
+    - Very useful for edge-cases
     
     #### Multi-pass
+    - Useful if you can guarantee constant amount of passes or if you need to know the length of the list
+    - Linked List Reverse
+        * Adding two list together
+        * LL Palindrome
