@@ -25,3 +25,18 @@ It is __guaranteed__ that the node to be deleted is __not a tail node__ in the l
 **Example 4:**
 - **Input**: head = [-3,5,-99], node = -3
 - **Output**: [5,-99]
+
+```Python
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+class Solution(object):
+    def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+```
