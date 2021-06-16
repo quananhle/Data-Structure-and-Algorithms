@@ -2,4 +2,4 @@
 
 **Difficulty**: 
 
-<span style="color:orange">Orange</span>
+<span style="color:red">Orange</span>
