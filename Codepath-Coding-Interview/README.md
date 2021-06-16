@@ -16,8 +16,8 @@
 
 - **M = Match**
 - Identify what type of problem you are solving
- * E.g. is this a problem a graph/linked list problem? Is this a pattern I've seen before
- * Data structure brainstorm might be a good idea sometimes
+  * E.g. is this a problem a graph/linked list problem? Is this a pattern I've seen before
+  * Data structure brainstorm might be a good idea sometimes
 - **Match** and **Plan** are usually the hardest part for most problems
 - You might need to go back and forth **Match** and **Plan** until you find an algorithm that you are confident with
 
@@ -25,7 +25,7 @@
 
 - **P = Plan**
 - What techniques/pattern do you know that you can use with the type of problem you've identified
- * E.g. if you know that the problem you are given is a graphs problem, then you know you can do DFS/BFS traversals with the graph
+  * E.g. if you know that the problem you are given is a graphs problem, then you know you can do DFS/BFS traversals with the graph 
 - What additional auxiliary data structures might you need?
 - Sanity check your approach with the test-cases you made
 - Write down any important details so you don't forget them while coding in the next step
