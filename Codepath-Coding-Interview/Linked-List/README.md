@@ -20,3 +20,11 @@ class LinkedListNode:
     * Dummy-head
     * Two-pointer
     * Multi-pass
+
+    #### Two-Pointer
+    
+    
+    #### Dummy-head
+    
+    
+    #### Multi-pass
