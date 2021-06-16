@@ -10,3 +10,4 @@ class LinkedListNode:
 ```
 - You only need a value in order to initialize a node
     * *next* and *prev* (if doubly linked-list)
+- Majority of linked list coding questions is singly linked list
