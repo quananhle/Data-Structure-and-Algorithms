@@ -22,28 +22,69 @@ Items:
 - Tobacco
 
 Ports:
-
-- Rio De Janeiro
+- Amsterdam
+- Athens
+- Bahia
+- Beira
+- Beirut
 - Belize
+- Bilbao
+- Bombay
+- Bordeaux
+- Boston
+- Buenos Aires
+- Cadiz
+- Calcutta
+- Canary Islands
+- Capetowns
+- Charleston
+- Curacao
+- Daman
+- Fu-chao
+- Genoa
+- Glasgow
+- Goa
+- Guadelope
+- Halifax
+- Istanbul
+- Lagos
+- Lisbon
+- Liverpool
+- Livorno
+- London
+- Macao
+- Madeira
+- Madras
+- Malaga
+- Mangalore
+- Manila
+- Marseilles
 - Mogadishu
 - Mombassa
-- Madras
-- Whydah
-- Lagos
-- Capetown
-- Beira
-- Mangalore
+- New Orleans
+- New York
 - Philadelphia
-- Bahia
-- Bombay
-- Daman
-- Vera Cruz
-- Goa
-- Sumatra
+- Port Royale
+- Porto Bello
+- Rangoon
+- Recife
+- Rio De Janeiro
+- Santiago
+- Santo Domingo
+- Shanghai
 - Singapore
-- Manila
-- Calcutta
-- 
+- St. Petersburg
+- Stockholm
+- Sumatra
+- Surinam
+- Tangiers
+- Trinidad
+- Tunisia
+- Venice
+- Vera Cruz
+- Whydah
+
+
 
 
 ## Most profited route with nations inputs
