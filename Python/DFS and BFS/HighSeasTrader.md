@@ -101,3 +101,6 @@ National relationships:
 - Allies
 - Neutral
 - Enemies
+
+
+## Distance
