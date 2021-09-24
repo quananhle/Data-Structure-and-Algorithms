@@ -12,7 +12,7 @@
   * Test cases should not be too easy, nor too hard, and should encompass a wide-rage of cases
   * To convince yourself and the interviewer that the solution is correct
 
-[<img src="Hackerrank/Badges/Java_Badge.png" height="200" width="160"/>](https://www.hackerrank.com/qle21)
+[<img src="Codepath-Coding-Interview/photos/U.png" height="200" width="160"/>](https://www.hackerrank.com/qle21)
 
 #### M
 
