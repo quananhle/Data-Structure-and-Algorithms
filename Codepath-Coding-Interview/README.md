@@ -14,6 +14,14 @@
 
 [<img src="Codepath-Coding-Interview/photos/U.png" height="200" width="160"/>](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Codepath-Coding-Interview)
 
+
+<img src="https://media.giphy.com/media/CcaHlGjsRGgX3ax4B3/giphy.gif" title="Quick Sorting Visualization" alt="Gif of the Quick Sorting Visualization">
+
+<img src="https://media.giphy.com/media/cZxTGymVeHOKCQYXM7/giphy.gif" title="Heap Sorting Visualization" alt="Gif of the Heap Sorting Visualization">
+
+![Alt text](pic/Analyzation.png?raw=true "Main page")
+
+
 #### M
 
 - **M = Match**
