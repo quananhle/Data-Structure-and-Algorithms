@@ -12,15 +12,7 @@
   * Test cases should not be too easy, nor too hard, and should encompass a wide-rage of cases
   * To convince yourself and the interviewer that the solution is correct
 
-[<img src="Codepath-Coding-Interview/photos/U.png" height="200" width="160"/>](https://github.com/Quananhle/Data-Structure-and-Algorithms/tree/master/Codepath-Coding-Interview)
-
-
-<img src="Codepath-Coding-Interview/photos/U.png" height="200" width="160" title="Quick Sorting Visualization" alt="Gif of the Quick Sorting Visualization">
-
-<img src="https://media.giphy.com/media/cZxTGymVeHOKCQYXM7/giphy.gif" title="Heap Sorting Visualization" alt="Gif of the Heap Sorting Visualization">
-
-![Alt text](pic/Analyzation.png?raw=true "Main page")
-
+![Alt text](photos/U.png "U")
 
 #### M
 
