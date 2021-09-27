@@ -14,7 +14,7 @@ class LinkedListNode:
 
 ### Linked List: Things To Know
 
-![Alt text](Codepath-Coding-Interview/photos/LL.png "LL")
+![Alt text](master/Data-Structure-and-Algorithms/Codepath-Coding-Interview/photos/LL.png "LL")
 ![Alt text](photos/LL.png "LL")
 
 - All problems deal with pointer-manipulation and traversing the list
