@@ -23,6 +23,8 @@
 - **Match** and **Plan** are usually the hardest part for most problems
 - You might need to go back and forth **Match** and **Plan** until you find an algorithm that you are confident with
 
+![Alt text](photos/U.png "M")
+
 #### P
 
 - **P = Plan**
@@ -33,12 +35,16 @@
 - Write down any important details so you don't forget them while coding in the next step
 - **Do not go past this step without having an algorithm**
 
+![Alt text](photos/U.png "P")
+
 #### I
 
 - **I = Implement**
 - Translate your algorithm into code
 - This is arguably one of the easier steps. If you prepared properly, then coding should be second nature
 - **Coding becomes really easy as you do more problems**
+
+![Alt text](photos/U.png "I")
 
 #### R
 
@@ -47,8 +53,12 @@
 - If you find a bug, make sure you don't cause regressions by fixing it
 - **Make sure you test your code with the test cases you made**
 
+![Alt text](photos/U.png "R")
+
 #### E
 
 - **E = Evaluate**
 - State the runtime/space complexity of your code
 - Discuss any other pros/cons in your solution
+
+![Alt text](photos/U.png "E")
