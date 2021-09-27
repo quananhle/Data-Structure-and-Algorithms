@@ -24,10 +24,13 @@ class LinkedListNode:
     * Multi-pass
 
     #### Two-Pointer
+    ![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/Two-Pointer.png "Two-Pointer")  
     - Use two/multiple pointers to manipulate references to nodes (e.g. reversing a linked list)
     - Also used to get/infer certaint information about list (e.g. detect cycle)
     
     #### Dummy-head
+    
+    ![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/Dummy-Head.png "Dummy-Head")
     - Create a 'dummy head' node and construct a list using its next pointer
     - Return ```dummyHead.next``` to return the newly constructed list
     - Very useful when you need to manipulate pointers and create a list with the same nodes but different ordering
