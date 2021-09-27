@@ -14,6 +14,8 @@ class LinkedListNode:
 
 ### Linked List: Things To Know
 
+![Alt text](Codepath-Coding-Interview/photos/LL.png "LL")
+
 - All problems deal with pointer-manipulation and traversing the list
 - Most problems require you to use O(1) space
 - Common patterns in solving these problems:
