@@ -14,8 +14,7 @@ class LinkedListNode:
 
 ### Linked List: Things To Know
 
-![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/Codepath-Coding-Interview/photos/LL.png "LL")
-![Alt text](photos/LL.png "LL")
+![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/LL.png "LL")
 
 - All problems deal with pointer-manipulation and traversing the list
 - Most problems require you to use O(1) space
