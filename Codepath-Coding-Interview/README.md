@@ -23,7 +23,7 @@
 - **Match** and **Plan** are usually the hardest part for most problems
 - You might need to go back and forth **Match** and **Plan** until you find an algorithm that you are confident with
 
-![Alt text](photos/U.png "M")
+![Alt text](photos/M.png "M")
 
 #### P
 
@@ -35,7 +35,7 @@
 - Write down any important details so you don't forget them while coding in the next step
 - **Do not go past this step without having an algorithm**
 
-![Alt text](photos/U.png "P")
+![Alt text](photos/P.png "P")
 
 #### I
 
@@ -44,7 +44,7 @@
 - This is arguably one of the easier steps. If you prepared properly, then coding should be second nature
 - **Coding becomes really easy as you do more problems**
 
-![Alt text](photos/U.png "I")
+![Alt text](photos/I.png "I")
 
 #### R
 
@@ -53,7 +53,7 @@
 - If you find a bug, make sure you don't cause regressions by fixing it
 - **Make sure you test your code with the test cases you made**
 
-![Alt text](photos/U.png "R")
+![Alt text](photos/R.png "R")
 
 #### E
 
@@ -61,4 +61,4 @@
 - State the runtime/space complexity of your code
 - Discuss any other pros/cons in your solution
 
-![Alt text](photos/U.png "E")
+![Alt text](photos/E.png "E")
