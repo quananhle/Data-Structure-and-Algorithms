@@ -42,4 +42,21 @@ class Solution(object):
         :type val: int
         :rtype: ListNode
         """
+        # return the new head requires a sentinel node or a dummy head
+        sentinel = ListNode(0)
+        # dummy head points to the head of the linked list
+        sentinel.next = head
+        prev, curr = sentinel, head
+        # loop through the linked list
+        while curr:
+            # if node to be removed found
+            if curr.val == val:
+                # previous node points to next node
+                prev.next = curr.next
+            else:
+                # otherwise, move up previous node pointer
+                prev = curr
+            # increment
+            curr = curr.next
+        return sentinel.next
 ```
