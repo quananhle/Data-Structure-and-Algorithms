@@ -60,3 +60,5 @@ class Solution(object):
             curr = curr.next
         return sentinel.next
 ```
+Space complexity: O(1)
+Time complexity: O(n) 
