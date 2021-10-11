@@ -74,41 +74,41 @@ class Solution(object):
             """
                                 prev          head
                                 |             |
-            None        <-      1             2       ->      3       ->      4       ->      5       ->      None
+            None        <-      1             2     ->      3       ->      4       ->      5       ->      None
                                 |
                                 curr
             """
         return curr
         """
-                    prev            head
-                    |               |
-        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
-                    |
-                    curr
+                            prev            head
+                            |               |
+        None        <-      1               2       ->      3       ->      4       ->      5       ->      None
+                            |
+                            curr
 
-                                    prev            head
-                                    |               |
-        None   <-   1       <-      2               3       ->      4       ->      5       ->      None
-                                    |
-                                    curr
+                                            prev            head
+                                            |               |
+        None        <-      1       <-      2               3       ->      4       ->      5       ->      None
+                                            |
+                                            curr
 
-                                                    prev            head
-                                                    |               |
-        None   <-   1       <-      2       <-      3               4       ->      5       ->      None
-                                                    |
-                                                    curr
+                                                            prev            head
+                                                            |               |
+        None        <-      1       <-      2       <-      3               4       ->      5       ->      None
+                                                            |
+                                                            curr
 
-                                                                    prev            head
-                                                                    |               |
-        None   <-   1       <-      2       <-      3       <-      4               5       ->      None
-                                                                    |
-                                                                    curr
+                                                                            prev            head
+                                                                            |               |
+        None        <-      1       <-      2       <-      3       <-      4               5       ->      None
+                                                                            |
+                                                                            curr
                                                                     
-                                                                                    prev            head
-                                                                                    |               |
-        None   <-   1       <-      2       <-      3       <-      4      <-       5               None
-                                                                                    |
-                                                                                    currr
+                                                                                            prev            head
+                                                                                            |               |
+        None        <-      1       <-      2       <-      3       <-      4      <-       5               None
+                                                                                            |
+                                                                                            currr
         """
 ```
 
