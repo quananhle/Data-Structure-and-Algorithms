@@ -18,16 +18,16 @@ Given the ```head``` of a singly linked list, return the _middle node of the lin
 
 ```Python
 # Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution(object):
-    def removeNthFromEnd(self, head, n):
+    def middleNode(self, head):
         """
         :type head: ListNode
-        :type n: int
         :rtype: ListNode
         """
+        
 ```
 
