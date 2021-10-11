@@ -58,29 +58,29 @@ class Solution(object):
                     |
                     curr
 
-                    prev            head
-                    |               |
-        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
-                    |
-                    curr
+                                    prev            head
+                                    |               |
+        None   <-   1       <-      2               3       ->      4       ->      5       ->      None
+                                    |
+                                    curr
 
-                    prev            head
-                    |               |
-        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
-                    |
-                    curr
+                                                    prev            head
+                                                    |               |
+        None   <-   1       <-      2       <-      3               4       ->      5       ->      None
+                                                    |
+                                                    curr
 
-                    prev            head
-                    |               |
-        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
-                    |
-                    curr
-
-                    prev            head
-                    |               |
-        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
-                    |
-                    curr
+                                                                    prev            head
+                                                                    |               |
+        None   <-   1       <-      2       <-      3       <-      4               5       ->      None
+                                                                    |
+                                                                    curr
+                                                                    
+                                                                                    prev            head
+                                                                                    |               |
+        None   <-   1       <-      2       <-      3       <-      4      <-       5               None
+                                                                                    |
+                                                                                    currr
         """
 ```
 
