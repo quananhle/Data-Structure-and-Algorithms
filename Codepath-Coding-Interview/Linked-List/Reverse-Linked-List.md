@@ -39,6 +39,11 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        """
+        head
+        |               
+        1       ->      2       ->      3       ->      4       ->      5       ->      None
+        """
         prev = None
         while head:
             curr = head
@@ -46,14 +51,42 @@ class Solution(object):
             curr.next = prev
             prev = curr
         return curr
+        """
+                    prev            head
+                    |               |
+        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
+                    |
+                    curr
+        """
+        """
+                    prev            head
+                    |               |
+        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
+                    |
+                    curr
+        """
+        """
+                    prev            head
+                    |               |
+        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
+                    |
+                    curr
+        """
+        """
+                    prev            head
+                    |               |
+        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
+                    |
+                    curr
+        """
+        """
+                    prev            head
+                    |               |
+        None   <-   1               2       ->      3       ->      4       ->      5       ->      None
+                    |
+                    curr
+        """
 ```
 
-head = [1,2,3,4,5]
 
-
-prev        head
-
-None        1       ->      2       ->      3       ->      4       ->      5       ->      None
-
-            curr
 
