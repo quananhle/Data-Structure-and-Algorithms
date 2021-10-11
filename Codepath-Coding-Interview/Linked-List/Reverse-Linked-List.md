@@ -47,9 +47,37 @@ class Solution(object):
         prev = None
         while head:
             curr = head
+            """
+            prev                head
+            |                   |
+            None                1       ->      2       ->      3       ->      4       ->      5       ->      None
+                                |
+                                curr
+            """
             head = head.next
+            """
+            prev                                head
+            |                                   |
+            None                1       ->      2       ->      3       ->      4       ->      5       ->      None
+                                |
+                                curr
+            """
             curr.next = prev
+            """
+            prev                              head
+            |                                 |
+            None        <-      1             2       ->      3       ->      4       ->      5       ->      None
+                                |
+                                curr
+            """
             prev = curr
+            """
+                                prev          head
+                                |             |
+            None        <-      1             2       ->      3       ->      4       ->      5       ->      None
+                                |
+                                curr
+            """
         return curr
         """
                     prev            head
