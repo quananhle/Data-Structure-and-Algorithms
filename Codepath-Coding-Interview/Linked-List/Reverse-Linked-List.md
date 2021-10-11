@@ -48,3 +48,12 @@ class Solution(object):
         return curr
 ```
 
+head = [1,2,3,4,5]
+
+
+prev        head
+
+None        1       ->      2       ->      3       ->      4       ->      5       ->      None
+
+            curr
+
