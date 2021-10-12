@@ -4,7 +4,11 @@
 
 **Difficulty**: Green
 
-Given the ```head``` of a singly linked list, return the _middle node of the linked list_. If there are two middle nodes, return the __second middle node__.
+The __array-form__ of an integer ```num``` is an array representing its digits in left to right order.
+
+    For example, for num = 1321, the array form is [1,3,2,1].
+
+Given ```num```, the ___array-form___ of an integer, and an integer ```k```, return the __array-form__ of the integer ```num + k```.
 
 #### Example 1: 
 - Input: head = [1,2,3,4,5]
