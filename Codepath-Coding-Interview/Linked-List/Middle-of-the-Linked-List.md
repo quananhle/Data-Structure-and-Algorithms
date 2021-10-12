@@ -1,6 +1,6 @@
-## Remove Nth Node From End of List
+## Middle of the Linked List
 
-[Leetcode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/)
+[Leetcode](https://leetcode.com/problems/middle-of-the-linked-list/)
 
 **Difficulty**: Green
 
