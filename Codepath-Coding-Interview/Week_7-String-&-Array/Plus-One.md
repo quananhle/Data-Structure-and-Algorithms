@@ -30,17 +30,16 @@ Increment the large integer by one and return the _resulting array_ of digits.
 
 Constraints:
 
-    1 <= num.length <= 104
-    0 <= num[i] <= 9
-    num does not contain any leading zeros except for the zero itself.
-    1 <= k <= 104
+    1 <= digits.length <= 100
+    0 <= digits[i] <= 9
+    digits does not contain any leading 0's.
+
     
 ```Python
 class Solution(object):
-    def addToArrayForm(self, num, k):
+    def plusOne(self, digits):
         """
-        :type num: List[int]
-        :type k: int
+        :type digits: List[int]
         :rtype: List[int]
         """
 ```
