@@ -11,16 +11,16 @@ The __array-form__ of an integer ```num``` is an array representing its digits i
 Given ```num```, the ___array-form___ of an integer, and an integer ```k```, return the __array-form__ of the integer ```num + k```.
 
 #### Example 1: 
-- Input: head = [1,2,3,4,5]
-- Output: [3,4,5]
-- Explanation: The middle node of the list is node 3.
+- Input: num = [1,2,0,0], k = 34
+- Output: [1,2,3,4]
+- Explanation: 1200 + 34 = 1234
 
 ![Alt text](https://assets.leetcode.com/uploads/2021/07/23/lc-midlist1.jpg)
 
 #### Example 2: 
-- Input: head = [1,2,3,4,5,6]
-- Output: [4,5,6]
-- Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
+- Input: num = [2,7,4], k = 181
+- Output: [4,5,5]
+- Explanation: 274 + 181 = 455
 
 ![Alt text](https://assets.leetcode.com/uploads/2021/07/23/lc-midlist2.jpg)
 
