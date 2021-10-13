@@ -38,6 +38,18 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        
+        # Brute-force method    
+        count = length = 0
+        tmp = curr = head
+        while tmp:
+            length += 1
+            tmp = tmp.next
+        middle = length // 2
+        while head:
+            if middle > 0:
+                curr = curr.next
+            head = head.next
+            middle -= 1
+        return curr
 ```
 
