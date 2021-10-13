@@ -57,7 +57,7 @@ class Solution(object):
 ```
 ![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/image.png)
 
-##### Array: 
+##### Two pointers: 
 ```Python
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -70,4 +70,10 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
 ```
