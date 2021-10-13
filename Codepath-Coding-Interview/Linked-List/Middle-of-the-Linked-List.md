@@ -41,10 +41,12 @@ class Solution(object):
         # Brute-force method    
         count = length = 0
         tmp = curr = head
+        # count the length of the linked list
         while tmp:
             length += 1
             tmp = tmp.next
         middle = length // 2
+        # stop when encountered the middle note
         while head:
             if middle > 0:
                 curr = curr.next
