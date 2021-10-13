@@ -25,7 +25,8 @@ Constraints:
     The number of nodes in the list is in the range [1, 100].
     1 <= Node.val <= 100
 
-    
+
+##### Brute-force method: 
 ```Python
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -56,3 +57,4 @@ class Solution(object):
 ```
 ![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/image.png)
 
+##### Array: 
