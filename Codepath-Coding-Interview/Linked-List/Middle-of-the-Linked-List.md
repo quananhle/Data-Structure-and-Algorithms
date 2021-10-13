@@ -54,4 +54,5 @@ class Solution(object):
             middle -= 1
         return curr
 ```
+![Alt text](https://github.com/Quananhle/Data-Structure-and-Algorithms/blob/master/Codepath-Coding-Interview/photos/image.png)
 
