@@ -62,9 +62,19 @@ class Solution(object):
             Head                        1 -> 3 -> 5
             |                           |
             Right pointer               List2
+            
+            Step 1: list1.val = list2.val
+            
+                    Left pointer                List1
+                    |                           |
+                    Dummy --> 0                 1 --> 2 --> 4
+
+                    Head  --> 0                 1 --> 3 --> 5
+                    |                           |
+                    Right pointer               List2            
         """
         
-        head = ListNode(-1)
+        head = ListNode()
         dummy = head
         # head = dummy = ListNode()
         while list1 and list2:
