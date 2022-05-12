@@ -253,4 +253,5 @@ class Solution(object):
         Step 6: self.mergeTwoLists(None, 5)
                 list1 is None
                 return list2
+        """
 ```
