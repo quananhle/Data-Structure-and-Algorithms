@@ -70,22 +70,56 @@ class Solution(object):
         while list1 and list2:
             if list1.val < list2.val:
                 dummy.next = list1
+                dummy = list1
                 list1 = list1.nextt
             """
             Step 1: list1.val = list2.val
             
                     Left pointer          List1
                     |                     |
-                    Dummy --> 0 --> 1 --> 2 --> 4
-
-                    Head  --> 0                 1 --> 3 --> 5
+                    Dummy     0 --> 1 --> 2 --> 4
+                    |               ^
+                    |_______________|
+                                    ^
+                                    |
+                    Head  --> 0 -----           1 --> 3 --> 5
                     |                           |
                     Right pointer               List2
             """
+            """
+            Step 3: list1.val < list2.val
+            
+                    Left pointer                               List1
+                    |       |-----------------|                |
+                    Dummy --| 0 --> 1 -----   |--------> 2 --> 4
+                                    ^     |              ^
+                                    |     |              |
+                                    |     |              |
+                                    |     |              |
+                    Head  --> 0 -----     |------------> 1 --> 3 --> 5
+                    |                                          |
+                    |                                          |
+                    Right pointer                              List2
+            """            
             else:
                 dummy.next = list2
+                dummy = list2
                 list2 = list2.next
-            dummy = dummy.next
+            """
+            Step 2: list1.val > list2.val
+            
+                    Left pointer              List1
+                    |                         |
+                    Dummy     0 --> 1 -----   2 --> 4
+                    |               ^     |
+                    |_______________|__   |
+                                    |  |  |
+                                    |  |  |
+                    Head  --> 0 -----  |  |--> 1 --> 3 --> 5
+                    |                  |       ^     |
+                    |                  |-------|     |
+                    Right pointer                    List2
+            """
         dummy.next = list1 if list1 else list2
         return head.next
 ```
