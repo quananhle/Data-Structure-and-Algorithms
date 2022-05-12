@@ -62,16 +62,6 @@ class Solution(object):
             Head                        1 -> 3 -> 5
             |                           |
             Right pointer               List2
-            
-            Step 1: list1.val = list2.val
-            
-                    Left pointer                List1
-                    |                           |
-                    Dummy --> 0                 1 --> 2 --> 4
-
-                    Head  --> 0                 1 --> 3 --> 5
-                    |                           |
-                    Right pointer               List2            
         """
         
         head = ListNode()
@@ -80,7 +70,18 @@ class Solution(object):
         while list1 and list2:
             if list1.val < list2.val:
                 dummy.next = list1
-                list1 = list1.next
+                list1 = list1.nextt
+            """
+            Step 1: list1.val = list2.val
+            
+                    Left pointer          List1
+                    |                     |
+                    Dummy --> 0 --> 1 --> 2 --> 4
+
+                    Head  --> 0                 1 --> 3 --> 5
+                    |                           |
+                    Right pointer               List2
+            """
             else:
                 dummy.next = list2
                 list2 = list2.next
