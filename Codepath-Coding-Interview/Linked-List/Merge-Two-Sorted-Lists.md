@@ -217,35 +217,35 @@ class Solution(object):
         """
         Step 1: self.mergeTwoLists(1 --> 2 --> 4, 1 --> 3 --> 5)
                 list1.val <= list2.val
-                list1.next = self.mergeTwoLists(2 --> 4,    1 --> 3 --> 5)
+                list1.next = self.mergeTwoLists(list1.next, list2)
                                                 List1       List2
                                                 |           |
                                            1 -> 2 -> 4      1 -> 3 -> 5
 
         Step 2: self.mergeTwoLists(2 --> 4, 1 --> 3 --> 5)
                 list1.val > list2.val
-                list2.next = self.mergeTwoLists(2 --> 4,        3 --> 5)
+                list2.next = self.mergeTwoLists(list1,          list2.next)
                                                 List1           List2
                                                 |               |
                                                 2 -> 4     1 -> 3 -> 5
 
         Step 3: self.mergeTwoLists(2 --> 4, 3 --> 5)
                 list1.val < list2.val
-                list1.next = self.mergeTwoLists(4,          3 --> 5)
+                list1.next = self.mergeTwoLists(list1.next, list2)
                                                 List1       List2
                                                 |           |
                                       1 -> 2 -> 4           3 -> 5
 
         Step 4: self.mergeTwoLists(4, 3 --> 5)
                 list1.val > list2.val
-                list2.next = self.mergeTwoLists(4,              5)
+                list2.next = self.mergeTwoLists(list1,          list2.next)
                                                 List1           List2
                                                 |               |
                                                 4               5
 
         Step 5: self.mergeTwoLists(4, 5)
                 list1.val < list2.val
-                list1.next = self.mergeTwoLists(None,       5)
+                list1.next = self.mergeTwoLists(list1.next, list2)
                                                 List1       List2
                                                 |           |
                                                 None        5
