@@ -68,7 +68,7 @@ class Solution(object):
         dummy = head
         # head = dummy = ListNode()
         while list1 and list2:
-            if list1.val < list2.val:
+            if list1.val <= list2.val:
                 dummy.next = list1
                 dummy = list1
                 list1 = list1.nextt
@@ -208,10 +208,49 @@ class Solution(object):
             return list2
         elif list2 is None:
             return list1
-        elif list1.val < list2.val:
+        elif list1.val <= list2.val:
             list1.next = self.mergeTwoLists(list1.next, list2)
             return list1
         else:
             list2.next = self.mergeTwoLists(list1, list2.next)
             return list2
+        """
+        Step 1: self.mergeTwoLists(1 --> 2 --> 4, 1 --> 3 --> 5)
+                list1.val <= list2.val
+                list1.next = self.mergeTwoLists(2 --> 4,    1 --> 3 --> 5)
+                                                List1       List2
+                                                |           |
+                                           1 -> 2 -> 4      1 -> 3 -> 5
+
+        Step 2: self.mergeTwoLists(2 --> 4, 1 --> 3 --> 5)
+                list1.val > list2.val
+                list2.next = self.mergeTwoLists(2 --> 4,        3 --> 5)
+                                                List1           List2
+                                                |               |
+                                                2 -> 4     1 -> 3 -> 5
+
+        Step 3: self.mergeTwoLists(2 --> 4, 3 --> 5)
+                list1.val < list2.val
+                list1.next = self.mergeTwoLists(4,          3 --> 5)
+                                                List1       List2
+                                                |           |
+                                      1 -> 2 -> 4           3 -> 5
+
+        Step 4: self.mergeTwoLists(4, 3 --> 5)
+                list1.val > list2.val
+                list2.next = self.mergeTwoLists(4,              5)
+                                                List1           List2
+                                                |               |
+                                                4               5
+
+        Step 5: self.mergeTwoLists(4, 5)
+                list1.val < list2.val
+                list1.next = self.mergeTwoLists(None,       5)
+                                                List1       List2
+                                                |           |
+                                                None        5
+
+        Step 6: self.mergeTwoLists(None, 5)
+                list1 is None
+                return list2
 ```
