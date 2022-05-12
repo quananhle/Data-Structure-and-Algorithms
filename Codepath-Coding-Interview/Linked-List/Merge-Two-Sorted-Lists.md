@@ -186,6 +186,24 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
+        """
+        Understand
+            Input: 1 -> 2 -> 4, 1 -> 3 -> 5
+            Output: 1 -> 1 -> 2 -> 3 -> 4 -> 5
+        
+        Match
+            Linked List
+        
+        Plan
+            - Recursion
+            List1
+            |
+            1 -> 2 -> 4
+            
+            1 -> 3 -> 5
+            |
+            List2
+        """        
         if list1 is None:
             return list2
         elif list2 is None:
