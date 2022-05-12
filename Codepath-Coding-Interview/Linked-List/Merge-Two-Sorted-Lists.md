@@ -89,18 +89,18 @@ class Solution(object):
             """
             Step 3: list1.val < list2.val
             
-                    Left pointer                               List1
-                    |       |-----------------|                |
-                    Dummy --| 0 --> 1 -----   |--------> 2 --> 4
-                                    ^     |              ^
-                                    |     |              |
-                                    |     |              |
-                                    |     |              |
-                    Head  --> 0 -----     |------------> 1 --> 3 --> 5
-                    |                                          |
-                    |                                          |
-                    Right pointer                              List2
-            """            
+                    Left pointer                                List1
+                    |       |-----------------|                 |
+                    Dummy --| 0 --> 1 -----   | --------> 2 --> 4
+                                    ^     |               ^
+                                    |     |               |
+                                    |     |               |
+                                    |     |               |
+                    Head  --> 0 -----     | ------------> 1     3 --> 5
+                    |                                           |
+                    |                                           |
+                    Right pointer                               List2
+            """
             else:
                 dummy.next = list2
                 dummy = list2
@@ -115,11 +115,26 @@ class Solution(object):
                     |_______________|__   |
                                     |  |  |
                                     |  |  |
-                    Head  --> 0 -----  |  |--> 1 --> 3 --> 5
-                    |                  |       ^     |
-                    |                  |-------|     |
-                    Right pointer                    List2
+                    Head  --> 0 -----  |  | --> 1 --> 3 --> 5
+                    |                  |        ^     |
+                    |                  |--------|     |
+                    Right pointer                     List2
             """
+            """
+            Step 4: list1.val > list2.val
+            
+                    Left pointer                                        List1
+                    |                                                   |
+                    Dummy     0 --> 1 -----              2 ------       4
+                    |               ^     |              ^      |
+                    |_______________|__   |              |      |
+                                    |  |  |              |      |
+                                    |  |  |              |      |      
+                    Head  --> 0 -----  |  |------------> 1      | ---> 3 --> 5
+                    |                  |                               ^     |
+                    |                  |-------------------------------|     |
+                    Right pointer                                            List2
+            """                  
         dummy.next = list1 if list1 else list2
         return head.next
 ```
