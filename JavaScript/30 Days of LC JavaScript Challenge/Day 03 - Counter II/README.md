@@ -130,7 +130,7 @@ var createCounter = function(init) {
  */
 ```
 
-```JavaScipt
+```JavaScript
 /**
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
@@ -162,3 +162,45 @@ var createCounter = function(init) {
 ```
 
 ### Approach 4: Class
+
+
+```JavaScript
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+class Counter {
+    constructor(init) {
+        this.init = init;
+        this.curr = init;
+    }
+
+    increment() {
+        // this.curr++;
+        this.curr += 1;
+        return this.curr;
+    }
+
+    decrement() {
+        // this.curr--;
+        this.curr -= 1;
+        return this.curr;
+    }
+
+    reset() {
+        this.curr = this.init;
+        return this.curr;
+    }
+}
+
+var createCounter = function(init) {
+  return new Counter(init);
+};
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */
+```
