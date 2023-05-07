@@ -204,3 +204,36 @@ var createCounter = function(init) {
  * counter.decrement(); // 4
  */
 ```
+
+### Approach 5: Closure with Proxy
+
+```JavaScript
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+var createCounter = function(init) {
+  let curr = init;
+  return new Proxy({}, {
+      get: (target, key) => {
+          switch(key) {
+              case "increment":
+                return () => ++curr;
+              case "decrement":
+                return () => --curr;
+              case "reset":
+                return () => (curr = init);
+              default:
+                throw Exception("Unexpected error");
+          }
+      },
+  });
+};
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */
+```
