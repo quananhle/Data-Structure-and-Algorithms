@@ -54,16 +54,16 @@ var createCounter = function(init) {
     let curr = init;
     return {
         increment: function() {
-            curr++
-            return curr
+            curr++;
+            return curr;
         },
         decrement: function() {
-            curr--
-            return curr
+            curr--;
+            return curr;
         },
         reset: function() {
-            curr = init
-            return curr
+            curr = init;
+            return curr;
         }
     }
 };
@@ -76,4 +76,26 @@ var createCounter = function(init) {
  */
  ```
  
- ### Approach 2:
+### Approach 2: Closure with Shortened Syntax
+ 
+```JavaScript
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+var createCounter = function(init) {
+    let curr = init;
+    return {
+        increment: () => ++curr,
+        decrement: () => --curr,
+        reset: () => (curr = init),
+    }
+};
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */
+```
