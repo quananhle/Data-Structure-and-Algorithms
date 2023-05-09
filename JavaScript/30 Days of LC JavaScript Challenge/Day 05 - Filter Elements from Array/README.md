@@ -43,6 +43,74 @@ __Constraints:__
 
 ---
 
+### Truthy and Falsy
+
+In this question, you are asked to remove all values from an array that aren't truthy (i.e. remove all falsy values). But what does that mean? ```JavaScript``` has true boolean values of ```true``` and ```false```. But you are actually allowed to put any value inside an ```if``` statement. That value will be coerced into a boolean based on it's "truthiness".
+
+All values are considered truthy except the following:
+
+- ```false```
+- All forms of zero, meaning ```0```, ```-0``` (output of ```0/-1```), and ```0n``` (output of ```BigInt(0)```)
+- ```NaN``` ("Not a Number", one way to get it is with ```0/0```)
+- ```""``` (empty string)
+- ```null```
+- ```undefined```
+
+#### Why does this language feature exist?
+
+The short answer is it can be convenient. Imagine you have a textfield which edits a variable userInput which is initially null.
+
+```JavaScript
+if (userInput !== null && userInput !== "") {
+  // uploadToDatabase(userInput)
+}
+```
+
+can be shortened to:
+
+```JavaScript
+if (userInput) {
+  // uploadToDatabase(userInput)
+}
+```
+
+#### Truthiness and Logical Operators
+
+- The __OR__ operator ```||``` returns the first value if the first value is __truthy__ (without evaluating the 2nd value). Otherwise it returns the 2<sup>nd</sup> value.
+- The __AND__ operator ```&&``` returns the first value if the first value is __falsy__ (without evaluating the 2nd value). Otherwise it returns the 2<sup>nd</sup> value.
+- The __Nullish Coalescing__ operator ```??``` is identical to ```||``` except it only treats ```null``` and ```undefined``` as __falsy__.
+
+```JavaScript
+let val;
+if (a) {
+  val = a;
+} else if (b) {
+  val = b;
+} else {
+  val = c;
+}
+```
+
+can be replaced with:
+
+```JavaScript
+const val = a || b || c;
+```
+
+You could also conditionally execute some code:
+
+```JavaScript
+if (a && b) {
+  func();
+}
+```
+
+can be replaced with:
+
+```JavaScript
+a && b && func();
+```
+
 ### Approach 1: Push Values onto New Array
 
 ```JavaScript
@@ -82,22 +150,7 @@ var filter = function(arr, fn) {
 };
 ```
 
-```JavaScript
-/**
- * @param {number[]} arr
- * @param {Function} fn
- * @return {number[]}
- */
-var filter = function(arr, fn) {
-    const newArray = [];
-    for (let i = 0; i < arr.length; ++i) {
-        if (fn(arr[i], i)) {
-            newArray.push(arr[i]);
-        }
-    }
-    return newArray;
-};
-```
+### Approach 3: Preallocate Memory
 
 ```JavaScript
 /**
@@ -106,15 +159,22 @@ var filter = function(arr, fn) {
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    const newArray = [];
+    let curr = 0;
+    const newArray = new Array(arr.length);
     for (let i = 0; i < arr.length; ++i) {
         if (fn(arr[i], i)) {
-            newArray.push(arr[i]);
+            newArray[curr] = arr[i];
+            ++curr;
         }
+    }
+    while (newArray.length > curr) {
+        newArray.pop();
     }
     return newArray;
 };
 ```
+
+### Approach 4: Perform Operations In-Place
 
 ```JavaScript
 /**
@@ -123,15 +183,21 @@ var filter = function(arr, fn) {
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    const newArray = [];
+    let curr = 0;
     for (let i = 0; i < arr.length; ++i) {
         if (fn(arr[i], i)) {
-            newArray.push(arr[i]);
+            arr[curr] = arr[i];
+            ++curr;
         }
     }
-    return newArray;
+    while (arr.length > curr) {
+        arr.pop();
+    }
+    return arr;
 };
 ```
+
+### Approach 5: Built-in Function
 
 ```JavaScript
 /**
@@ -140,12 +206,6 @@ var filter = function(arr, fn) {
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    const newArray = [];
-    for (let i = 0; i < arr.length; ++i) {
-        if (fn(arr[i], i)) {
-            newArray.push(arr[i]);
-        }
-    }
-    return newArray;
+    return arr.filter(fn);
 };
 ```
