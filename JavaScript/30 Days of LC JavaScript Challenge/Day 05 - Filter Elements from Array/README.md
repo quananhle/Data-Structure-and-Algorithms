@@ -42,3 +42,110 @@ __Constraints:__
 - ```-10^9 <= arr[i] <= 10^9```
 
 ---
+
+### Approach 1: Push Values onto New Array
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
+
+### Approach 2: For...in Loop
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (const num in arr) {
+        const i = Number(num);
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (fn(arr[i], i)) {
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+```
