@@ -41,3 +41,36 @@ __Constraints:__
 
 ---
 
+### Approach 1: Write Values onto Initially Empty Array
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i] = fn(arr[i], i);
+    }
+    return newArr;
+};
+```
+
+### Approach 2: For...in Loop
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    const newArr = new Array(arr.length);
+    for (const i in arr) {
+        newArr[i] = fn(arr[i], Number(i));
+    }
+    return newArr;
+};
+```
