@@ -74,3 +74,70 @@ var map = function(arr, fn) {
     return newArr;
 };
 ```
+
+### Approach 3: Push Values onto Array
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(fn(arr[i], i));
+    }
+    return newArr;
+};
+```
+
+### Approach 4: Preallocate Memory
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    const newArr = new Array(arr.length);
+    for (let i = 0; i < arr.length; i++) {
+        newArr[i] = fn(arr[i], i);
+    }
+    return newArr;
+};
+```
+
+### Approach 5: 32 Bit Integer Array
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    const newArr = new Int32Array(arr.length);
+    for (let i = 0; i < arr.length; ++i) {
+        newArr[i] = fn(arr[i], i);
+    }
+    return newArr;
+};
+```
+
+### Approach 6: In-Memory Transformation
+
+```JavaScript
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    for (let i = 0; i < arr.length; ++i) {
+        arr[i] = fn(arr[i], i);
+    }
+    return arr
+};
+```
