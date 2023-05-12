@@ -31,7 +31,7 @@
   - [Two-Pointer in Linked List](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Linked%20List/Two-Pointer%20in%20Linked%20List)
 - ### [Queue & Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack)
   - [Queue](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Queue)
-    - Monotonic Queue
+    - [Monotonic Queue](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20&%20Stack/Monotonic%20Queue)
   - [Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Stack)
     - [Monotonic Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Monotonic%20Stack)
   - [Breadth-First Search](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Breadth-First%20Search)
@@ -48,6 +48,9 @@
 - ### [Tree & Graphs](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs)
   - [Depth-First Search Algorithm in Graph](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs/Depth-First%20Search%20Algorithm%20in%20Graph)
   - [Disjoint Set](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs/Disjoint%20Set)
+  - [Segment Tree](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs/Segment%20Tree)
+- ### [Trie](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Trie)
+
 
 # Problems
 
