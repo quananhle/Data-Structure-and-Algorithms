@@ -29,6 +29,25 @@
 - ### [Linked List](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Linked%20List)
   - [Classic Problems](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Linked%20List/Classic%20Problems)
   - [Two-Pointer in Linked List](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Linked%20List/Two-Pointer%20in%20Linked%20List)
+- ### [Queue & Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack)
+  - [Queue](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Queue)
+    - Monotonic Queue
+  - [Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Stack)
+    - [Monotonic Stack](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Monotonic%20Stack)
+  - [Breadth-First Search](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Breadth-First%20Search)
+  - [Depth-First Search](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Depth-First%20Search)
+  - [Union Find](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Queue%20%26%20Stack/Union%20Find)
+- ### [Recursion](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion)
+  - [Recursion I](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Recursion%20I)
+  - [Recursion II](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Recursion%20II)
+    - [Backtracking](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Recursion%20II/Backtracking)
+    - [Divide and Conquer](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Recursion%20II/Divide%20and%20Conquer)
+    - [Unfold Recursion](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Recursion%20II/Unfold%20Recursion)
+  - [Dijkstra's Algorithm](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Recursion/Dijkstra's%20Algorithm)
+- ### [Sorting](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Sorting)
+- ### [Tree & Graphs](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs)
+  - [Depth-First Search Algorithm in Graph](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs/Depth-First%20Search%20Algorithm%20in%20Graph)
+  - [Disjoint Set](https://github.com/quananhle/Python/tree/main/Software%20Engineering%20Practicing/Concepts/Tree%20and%20graphs/Disjoint%20Set)
 
 # Problems
 
