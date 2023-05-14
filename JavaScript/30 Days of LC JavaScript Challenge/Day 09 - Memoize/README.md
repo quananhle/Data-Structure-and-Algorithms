@@ -183,3 +183,39 @@ function memoize(fn) {
  * console.log(callCount) // 1 
  */
 ```
+
+### Approach 3: Optimize Based on Numeric Constraints + Function.apply
+
+```JavaScript
+/**
+ * @param {Function} fn
+ */
+function memoize(fn) {
+    const cache = new Map();
+    return function(...args) {
+        let key = arguments[0];
+        if (arguments[1]) {
+            key += arguments[1] * 100001;
+        }
+        const result = cache.get(key);
+        if (result != undefined) {
+            return result;
+        }
+        const output = fn(...args);
+        cache.set(key, output);
+        return output;
+    }
+}
+
+
+/** 
+ * let callCount = 0;
+ * const memoizedFn = memoize(function (a, b) {
+ *	 callCount += 1;
+ *   return a + b;
+ * })
+ * memoizedFn(2, 3) // 5
+ * memoizedFn(2, 3) // 5
+ * console.log(callCount) // 1 
+ */
+```
