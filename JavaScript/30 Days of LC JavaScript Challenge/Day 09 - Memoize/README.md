@@ -77,3 +77,74 @@ __Constraints:__
 - input function is ```sum```, ```fib```, or ```factorial```
 
 ---
+
+This type of optimization is called __memoization__ and is an extremely important example of a __higher-order function__.
+
+To give a concrete example of memoization, here is some code without memoization.
+
+```JavaScript
+let callCount = 0;
+const add = (a, b) => {
+  callCount += 1;
+  return a + b;
+}
+
+add(2, 2); // 4
+console.log(callCount); // 1
+add(2, 2); // 4
+console.log(callCount); // 2
+add(2, 2); // 4
+console.log(callCount); // 3
+```
+
+As expected, ```callCount``` is incremented every time ```add``` is called.
+
+However if we apply __memoization__:
+
+```JavaScript
+let callCount = 0;
+const add = (a, b) => {
+  callCount += 1;
+  return a + b;
+};
+const memoizedAdd = memoize(add);
+
+memoizedAdd(2, 2); // 4
+console.log(callCount); // 1
+memoizedAdd(2, 2); // 4
+console.log(callCount); // 1
+memoizedAdd(2, 2); // 4
+console.log(callCount); // 1
+```
+
+### Approach 1: Rest/Spread Syntax + JSON.stringify()
+
+```JavaScript
+/**
+ * @param {Function} fn
+ */
+function memoize(fn) {
+    const cache = {};
+    return function(...args) {
+        const key = JSON.stringify(args);
+        if (key in cache) {
+            return cache[key];
+        }
+        const output = fn(...args);
+        cache[key] = output
+        return output;
+    }
+}
+
+
+/** 
+ * let callCount = 0;
+ * const memoizedFn = memoize(function (a, b) {
+ *	 callCount += 1;
+ *   return a + b;
+ * })
+ * memoizedFn(2, 3) // 5
+ * memoizedFn(2, 3) // 5
+ * console.log(callCount) // 1 
+ */
+```
