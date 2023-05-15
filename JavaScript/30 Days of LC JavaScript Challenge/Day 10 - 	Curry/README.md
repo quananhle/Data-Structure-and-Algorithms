@@ -122,3 +122,49 @@ const result = doubleThenSquare(5); // (5 * 2)^2 = 100
 ```
 
 ---
+
+### Approach 1: Currying with Recursive Function Calls
+
+```JavaScript
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+var curry = function(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn(...args);
+        }
+        return (...nextArgs) => curried(...args, ...nextArgs);
+    };
+};
+
+/**
+ * function sum(a, b) { return a + b; }
+ * const csum = curry(sum);
+ * csum(1)(2) // 3
+ */
+```
+
+### Approach 2: Currying with the Built-in Bind Method
+
+```JavaScript
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+var curry = function(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn.apply(this, args);
+        }
+        return curried.bind(this, ...args);
+    };
+};
+
+/**
+ * function sum(a, b) { return a + b; }
+ * const csum = curry(sum);
+ * csum(1)(2) // 3
+ */
+```
