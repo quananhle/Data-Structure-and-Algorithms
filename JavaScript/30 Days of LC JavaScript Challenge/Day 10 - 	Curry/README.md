@@ -64,3 +64,61 @@ __Constraints:__
 - function parameters explicitly defined
 
 ---
+
+Currying is a powerful technique in functional programming that transforms a function with multiple arguments into a sequence of functions. It allows you to create flexible and reusable code by enabling partial application of function arguments. In this article, we will discuss the concept and implementation of currying in JavaScript.
+
+Currying in JavaScript has several practical applications that can help improve code readability, maintainability, and reusability. Here are some practical use cases of currying:
+
+1. Reusable utility functions: Currying can help create reusable utility functions that can be easily customized for specific use cases. Currying allows you to create a function that returns another function with a partially applied argument. In this case, we have a curried add function that takes two arguments, a and b. When you call add with a single argument, it returns a new function that takes the second argument b and adds it to the initially provided a.
+
+```JavaScript
+const add = a => b => a + b;
+
+// Create a new function 'add5' by calling the curried 'add' function with the value 5.
+// The returned function will take a single argument 'b' and add it to 5.
+const add5 = add(5);
+
+// Now, when we call 'add5' with a value (e.g., 3), it adds 5 to the input value, resulting in 8.
+const result = add5(3); // 8
+```
+
+2. Event handling: In event-driven programming, currying can be used to create event handlers with specific configurations, while keeping the core event handling function generic.
+
+```JavaScript
+const handleClick = buttonId => event => {
+   console.log(`Button ${buttonId} clicked`, event);
+};
+
+const button1Handler = handleClick(1);
+document.getElementById("button1").addEventListener("click", button1Handler);
+```
+
+3. Customizing API calls: Currying can help create more specific API calls based on a generic API call function.
+
+```JavaScript
+const apiCall = baseUrl => endpoint => params =>
+        fetch(`${baseUrl}${endpoint}`, { ...params });
+
+const myApiCall = apiCall("https://my-api.com");
+const getUser = myApiCall("/users");
+const updateUser = myApiCall("/users/update");
+
+// Usage:
+getUser({ userId: 1 });
+updateUser({ userId: 1, name: "John Doe" });
+```
+
+4. Higher-order functions and functional composition: Currying enables the creation of higher-order functions that can be composed to create more complex functionality.
+
+```JavaScript
+const compose = (f, g) => x => f(g(x));
+
+const double = x => x * 2;
+const square = x => x * x;
+
+const doubleThenSquare = compose(square, double);
+
+const result = doubleThenSquare(5); // (5 * 2)^2 = 100
+```
+
+---
