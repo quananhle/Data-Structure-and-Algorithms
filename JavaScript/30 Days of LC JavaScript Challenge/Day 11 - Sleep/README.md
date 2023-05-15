@@ -212,3 +212,90 @@ fetch('https://api.example.com/data')
 ```
 
 We're using fetch here (which returns a promise) to retrieve data from a URL. We then use ```.then``` to handle the response, and ```.catch``` to handle any errors. Finally, regardless of whether the fetch operation was successful or not, ```.finally``` is called to set isLoading to false and log a message to the console.
+
+### Understanding Promise Returns in Async Functions
+
+One interesting fact that might come in handy when solving this problem is that whether you return a promise with ```return new Promise()``` or ```return await new Promise()``` inside an async function, the behavior usually remains the same. This is because an async function always wraps the returned value in a promise. However, using ```await``` can make a difference in certain situations, such as error handling.
+
+```JavaScript
+async function example() {
+    try {
+        return new Promise((resolve, reject) => {
+            throw new Error('Oops!');
+        });
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+example(); // The error is not caught, and it rejects the promise returned by example.
+
+async function example2() {
+    try {
+        return await new Promise((resolve, reject) => {
+            throw new Error('Oops!');
+        });
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+example2(); // The error is caught, and the promise returned by example2 is resolved.
+```
+
+---
+
+### Approach 1: Asynchronous Programming with Promises and setTimeout
+
+```JavaScript
+/**
+ * @param {number} millis
+ */
+async function sleep(millis) {
+    return new Promise(resolve => {
+        setTimeout(resolve, millis);
+    })
+}
+
+/** 
+ * let t = Date.now()
+ * sleep(100).then(() => console.log(Date.now() - t)) // 100
+ */
+ 
+ ```JavaScript
+ /**
+ * @param {number} millis
+ */
+async function sleep(millis) {
+    return new Promise((resolve, reject) => {
+        try {
+            setTimeout(() => resolve(5), millis);
+        }
+        catch(err) {
+            reject(err);
+        }
+    })
+}
+
+/** 
+ * let t = Date.now()
+ * sleep(100).then(() => console.log(Date.now() - t)) // 100
+ */
+
+```
+
+### Approach 2: Asynchronous Programming with Promises and setTimeout without Return
+
+```JavaScript
+/**
+ * @param {number} millis
+ */
+async function sleep(millis) {
+    return new Promise(res => setTimeout(res, millis))
+}
+
+/** 
+ * let t = Date.now()
+ * sleep(100).then(() => console.log(Date.now() - t)) // 100
+ */
+```
