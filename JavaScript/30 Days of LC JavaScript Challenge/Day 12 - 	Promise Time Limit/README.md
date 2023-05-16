@@ -99,3 +99,36 @@ To force the promise ```someProcess()``` returns to reject after an hour:
 const ONE_HOUR_IN_MS = 3600 * 1000;
 const timeLimitedProcess = timeLimit(someProcess, ONE_HOUR_IN_MS);
 ```
+
+### Notify Users of Failure
+
+Imagine a user requested to download a file which you expect should take less than 10 seconds to download. If the download is taking too long, rather than let the user wait, it may be better to just give up and show the user an error message.
+
+Similar to the first use-case, this really should only be done as a last resort. It's likely better to implement a loading indicator and/or fix the underlying issue causing the slowness.
+
+---
+
+### Approach 1: Call Function Inside New Promise
+
+```JavaScript
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
+var timeLimit = function(fn, t) {
+	return async function(...args) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Time Limit Exceeded");
+            }, t);
+            fn(...args).then(resolve).catch(reject);
+        })
+    }
+};
+
+/**
+ * const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
+ * limited(150).catch(console.log) // "Time Limit Exceeded" at t=100ms
+ */
+```
