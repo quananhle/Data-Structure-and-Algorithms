@@ -68,3 +68,34 @@ __Constraints:__
 - ```0 <= inputs.length <= 10```
 - ```0 <= t <= 1000```
 - ```fn``` returns a promise
+
+---
+
+### Use-cases for Time Limit
+
+#### Long Running Processes
+
+You may have code which repeats over and over again. A common example of this would be loading data into a cache and keeping it in sync with the data source.
+
+```JavaScript
+async function repeatProcessIndefinitely() {
+  while (true) {
+    try {
+      await someProcess();
+    } catch (e) {
+      console.error(e);
+    }
+  }
+}
+```
+
+If ```someProcess``` were to ever never fulfill, the loop would get frozen and nothing would happen. Forcing ```someProcess``` to throw an error would unfreeze the process.
+
+An important consideration is that code in ```someProcess``` can still continue executing even if the promise was rejected. So you might have multiple blocks of code executing in parallel. A better solution may be fix the underlying issue which caused the freeze or to implement proper cancellation. Consider solving Design Cancellable Function to implement true cancellation.
+
+To force the promise ```someProcess()``` returns to reject after an hour:
+
+```JavaScript
+const ONE_HOUR_IN_MS = 3600 * 1000;
+const timeLimitedProcess = timeLimit(someProcess, ONE_HOUR_IN_MS);
+```
