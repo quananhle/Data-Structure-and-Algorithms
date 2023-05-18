@@ -75,3 +75,123 @@ __Constraints:__
 - ```1 <= n <= 10```
 
 ---
+
+### Use-case for Promise Pool
+
+Imagine you have a long list of files you have to download, and you can only download them one at a time. If you requested all of them at once in parallel (using ```Promise.all```), several bad things could happen:
+
+1. The environment may cancel requests because it detects that there are too many to handle.
+2. The database may become unresponsive under the heavy load.
+3. Too much network traffic could cause higher priority requests to get delayed.
+4. The app could become unresponsive trying to process all the data at once.
+
+An alternative approach could be to process one file at a time:
+
+```JavaScript
+for (const filename of files) {
+  await download(filename);
+}
+```
+
+However, this is slow and doesn't take advantage of parallelization.
+
+The optimal approach is to decide on a reasonable limit on the number of concurrent requests and use a promise pool. Using the implementation asked for in this problem, it would look like this:
+
+```JavaScript
+const files = ["data.json", "data2.json", "data3.json"];
+
+// weird double arrow function because we want to create functions
+// but we don't want to execute them until later
+const functions = files.map(filename => () => download(filename));
+
+const POOL_LIMIT = 2;
+await promisePool(functions, POOL_LIMIT);
+```
+
+### Approach 1: Recursive Helper Function
+
+1. Every time we execute a new function, we increment ```functionIndices``` and we increment ```inProgressCount```.
+2. Every time a promise resolves, we decrement ```inProgressCount```, and repeat step 1 while ```inProgressCount < n``` and there are still functions left to execute
+3. If at any point, ```functionIndices == functions.length``` and ```inProgressCount == 0```, we are done and should resolve the returned promise.
+
+```JavaScript
+/**
+ * @param {Function[]} functions
+ * @param {number} n
+ * @return {Function}
+ */
+var promisePool = async function(functions, n) {
+    return new Promise((resolve) => {
+        let inProgressCount = 0;
+        let functionIndices = 0;
+        function helper() {
+            // Base case
+            if (functionIndices >= functions.length) {
+                if (inProgressCount === 0) {
+                    resolve();
+                    return;
+                }
+            }
+            while (inProgressCount < n && functionIndices < functions.length) {
+                inProgressCount += 1;
+                const promise = functions[functionIndices]();
+                functionIndices += 1;
+                promise.then(() => {
+                    inProgressCount -= 1;
+                    helper();
+                });
+            }
+        }
+        helper();
+    })
+};
+
+/**
+ * const sleep = (t) => new Promise(res => setTimeout(res, t));
+ * promisePool([() => sleep(500), () => sleep(400)], 1)
+ *   .then(console.log) // After 900ms
+ */
+```
+
+### Approach 2: Async/Await + Promise.all() + Array.shift()
+
+We can define a recursive function evaluateNext that:
+
+1. Immediately returns if there are no functions to execute (the base case).
+2. Removes the first function from the list of functions (using ```Array.shift```).
+3. Executes that same first function and waits for its completion.
+4. Recursively calls itself and waits for its own completion. That way as soon as any function finishes, the next function in the queue is processed.
+
+```JavaScript
+/**
+ * @param {Function[]} functions
+ * @param {number} n
+ * @return {Function}
+ */
+var promisePool = async function(functions, n) {
+    async function evaluateNext() {
+        if (functions.length === 0) {
+            return;
+        }
+        const fn = functions.shift();
+        await fn();
+        await evaluateNext();
+    }
+    const nPromises = Array(n).fill().map(evaluateNext);
+    await Promise.all(nPromises);
+};
+```
+
+### Approach 3: 2-Liner
+
+```JavaScript
+/**
+ * @param {Function[]} functions
+ * @param {number} n
+ * @return {Function}
+ */
+var promisePool = async function(functions, n) {
+    const evaluateNext = () => functions[n++]?.().then(evaluateNext);
+    return Promise.all(functions.slice(0, n).map(f => f().then(evaluateNext)));
+};
+```
