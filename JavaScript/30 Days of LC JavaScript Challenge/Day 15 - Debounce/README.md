@@ -162,7 +162,7 @@ var debounce = function(fn, t) {
  */
  ```
  
- ### setInterval + clearInterval
+ ### Approach 2: setInterval + clearInterval
  
  ```JavaScript
  /**
