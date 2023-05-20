@@ -57,3 +57,74 @@ __Constraints:__
 
 ---
 
+### Use-case for a Cache with a Time Limit
+
+Imagine you are maintaining a cache of files from a database. You could load each file once and keep it in memory indefinitely. The issue is if a file is updated in the database, the cache will contains out-of-date data. Another option is to constantly re-download the files every time a file is accessed (or at least send a request asking if it changed). But this could be inefficient and slow, especially if the files change infrequently.
+
+If it is acceptable for the data to sometimes be a little out of date, a good compromise is to give the data a Time Until Expiration. This provides a good balance between performance and having up-to-date data. This type of cache is most effective when the same key is accessed in rapid succession.
+
+Here is some code showing how to use this type of cache for that purpose:
+
+```JavaScript
+const cache = new TimeLimitedCache();
+
+async function getFileWithCache(filename) {
+  let content = cache.get(filename);
+  if (content !== -1) return content;
+  content = await loadFileContents(filename);
+  const ONE_HOUR = 60 * 60 * 1000;
+  cache.set(filename, content, ONE_HOUR);
+  return content;
+}
+```
+
+In the above code, ```getFileWithCache``` first tries to load the data from the cache. If there was a cache-hit, it immediately returns the result. Otherwise it downloads the data and populates the cache before returning the downloaded data.
+
+---
+
+### Approach 1: setTimeout + clearTimeout + Class Syntax
+
+```JavaScript
+var TimeLimitedCache = function() {
+    this.cache = new Map();
+};
+
+/** 
+ * @param {number} key
+ * @param {number} value
+ * @param {number} time until expiration in ms
+ * @return {boolean} if un-expired key already existed
+ */
+TimeLimitedCache.prototype.set = function(key, value, duration) {
+    const valueInCache = this.cache.get(key);
+    if (valueInCache) {
+      clearTimeout(valueInCache.timeout);
+    }
+    const timeout = setTimeout(() => this.cache.delete(key), duration);
+    this.cache.set(key, { value, timeout });
+    return Boolean(valueInCache);
+};
+
+/** 
+ * @param {number} key
+ * @return {number} value associated with key
+ */
+TimeLimitedCache.prototype.get = function(key) {
+    return this.cache.has(key) ? this.cache.get(key).value : -1;
+};
+
+/** 
+ * @return {number} count of non-expired keys
+ */
+TimeLimitedCache.prototype.count = function() {
+    return this.cache.size;
+};
+
+/**
+ * Your TimeLimitedCache object will be instantiated and called as such:
+ * var obj = new TimeLimitedCache()
+ * obj.set(1, 42, 1000); // false
+ * obj.get(1) // 42
+ * obj.count() // 1
+ */
+```
