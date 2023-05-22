@@ -51,5 +51,56 @@ __Constraints:__
 
 ---
 
+### Use-cases for Throttle
 
+Throttle is used when you want to perform an action as soon as possible, but also want to guarantee a limit on how frequently that action could be performed.
 
+A use-case could be as simple as downloading data when a user clicks a button. You don't want there to be any delay when the user first clicks the button (why debounce wouldn't be suitable). But you also don't want to try to download dozens of copies if you user decided to start spam clicking the button. Adding a throttle of a few seconds to the download function elegantly achieve the desired result.
+
+A simple way to think about when to use debounce and when to use throttle:
+
+- Debounce protects the user from unwanted events that could create lag (like trying to re-render a large grid of search results every time a character is typed). This is achieved by only executing code AFTER the user is done with their interaction.
+- Throttle prevents code from being called more frequently than the infrastructure/app can handle (like the user trying to spam click download). This is achieved by guaranteeing a limit on how frequently some code can be called. It generally doesn't hurt to apply throttling to most network requests, provided ```t``` is reasonably small.
+
+---
+
+### Approach 1: Recursive setTimeout Calls
+
+```JavaScript
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
+var throttle = function(fn, t) {
+    let timeoutInProgress = null;
+    let argsToProcess = null;
+
+    const timeoutFunction = () => {
+        if (argsToProcess === null) {
+            timeoutInProgress = null;
+        }
+        else {
+            fn(...argsToProcess);
+            argsToProcess = null;
+            timeoutInProgress = setTimeout(timeoutFunction, t);
+        }
+    };
+
+    return function throttled(...args) {
+        if (timeoutInProgress) {
+            argsToProcess = args;
+        }
+        else {
+            fn(...args);
+            timeoutInProgress = setTimeout(timeoutFunction , t);
+        }
+    }
+};
+
+/**
+ * const throttled = throttle(console.log, 100);
+ * throttled("log"); // logged immediately.
+ * throttled("log"); // logged at t=100ms.
+ */
+```
