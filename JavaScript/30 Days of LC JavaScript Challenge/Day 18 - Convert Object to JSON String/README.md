@@ -144,3 +144,76 @@ const jsonConfig = JSON.stringify(config);
 ```
 
 ---
+
+### Approach 1: Using JSON-like String Concatenation
+
+```JavaScript
+/**
+ * @param {any} object
+ * @return {string}
+ */
+var jsonStringify = function(object) {
+    if (object === null) {
+        return 'null';
+    }
+    if (Array.isArray(object)) {
+        const elements = object.map((element) => jsonStringify(element));
+        return `[${elements.join(',')}]`;
+    }
+    if (typeof object === 'object') {
+        const keys = Object.keys(object);
+        const keyValuePairs = keys.map((key) => `"${key}":${jsonStringify(object[key])}`);
+        return `{${keyValuePairs.join(',')}}`;
+    }
+    if (typeof object === 'string') {
+        return `"${object}"`;
+    }
+    return String(object);
+};
+```
+
+### Approach 2: Using Switch Case
+
+```JavaScript
+/**
+ * @param {any} object
+ * @return {string}
+ */
+var jsonStringify = function(object) {
+  switch (typeof object) {
+    case 'object':
+      if (Array.isArray(object)) {
+        const elements = object.map((element) => jsonStringify(element));
+        return `[${elements.join(',')}]`;
+      } else if (object) {
+        const keys = Object.keys(object);
+        const keyValuePairs = keys.map((key) => `"${key}":${jsonStringify(object[key])}`);
+        return `{${keyValuePairs.join(',')}}`;
+      } else {
+        return 'null';
+      }
+    case 'boolean':
+    case 'number':
+      return `${object}`;
+    case 'string':
+      return `"${object}"`;
+    default:
+      return '';
+  }
+};
+```
+
+### Approach 3: Using Ternary Operator
+
+```JavaScript
+/**
+ * @param {any} object
+ * @return {string}
+ */
+var jsonStringify = function(object) {
+    return typeof object === 'string' ? '"' + object + '"' :
+        object === null || typeof object !== 'object' ? object :
+        Array.isArray(object) ? '[' + object.reduce((acc, x) => acc + jsonStringify(x) + ',', '').slice(0, -1) + ']' :
+        '{' + Object.entries(object).reduce((acc, x) => acc + jsonStringify(x[0]) + ':' + jsonStringify(x[1]) + ',', '').slice(0, -1) + '}';
+};
+```
