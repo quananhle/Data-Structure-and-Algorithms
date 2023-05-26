@@ -119,3 +119,20 @@ __Constraints:__
 
 ---
 
+### Use-cases for Finding Differences Between Objects
+
+#### Visualizations
+
+Imagine you had a large object representing the state of all or part of your application, and you are trying to better understand the code by seeing what parts of state are effected by different actions a user performs.
+
+Rather than manually explore the two JSON files before and after the user action, it would be better to have an algorithm display exactly what the changes are and nothing else.
+
+Redux is a popular state management library based off the core principle of actions effecting a large, immutable state object. One reason it is popular is the transparency it provides into what exactly is effected by a given action. And Redux DevTools is a popular tool for visualizing this, and it provides a JSON difference tool as a core feature.
+
+#### Efficiently Storing Past Versions of a File.
+
+Suppose you wanted to implement persistent autosave feature in some app which, at its core, modifies a large JavaScript object. The simplest way would be to store a copy of each object in a file, every time a user performs an action. Then, when the user wants to revert to an earlier version, they simply select the file and load it. However, this is inefficient. A huge amount of data is just copied from one file to the next. A solution which would take up less storage is to only store differences between files. It would require some processing to create the desired file by applying the updates, but it would take up considerably less storage.
+
+---
+
+
