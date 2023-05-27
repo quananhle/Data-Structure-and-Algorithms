@@ -46,11 +46,14 @@ __Constraints:__
 
 ---
 
-Use Cases:
-Pagination:
+### Use Cases:
 
-When implementing pagination in a web application, you often need to split a large list of items into smaller chunks or pages. The chunking operation allows you to divide the items into manageable portions, making it easier to display and navigate through the data.
-In the example usage, let's say we have an array of 10 items and want to display 3 items per page. We specify the current page number as 2. The function will be called with these parameters, and the resulting chunked array (representing the items for the second page) should be logged to the console.
+__Pagination__:
+
+- When implementing pagination in a web application, you often need to split a large list of items into smaller chunks or pages. The chunking operation allows you to divide the items into manageable portions, making it easier to display and navigate through the data.
+- In the example usage, let's say we have an array of ```10``` items and want to display ```3``` items per page. We specify the current page number as ```2```4. The function will be called with these parameters, and the resulting chunked array (representing the items for the second page) should be logged to the console.
+
+```JavaScript
 function paginateArray(array, pageSize, pageNumber) {
 // Calculate the starting index of the current page
 const startIndex = (pageNumber - 1) * pageSize;
@@ -72,18 +75,23 @@ const pageNumber = 2; // Current page number
 
 const result = paginateArray(data, pageSize, pageNumber);
 console.log(result);
-Parallel Processing:
+```
 
-In parallel computing or distributed systems, data is often divided into chunks and processed simultaneously by multiple processors or nodes. Chunking the data allows for efficient distribution and parallel execution of tasks, improving overall performance.
-Image Processing:
+__Parallel Processing__:
 
-In image processing applications, large images are often divided into smaller blocks or tiles to enable processing and analysis at a more granular level. Each tile can be independently processed, allowing for parallelization and efficient utilization of computational resources.
-Data Analysis and Aggregation:
+- In parallel computing or distributed systems, data is often divided into chunks and processed simultaneously by multiple processors or nodes. Chunking the data allows for efficient distribution and parallel execution of tasks, improving overall performance.
 
-When dealing with large datasets, it can be beneficial to divide the data into smaller chunks for analysis and aggregation purposes. This approach allows for parallel or distributed processing, enabling faster data processing and efficient resource utilization.
-File Upload and Transfer:
+__Image Processing__:
 
-When uploading or transferring large files, the data is typically sent in smaller chunks to handle potential network limitations and ensure reliable delivery. The receiving end can process each chunk independently and reassemble them to reconstruct the original file.
+- In image processing applications, large images are often divided into smaller blocks or tiles to enable processing and analysis at a more granular level. Each tile can be independently processed, allowing for parallelization and efficient utilization of computational resources.
+
+__Data Analysis and Aggregation__:
+
+- When dealing with large datasets, it can be beneficial to divide the data into smaller chunks for analysis and aggregation purposes. This approach allows for parallel or distributed processing, enabling faster data processing and efficient resource utilization.
+
+__File Upload and Transfer__:
+
+- When uploading or transferring large files, the data is typically sent in smaller chunks to handle potential network limitations and ensure reliable delivery. The receiving end can process each chunk independently and reassemble them to reconstruct the original file.
 
 ### Approach 1: Using Brute Force
 
