@@ -200,7 +200,7 @@ var chunk = function(arr, size) {
 
 ### Approach 5: Push
 
-```Python
+```JavaScript
 /**
  * @param {Array} arr
  * @param {number} size
@@ -221,5 +221,20 @@ var chunk = function(arr, size) {
         res.push(currentChunk);
     }
     return res;
+};
+```
+
+### Approach 6: Using Ceiling
+
+```JavaScript
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+var chunk = function(arr, size) {
+    return Array.from({length: Math.ceil(arr.length / size)}, function(_, i) {
+        return arr.slice(i * size, i * size + size);
+    })
 };
 ```
