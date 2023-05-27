@@ -148,6 +148,9 @@ var chunk = function(arr, size) {
 
 ### Approach 3: Using Splice and Slice
 
+- __Time Complexity__: ```O(n^2)```, where ```n``` is the length or size of the input array.
+- __Space Complexity__: ```O(n)```, where ```n``` is the length or size of the input array.
+
 ```JavaScript
 /**
  * @param {Array} arr
@@ -170,5 +173,53 @@ var chunk = function(arr, size) {
     }
 
     return array.slice(1);
+};
+```
+
+### Approach 4: Using Reduce
+
+```JavaScript
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+var chunk = function(arr, size) {
+    return arr.reduce((array, elem) => {
+        const lastChunk = array[array.length - 1];
+        if (!lastChunk || lastChunk.length === size) {
+            array.push([elem]);
+        }
+        else {
+            lastChunk.push(elem);
+        }
+        return array;
+    }, []);
+};
+```
+
+### Approach 5: Push
+
+```Python
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+var chunk = function(arr, size) {
+    const res = [];
+    let currentChunk = [];
+
+    for (const element of arr) {
+        if (currentChunk.length === size) {
+            res.push(currentChunk);
+            currentChunk = [];
+        }
+        currentChunk.push(element);
+    }
+    if (currentChunk.length) {
+        res.push(currentChunk);
+    }
+    return res;
 };
 ```
