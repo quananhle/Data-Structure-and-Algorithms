@@ -95,6 +95,11 @@ __File Upload and Transfer__:
 
 ### Approach 1: Using Brute Force
 
+Complexity Analysis:
+
+- __Time Complexity__: ```O(n)```, where ```n``` is the length or size of the input array.
+- __Space Complexity__: ```O(n)```, where ```n``` is the length or size of the input array.
+
 ```JavaScript
 /**
  * @param {Array} arr
@@ -114,5 +119,56 @@ var chunk = function(arr, size) {
         array.push(temp);
     }
     return array;
+};
+```
+
+### Approach 2: Using Slicing
+
+- __Time Complexity__: ```O(n)```, where ```n``` is the length or size of the input array.
+- __Space Complexity__: ```O(1)```.
+
+```JavaScript
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+var chunk = function(arr, size) {
+    const array = [];
+    let i = 0;
+
+    while (i < arr.length) {
+        array.push(arr.slice(i, i + size));
+        i += size;
+    }
+    
+    return array;
+};
+```
+
+### Approach 3: Using Splice and Slice
+
+```JavaScript
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+var chunk = function(arr, size) {
+    let array = [[]];
+    let temp = [];
+
+    for (let i = 0; i < arr.length; i = i + size) {
+        for (let j = 0; j < size; j++) {
+            temp[j] = arr[j + i];
+            if (j + i === arr.length) {
+                temp.splice(j);
+                break;
+            }
+        }
+        array = [...array, [...temp]];
+    }
+
+    return array.slice(1);
 };
 ```
