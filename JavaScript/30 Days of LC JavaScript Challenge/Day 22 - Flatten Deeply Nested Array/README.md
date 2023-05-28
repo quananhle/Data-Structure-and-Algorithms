@@ -59,3 +59,92 @@ __Constraints:__
 - ```0 <= n <= 1000```
 
 ---
+
+![image](https://github.com/quananhle/Data-Structure-and-Algorithms/assets/35042430/ffd1f405-2c7e-41cf-a000-820cd42989f2)
+
+### Approach 1: Recursive approach
+
+```JavaScript
+/**
+ * @param {any[]} arr
+ * @param {number} depth
+ * @return {any[]}
+ */
+var flat = function (arr, n) {
+    let res = [];
+    const flattening = (nums, length) => {
+        for (const num of nums) {
+            if (Array.isArray(num) && length > 0) {
+                flattening(num, length - 1);
+            }
+            else {
+                res.push(num);
+            }
+        }
+    }
+    flattening(arr, n);
+    return res;
+};
+```
+
+### Approach 2: Using Iterative Queue
+
+```JavaScript
+/**
+ * @param {any[]} arr
+ * @param {number} depth
+ * @return {any[]}
+ */
+var flat = function (arr, n) {
+    let nested = true;
+    let queue;
+    let depth = 0;
+
+    while (nested && depth < n) {
+        nested = false;
+        queue = [];
+
+        for (let i = 0; i < arr.length; ++i) {
+            if (Array.isArray(arr[i])) {
+                queue.push(...arr[i]);
+                nested = true;
+            }
+            else {
+                queue.push(arr[i])
+            }
+        }
+
+        arr = [...queue];
+        depth++;
+    }
+
+    return arr
+};
+```
+
+### Approach 3: Using Iterative Stack
+
+
+```JavaScript
+/**
+ * @param {any[]} arr
+ * @param {number} depth
+ * @return {any[]}
+ */
+var flat = function (arr, n) {
+	const stack = [...arr.map((item) => [item, n])];
+	const res = [];
+	
+	while (stack.length > 0) {
+		const [item, depth] = stack.pop();
+		if (Array.isArray(item) && depth > 0) {
+			// push back with depth - 1
+			stack.push(...item.map((el) => [el, depth - 1]));
+		} else {
+			res.push(item);
+		}
+	}
+
+	return res.reverse();
+};
+```
