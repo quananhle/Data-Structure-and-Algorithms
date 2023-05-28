@@ -62,7 +62,7 @@ Array.prototype.last = function() {
  */
 ```
 
-### Nullish Coalescing Operator
+#### Nullish Coalescing Operator
 
 ```JavaScript
 Array.prototype.last = function() {
@@ -75,7 +75,7 @@ Array.prototype.last = function() {
  */
 ```
 
-### ```pop()```
+#### ```pop()```
 
 ```JavaScript
 Array.prototype.last = function() {
@@ -89,7 +89,7 @@ Array.prototype.last = function() {
  */
 ```
 
-### Array.prototype.slice()
+#### Array.prototype.slice()
 
 
 ```JavaScript
@@ -103,7 +103,7 @@ Array.prototype.last = function() {
  */
 ```
 
-### Default Parameters
+#### Default Parameters
 
 ```JavaScript
 Array.prototype.last = function() {
@@ -117,13 +117,37 @@ Array.prototype.last = function() {
  */
 ```
 
-### Nullish Coalescing Operator With Array.prototype.at()
+#### Nullish Coalescing Operator With Array.prototype.at()
 
 
 ```JavaScript
 Array.prototype.last = function() {
     return this.at(-1) ?? -1;
 };
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+#### ```findLast``` Method (for ECMAScript 2022 and beyond)
+
+```JavaScript
+if (!Array.prototype.findLast) {
+    Array.prototype.findLast = function(predicate) {
+        for (let i = this.length - 1; i >= 0; i--) {
+            if (predicate(this[i], i, this)) {
+                return this[i];
+            }
+        }
+        return undefined;
+    };
+}
+
+Array.prototype.last = function() {
+  return this.findLast(() => true) ?? -1;
+}
 
 /**
  * const arr = [1, 2, 3];
