@@ -88,3 +88,45 @@ Array.prototype.last = function() {
  * arr.last(); // 3
  */
 ```
+
+### Array.prototype.slice()
+
+
+```JavaScript
+Array.prototype.last = function() {
+    return this.length ? this.slice(-1)[0] : -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+### Default Parameters
+
+```JavaScript
+Array.prototype.last = function() {
+    const [lastElement = -1] = this.slice(-1);
+    return lastElement;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+### Nullish Coalescing Operator With Array.prototype.at()
+
+
+```JavaScript
+Array.prototype.last = function() {
+    return this.at(-1) ?? -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
