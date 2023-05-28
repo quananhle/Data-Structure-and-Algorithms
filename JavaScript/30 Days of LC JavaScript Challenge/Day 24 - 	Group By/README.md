@@ -85,3 +85,50 @@ __Constraints:__
 
 ---
 
+### Apprach 1: ```for``` loop
+
+```JavaScript
+/**
+ * @param {Function} fn
+ * @return {Array}
+ */
+Array.prototype.groupBy = function(fn) {
+    const res = {};
+
+    for (const item of this) {
+        key = fn(item)
+        if (key in res) {
+            res[key].push(item);
+        }
+        else{
+            res[key] = [item];
+        }
+    }
+    return res;
+};
+
+/**
+ * [1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
+ */
+ ```
+ 
+ ### Appraoch 2: ```reduce```
+ 
+ ```JavaScript
+ /**
+ * @param {Function} fn
+ * @return {Array}
+ */
+Array.prototype.groupBy = function(fn) {
+    return this.reduce((accum, item) => {
+        const key = fn(item);
+        accum[key] ||= [];
+        accum[key].push(item);
+        return accum;
+    }, {});
+};
+
+/**
+ * [1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
+ */
+ ```
