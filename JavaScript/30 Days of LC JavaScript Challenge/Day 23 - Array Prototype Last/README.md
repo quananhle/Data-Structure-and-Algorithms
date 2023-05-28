@@ -31,3 +31,60 @@ __Constraints:__
 
 ---
 
+### Approach 1: Extending Array Prototype to Include a .last() Method
+
+#### ```if```
+
+```JavaScript
+Array.prototype.last = function() {
+    if (this.length === 0) {
+        return -1;
+    }
+    return this[this.length - 1];
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+#### Ternary Operator
+
+```JavaScript
+Array.prototype.last = function() {
+    return this.length === 0 ? -1 : this[this.length - 1];
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+### Nullish Coalescing Operator
+
+```JavaScript
+Array.prototype.last = function() {
+    return this[this.length - 1] ?? -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
+
+### ```pop()```
+
+```JavaScript
+Array.prototype.last = function() {
+    let val = this.pop()
+    return val !== undefined ? val : -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+```
