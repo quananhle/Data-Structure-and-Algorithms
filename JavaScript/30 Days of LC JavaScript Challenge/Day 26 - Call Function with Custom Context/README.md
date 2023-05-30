@@ -194,11 +194,35 @@ Function.prototype.callPolyfill = function(context, ...args) {
 ### Approach 3: Using ```bind```
 
 ```JavaScript
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
+Function.prototype.callPolyfill = function(context, ...args) {
+    return this.bind(context)(...args);
+}
 
- ```
+/**
+ * function increment() { this.count++; return this.count; }
+ * increment.callPolyfill({count: 1}); // 2
+ */
+```
 
 ### Approach 4: Using ```apply```
 
 ```JavaScript
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
+Function.prototype.callPolyfill = function(context, ...args) {
+    return this.apply(context, args);
+}
 
- ```
+/**
+ * function increment() { this.count++; return this.count; }
+ * increment.callPolyfill({count: 1}); // 2
+ */
+```
