@@ -142,3 +142,51 @@ user.greet.callPolyfill({ name: 'Batman' }).sayAge.callPolyfill({ age: 1000 });
 // "Hello, Batman!"
 // "I am 1000 years old."
 ```
+
+---
+
+### Approach 1: Using Object
+
+```JavaScript
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
+Function.prototype.callPolyfill = function(context, ...args) {
+    Object.defineProperty(context, 'fn', {
+        value: this,
+        enumerable: false,
+    });
+
+    return context.fn(...args);
+}
+
+/**
+ * function increment() { this.count++; return this.count; }
+ * increment.callPolyfill({count: 1}); // 2
+ */
+```
+
+### Appraoach 2: Using Symbol
+
+```JavaScript
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
+Function.prototype.callPolyfill = function(context, ...args) {
+    const uniqueSymbol = Symbol();
+    context[uniqueSymbol] = this;
+    const result = context[uniqueSymbol](...args);
+    delete context[uniqueSymbol];
+
+    return result;
+}
+
+/**
+ * function increment() { this.count++; return this.count; }
+ * increment.callPolyfill({count: 1}); // 2
+ */
+ ```
