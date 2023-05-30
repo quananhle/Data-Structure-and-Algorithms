@@ -145,7 +145,7 @@ user.greet.callPolyfill({ name: 'Batman' }).sayAge.callPolyfill({ age: 1000 });
 
 ---
 
-### Approach 1: Using Object
+### Approach 1: Using ```Object```
 
 ```JavaScript
 /**
@@ -168,7 +168,7 @@ Function.prototype.callPolyfill = function(context, ...args) {
  */
 ```
 
-### Appraoach 2: Using Symbol
+### Appraoach 2: Using ```Symbol()```
 
 ```JavaScript
 /**
@@ -189,4 +189,16 @@ Function.prototype.callPolyfill = function(context, ...args) {
  * function increment() { this.count++; return this.count; }
  * increment.callPolyfill({count: 1}); // 2
  */
+```
+
+### Approach 3: Using ```bind```
+
+```JavaScript
+
+ ```
+
+### Approach 4: Using ```apply```
+
+```JavaScript
+
  ```
