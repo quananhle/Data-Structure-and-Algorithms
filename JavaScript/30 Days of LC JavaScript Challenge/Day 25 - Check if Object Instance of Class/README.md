@@ -74,3 +74,66 @@ var checkIfInstanceOf = function(obj, classFunction) {
  * checkIfInstanceOf(new Date(), Date); // true
  */
  ```
+
+### Approach 2: Built-in instanceof method
+
+```JavaScript
+/**
+ * @param {any} obj
+ * @param {any} classFunction
+ * @return {boolean}
+ */
+var checkIfInstanceOf = function(obj, classFunction) {
+    if (obj === null || obj === undefined || typeof classFunction !== 'function') {
+        return false;
+    }
+
+    let inputObj = obj;
+
+    if (typeof obj !== "object") {
+        inputObj = Object(obj);
+    }
+
+    return inputObj instanceof classFunction;
+};
+
+/**
+ * checkIfInstanceOf(new Date(), Date); // true
+ */
+```
+
+### Approach 3: Iterating Through Prototype Chain With Generator Function
+
+```JavaScript
+/**
+ * @param {any} obj
+ * @param {any} classFunction
+ * @return {boolean}
+ */
+
+function* prototypeGenerator(obj) {
+    let curr = Object.getPrototypeOf(obj);
+    while (curr !== null) {
+        yield curr;
+        curr = Object.getPrototypeOf(curr);
+    }
+}
+
+var checkIfInstanceOf = function(obj, classFunction) {
+    if (obj === null || obj === undefined || typeof classFunction !== 'function') {
+        return false;
+    }
+
+    for (const prototype of prototypeGenerator(obj)) {
+        if (prototype === classFunction.prototype) {
+            return true;
+        }
+    }
+
+    return false;
+};
+
+/**
+ * checkIfInstanceOf(new Date(), Date); // true
+ */
+ ```
