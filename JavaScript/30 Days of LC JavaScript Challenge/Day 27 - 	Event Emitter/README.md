@@ -61,3 +61,130 @@ __Constraints:__
 - The ```unsubscribe``` action takes one argument, which is the 0-indexed order of the subscription made before.
 
 ---
+
+### Use Cases:
+
+- __User Interface (UI) Interactions__: In web development, an ```EventEmitter``` can be used to handle user interactions such as button clicks, form submissions, or menu selections. Components can subscribe to these events and perform appropriate actions or updates when the events are emitted.
+
+```JavaScript
+// Create an EventEmitter instance
+const eventEmitter = new EventEmitter();
+
+// Subscribe to a button click event
+eventEmitter.subscribe("buttonClick", () => {
+console.log("Button clicked!");
+});
+
+// Emit the button click event
+eventEmitter.emit("buttonClick");
+```
+
+- __Asynchronous Operations__: When working with asynchronous operations like fetching data from an API or handling database queries, an ```EventEmitter``` can be used to notify components or modules about the completion or status of these operations. Subscribed callbacks can then handle the returned data or trigger subsequent actions.
+
+```JavaScript
+// Create an EventEmitter instance
+const eventEmitter = new EventEmitter();
+
+// Simulate an asynchronous operation
+function fetchData() {
+setTimeout(() => {
+    const data = "Some fetched data";
+    // Emit the event with the fetched data
+    eventEmitter.emit("dataFetched", data);
+}, 2000);
+}
+
+// Subscribe to the dataFetched event
+eventEmitter.subscribe("dataFetched", (data) => {
+console.log("Data fetched:", data);
+});
+
+// Trigger the asynchronous operation
+fetchData();
+```
+
+- __Custom Event-driven Systems__: ```EventEmitters``` can be used to build custom event-driven systems for specific application needs. For example, in a game engine, an ```EventEmitter``` can be used to manage events like player movement, collision detection, or game state changes. Components, such as game objects or UI elements, can subscribe to these events and respond accordingly.
+
+```JavaScript
+// Create an EventEmitter instance
+const eventEmitter = new EventEmitter();
+
+// Game state change event
+eventEmitter.subscribe("gameStateChange", (newState) => {
+console.log("Game state changed:", newState);
+});
+
+// Player movement event
+eventEmitter.subscribe("playerMovement", (movement) => {
+console.log("Player moved:", movement);
+});
+
+// Emit game events
+eventEmitter.emit("gameStateChange", "start");
+eventEmitter.emit("playerMovement", "left");
+```
+
+- __Logging and Error Handling__: An ```EventEmitter``` can be utilized to handle logging and error events. Subscribed callbacks can capture error events, log them to a file or console, and perform error handling tasks such as sending error reports or displaying error messages to the user.
+
+```JavaScript
+// Create an EventEmitter instance
+const eventEmitter = new EventEmitter();
+
+// Error event
+eventEmitter.subscribe("error", (errorMessage) => {
+console.error("Error occurred:", errorMessage);
+});
+
+// Log event
+eventEmitter.subscribe("log", (message) => {
+console.log("Log message:", message);
+});
+
+// Emit logging and error events
+eventEmitter.emit("error", "Something went wrong!");
+eventEmitter.emit("log", "Info: Application started.");
+```
+
+- __Event-driven Architectures__: ```EventEmitters``` are a fundamental building block in event-driven architectures. They enable loose coupling and decoupling of components by allowing them to communicate through events. This promotes modularity and scalability in large-scale applications.
+
+### Approach 1: Using Array
+
+```JavaScript
+class EventEmitter {
+    constructor() {
+        this.events = {};
+    }
+
+    subscribe(event, cb) {
+      this.events[event] = this.events[event] ?? [];
+      this.events[event].push(cb);
+
+      return {
+        unsubscribe: () => {
+          this.events[event] = this.events[event].filter(f => f !== cb);
+          //To avoid memory leaks adding a cleanup condition
+          if (this.events[event].length === 0) { delete this.events[event] }
+        },
+      };
+    }
+
+    emit(event, args = []) {
+        if (!(event in this.events)) return [];
+        return this.events[event].map(f => f(...args));
+    }
+}
+
+/**
+ * const emitter = new EventEmitter();
+ *
+ * // Subscribe to the onClick event with onClickCallback
+ * function onClickCallback() { return 99 }
+ * const sub = emitter.subscribe('onClick', onClickCallback);
+ *
+ * emitter.emit('onClick'); // [99]
+ * sub.unsubscribe(); // undefined
+ * emitter.emit('onClick'); // []
+ */
+```
+
+
