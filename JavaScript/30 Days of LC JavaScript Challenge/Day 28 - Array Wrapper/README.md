@@ -105,3 +105,84 @@ ArrayWrapper.prototype.toString = function() {
  * String(obj2); // "[3,4]"
  */
 ```
+
+### Apprach 3: Using ```toString()``` method in Array
+
+```JavaScript
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    return this.nums.reduce((a, b) => a + b, 0);
+};
+
+ArrayWrapper.prototype.toString = function() {
+    return '[' + this.nums.toString() + ']';
+};
+
+/**
+ * const obj1 = new ArrayWrapper([1,2]);
+ * const obj2 = new ArrayWrapper([3,4]);
+ * obj1 + obj2; // 10
+ * String(obj1); // "[1,2]"
+ * String(obj2); // "[3,4]"
+ */
+ ```
+ 
+ ### Approach 4: Using Template Literals in ```toString()``` Method
+ 
+ ```JavaScript
+ /**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    return this.nums.reduce((a, b) => a + b, 0);
+}
+
+ArrayWrapper.prototype.toString = function() {
+    return `[${this.nums}]`;
+}
+
+/**
+ * const obj1 = new ArrayWrapper([1,2]);
+ * const obj2 = new ArrayWrapper([3,4]);
+ * obj1 + obj2; // 10
+ * String(obj1); // "[1,2]"
+ * String(obj2); // "[3,4]"
+ */
+ ```
+
+### Approach 5: Using ```JSON.stringify``` in ```toString()``` Method
+
+```JavaScript
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    return this.nums.reduce((a, b) => a + b, 0);
+}
+
+ArrayWrapper.prototype.toString = function() {
+    return JSON.stringify(this.nums);
+}
+
+/**
+ * const obj1 = new ArrayWrapper([1,2]);
+ * const obj2 = new ArrayWrapper([3,4]);
+ * obj1 + obj2; // 10
+ * String(obj1); // "[1,2]"
+ * String(obj2); // "[3,4]"
+ */
+```
