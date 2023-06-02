@@ -47,3 +47,61 @@ __Constraints:__
 - Note: ```nums``` is the array passed to the constructor
 
 ---
+
+### Approach 1: Implementing ```valueOf``` and ```toString``` methods in ```ArrayWrapper``` class
+
+```JavaScript
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    return this.nums.reduce((a, b) => a + b, 0);
+}
+
+ArrayWrapper.prototype.toString = function() {
+    return "[" + this.nums.join(',') + "]"
+}
+
+/**
+ * const obj1 = new ArrayWrapper([1,2]);
+ * const obj2 = new ArrayWrapper([3,4]);
+ * obj1 + obj2; // 10
+ * String(obj1); // "[1,2]"
+ * String(obj2); // "[3,4]"
+ */
+ ```
+ 
+ ### Apprach 2: Using ```for``` loop in ```valueOf()``` method
+ 
+ ```JavaScript
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    let sum = 0;
+    for (let i = 0; i < this.nums.length; ++i) {
+        sum += this.nums[i];
+    }
+    return sum;
+}
+
+ArrayWrapper.prototype.toString = function() {
+    return "[" + this.nums.join(',') + "]"
+}
+
+/**
+ * const obj1 = new ArrayWrapper([1,2]);
+ * const obj2 = new ArrayWrapper([3,4]);
+ * obj1 + obj2; // 10
+ * String(obj1); // "[1,2]"
+ * String(obj2); // "[3,4]"
+ */
+```
