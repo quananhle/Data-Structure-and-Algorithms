@@ -76,7 +76,7 @@ var inorderTraversal = function* (arr) {
     const stack = [arr];
   
     while (stack.length > 0) {
-            const current = stack.pop();
+        const current = stack.pop();
 
         if (!Array.isArray(current)) {
             yield current;
