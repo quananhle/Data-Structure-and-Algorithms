@@ -38,6 +38,10 @@ __Constraints:__
 
 ---
 
+### Approach 1: Using a ```while``` loop
+
+The ```yield``` keyword pauses the function execution and returns the value of prev1, then it resumes from where it left off in the next call.
+
 ```JavaScript
 /**
  * @return {Generator<number>}
@@ -52,6 +56,74 @@ var fibGenerator = function*() {
         prev1 = prev2;
         prev2 += temp;
     }
+};
+
+/**
+ * const gen = fibGenerator();
+ * gen.next().value; // 0
+ * gen.next().value; // 1
+ */
+ ```
+
+### Approach 2: Using Destructuring Assignment in Fibonacci Sequence Update
+
+```JavaScript
+/**
+ * @return {Generator<number>}
+ */
+var fibGenerator = function*() {
+    let a = 0;
+    let b = 1;
+
+    while (true) {
+        yield a;
+        [a, b] = [b, a + b];
+    }
+};
+
+/**
+ * const gen = fibGenerator();
+ * gen.next().value; // 0
+ * gen.next().value; // 1
+ */
+ ```
+ 
+ ### Approach 3: Recursive
+ 
+ ```JavaScript
+ /**
+ * @return {Generator<number>}
+ */
+var fibGenerator = function*(a = 0, b = 1) {
+    yield a;
+
+    yield *fibGenerator(b, a + b);
+};
+
+/**
+ * const gen = fibGenerator();
+ * gen.next().value; // 0
+ * gen.next().value; // 1
+ */
+ ```
+ 
+ ### Approach 4: Precomputed Array and Custom Iterator
+ 
+ ```JavaScript
+ /**
+ * @return {Generator<number>}
+ */
+var fibGenerator = function() {
+    const n = 50;
+
+    const sequence = Array(n).fill(0);
+    sequence[1] = 1;
+
+    for (let i = 2; i < n; ++i) {
+        sequence[i] = sequence[i - 1] + sequence[i - 2];
+    }
+
+    return sequence[Symbol.iterator]();
 };
 
 /**
