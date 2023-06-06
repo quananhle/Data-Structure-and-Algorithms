@@ -1,5 +1,7 @@
 ## [2632. Curry](https://leetcode.com/problems/curry)
 
+```Tag```: ```Function input and Output```
+
 #### Difficulty: Medium
 
 Given a function ```fn```, return _a curried version of that function_.
