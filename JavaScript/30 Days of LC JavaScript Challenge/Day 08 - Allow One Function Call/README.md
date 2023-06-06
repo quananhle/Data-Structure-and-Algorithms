@@ -1,5 +1,7 @@
 ## [Allow One Function Call](https://leetcode.com/problems/allow-one-function-call)
 
+```Tag```: ```Function input and Output```
+
 #### Difficulty: Easy
 
 Given a function ```fn```, return _a new function that is identical to the original function except that it ensures ```fn``` is called at most once_.
