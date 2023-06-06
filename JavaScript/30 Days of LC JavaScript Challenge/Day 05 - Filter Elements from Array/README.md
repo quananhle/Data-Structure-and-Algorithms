@@ -1,5 +1,7 @@
 ## [2634. Filter Elements from Array](https://leetcode.com/problems/filter-elements-from-array)
 
+```Tag```: ```Basic Array Transforms```
+
 #### Difficulty: Easy
 
 Given an integer array ```arr``` and a filtering function ```fn```, return _a new array with a fewer or equal number of elements_.
