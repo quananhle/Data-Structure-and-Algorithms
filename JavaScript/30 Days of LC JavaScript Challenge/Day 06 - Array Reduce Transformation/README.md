@@ -1,5 +1,7 @@
 ## [2626. Array Reduce Transformation](https://leetcode.com/problems/array-reduce-transformation)
 
+```Tag```: ```Basic Array Transforms```
+
 #### Difficulty: Easy
 
 Given an integer array ```nums```, a reducer function ```fn```, and an initial value ```init```, return _a reduced array_.
