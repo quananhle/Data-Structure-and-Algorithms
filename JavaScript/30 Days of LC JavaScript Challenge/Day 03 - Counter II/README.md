@@ -1,5 +1,7 @@
 ## [2665. Counter II](https://leetcode.com/problems/counter-ii/?utm_campaign=PostD3&utm_medium=Post&utm_source=Post&gio_link_id=xRxVYOXo)
 
+```Tag```: ```Closure```
+
 #### Difficulty: Easy
 
 Write a function ```createCounter```. It should accept an initial integer ```init```. It should return an object with three functions.
