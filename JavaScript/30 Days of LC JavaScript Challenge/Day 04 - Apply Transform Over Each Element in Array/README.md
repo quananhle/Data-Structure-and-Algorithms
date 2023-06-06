@@ -1,5 +1,7 @@
 ## [2635. Apply Transform Over Each Element in Array](https://leetcode.com/problems/apply-transform-over-each-element-in-array)
 
+```Tag```: ```Basic Array Transforms```
+
 #### Difficulty: Easy
 
 Given an integer array ```arr``` and a mapping function ```fn```, return _a new array with a transformation applied to each element_.
