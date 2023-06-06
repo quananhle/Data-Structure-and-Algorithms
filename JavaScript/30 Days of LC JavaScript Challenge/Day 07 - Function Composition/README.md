@@ -1,5 +1,7 @@
 ## [2629. Function Composition](https://leetcode.com/problems/function-composition)
 
+```Tag```: ```Function input and Output```
+
 #### Difficulty: Easy
 
 Given an array of functions ```[f1, f2, f3, ..., fn]```, return _a new function ```fn``` that is the function composition of the array of functions_.
