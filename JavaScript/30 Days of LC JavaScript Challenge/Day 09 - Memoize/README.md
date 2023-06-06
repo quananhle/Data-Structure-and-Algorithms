@@ -1,5 +1,7 @@
 ## [2623. Memoize](https://leetcode.com/problems/memoize)
 
+```Tag```: ```Function input and Output```
+
 #### Difficulty: Medium
 
 Given a function ```fn```, return _a memoized version of that function_.
