@@ -1,5 +1,7 @@
 ## [2627. Debounce](https://leetcode.com/problems/debounce)
 
+```Tag```: ```Time (setTimeout)```
+
 #### Difficulty: Medium
 
 Given a function ```fn``` and a time in milliseconds ```t```, return _a debounced version of that function_.
