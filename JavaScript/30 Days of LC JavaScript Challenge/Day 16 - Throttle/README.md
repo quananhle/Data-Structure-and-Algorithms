@@ -1,5 +1,7 @@
 ## [2676. Throttle](https://leetcode.com/problems/throttle)
 
+```Tag```: ```Time (setTimeout)```
+
 #### Difficulty: Medium
 
 Given a function ```fn``` and a time in milliseconds ```t```, return _a throttled version of that function_.
