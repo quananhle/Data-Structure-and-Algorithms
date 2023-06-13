@@ -1,5 +1,7 @@
 ## [2622. Cache With Time Limit](https://leetcode.com/problems/cache-with-time-limit)
 
+```Tag```: ```Time (setTimeout)```
+
 #### Difficulty: Medium
 
 Write a class that allows getting and setting key-value pairs, however a __time until expiration__ is associated with each key.
