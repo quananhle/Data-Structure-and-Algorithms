@@ -1,5 +1,7 @@
 ## [2637. Promise Time Limit](https://leetcode.com/problems/promise-time-limit)
 
+```Tag```: ```Promise```
+
 #### Difficulty: Easy
 
 Given an asyncronous function ```fn``` and a time ```t``` in milliseconds, return a new __time limited__ version of the input function.
