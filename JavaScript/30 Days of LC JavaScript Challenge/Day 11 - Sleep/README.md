@@ -1,5 +1,7 @@
 ## [2621. Sleep](https://leetcode.com/problems/sleep)
 
+```Tag```: ```Promise```
+
 #### Difficulty: Easy
 
 Given a positive integer ```millis```, write an asyncronous function that sleeps for ```millis``` milliseconds. It can resolve any value.
