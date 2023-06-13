@@ -1,5 +1,7 @@
 ## [2636. Promise Pool](https://leetcode.com/problems/promise-pool)
 
+```Tag```: ```Promise```
+
 #### Difficulty: Medium
 
 Given an array of asyncronous functions ```functions``` and a pool limit ```n```, return _an asyncronous function ```promisePool```_. It should return a promise that resolves when all the input functions resolve.
