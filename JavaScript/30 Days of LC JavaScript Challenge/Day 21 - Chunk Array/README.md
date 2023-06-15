@@ -1,5 +1,7 @@
 ## [2677. Chunk Array](https://leetcode.com/problems/chunk-array)
 
+```Tag```: ```JSON / Recursion / Important Utilities```
+
 #### Difficulty: Easy
 
 Given an array ```arr``` and a chunk size ```size```, return _a chunked array_. A chunked array contains the original elements in ```arr```, but consists of subarrays each of length ```size```. The length of the last subarray may be less than ```size``` if ```arr.length``` is not evenly divisible by ```size```.
