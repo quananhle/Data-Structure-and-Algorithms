@@ -1,6 +1,6 @@
 ## [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings)
 
-```Tag```:
+```Tag```: ```Hash Map``` ```Hash Set```
 
 #### Difficulty: Easy
 
@@ -39,3 +39,35 @@ __Constraints:__
 - ```s``` and ```t``` consist of any valid ascii character.
 
 ---
+
+### Hash Map
+
+```Python
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        s_counter = collections.defaultdict()
+        t_counter = collections.defaultdict()
+        for c_s, c_t in zip(s, t):
+            if not c_s in s_counter:
+                s_counter[c_s] = c_t
+            else:
+                if s_counter[c_s] != c_t:
+                    return False
+            if not c_t in t_counter:
+                t_counter[c_t] = c_s
+            else:
+                if t_counter[c_t] != c_s:
+                    return False
+
+        return True
+```
+
+### Hash Set
+
+#### One Liner
+
+```Python
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        return len(s) == len(t) and len(set(s)) == len(set(t)) == len(set(zip(s, t)))
+```
