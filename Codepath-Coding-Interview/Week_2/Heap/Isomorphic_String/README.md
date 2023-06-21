@@ -47,18 +47,41 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         s_counter = collections.defaultdict()
         t_counter = collections.defaultdict()
+
         for c_s, c_t in zip(s, t):
             if not c_s in s_counter:
                 s_counter[c_s] = c_t
             else:
                 if s_counter[c_s] != c_t:
                     return False
+
             if not c_t in t_counter:
                 t_counter[c_t] = c_s
             else:
                 if t_counter[c_t] != c_s:
                     return False
 
+        return True
+```
+
+```Python
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        s_counter = collections.defaultdict()
+        t_counter = collections.defaultdict()
+        
+        for c_s, c_t in zip(s, t):
+            
+            # Case 1: No mapping exists in either of the dictionaries
+            if (not c_s in s_counter) and (not c_t in t_counter):
+                s_counter[c_s] = c_t
+                t_counter[c_t] = c_s
+            
+            # Case 2: Ether mapping doesn't exist in one of the dictionaries or Mapping exists and
+            # it doesn't match in either of the dictionaries or both            
+            elif s_counter.get(c_s) != c_t or t_counter.get(c_t) != c_s:
+                return False
+            
         return True
 ```
 
